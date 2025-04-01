@@ -1,0 +1,41 @@
+
+body {
+    font-family: roboto;
+    margin: 0;
+}
+
+.nav {
+    background: #066051;
+    list-style-type: none;
+    margin: 0;
+    padding: 16px 20px 30px 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav__img {
+    max-width: 10rem;
+    object-fit: contain;
+}
+
+.nav__right{
+    list-style-type: none;
+    margin-left: auto;
+    display: flex;
+}
+
+.nav__component .nav__link{
+    color: #fff;
+    text-align: center;
+}
+
+.nav__component {
+    margin-left: 20px;
+}
+
+.nav__link {
+    text-decoration: none;
+    padding: 8px 20px;
+    display: inline-block;
+}

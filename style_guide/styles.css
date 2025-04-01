@@ -1,17 +1,10 @@
-/* nav,
-a,
-ul,
-img,
-li {
-    border: black 1px solid;
-} */
-
-
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
 }
 
+
+/* Nav bar styles */
 .nav {
     background: #066051;
     list-style-type: none;

@@ -1,0 +1,60 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+
+/* Nav bar styles */
+.nav {
+    background: #066051;
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.nav__link--img {
+    padding: 0 1rem;
+}
+
+.nav__img {
+    max-width: 10rem;
+    object-fit: contain;
+    height: 100%;
+}
+
+.nav__right{
+    list-style-type: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+}
+
+.nav__component .nav__link{
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 3rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    background: #388074;
+}
+
+.nav__link:active {
+    background: #04443A;
+}
+
+.active {
+    background: #04443A;
+}

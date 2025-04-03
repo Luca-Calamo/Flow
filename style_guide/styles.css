@@ -9,7 +9,7 @@ body {
     background: #066051;
     list-style-type: none;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     justify-content: center;
     position: fixed;
@@ -22,12 +22,12 @@ body {
 }
 
 .nav__img {
-    max-width: 10rem;
+    max-width: 8rem;
     object-fit: contain;
     height: 100%;
 }
 
-.nav__right{
+.nav__right {
     list-style-type: none;
     margin: 0;
     margin-left: auto;
@@ -35,13 +35,14 @@ body {
     display: flex;
 }
 
-.nav__component .nav__link{
+.nav__component .nav__link {
     color: #fff;
     text-align: center;
-    padding: 1.5rem 3rem;
+    /* padding: 1.5rem 3rem; */
+    padding: 1.5rem 2rem;
 }
 
-.nav__link {
+.nav__component .nav__link {
     text-decoration: none;
     display: inline-block;
 }

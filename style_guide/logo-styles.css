@@ -1,0 +1,12 @@
+body {
+    margin-top: 6rem;
+}
+
+main {
+    margin: 2rem;
+}
+
+.font {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+}

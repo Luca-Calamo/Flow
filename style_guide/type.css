@@ -25,7 +25,7 @@ h2 {
 
 .shirt_type {
     width: 100%;
-    height: 300px;
+    height: 500px;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -47,6 +47,15 @@ h2 {
 
 }
 
+.character_examples__bold__container {
+padding-left: 20px;
+
+}
+
+.character_examples__reg__container {
+    padding-right: 20px;
+}
+
 .examples__regular {
     font-size: 26px;
 }
@@ -56,6 +65,37 @@ h2 {
     font-size: 26px;
 }
 
+.h1 {
+    font-size: 36pt;
+}
+
+.h2 {
+    font-size: 32pt;
+}
+
+.h3{
+    font-size: 28pt;
+}
+
+.h4{
+    font-size: 24pt;
+}
+
+.h5{
+    font-size: 20pt;
+}
+
+.body_copy{
+    font-size: 16pt;
+}
+
+.captions{
+    font-size: 12pt;
+}
+
+.labels{
+    font-size: 10pt;
+}
 
 
 

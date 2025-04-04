@@ -4,9 +4,110 @@ body {
 
 main {
     margin: 2rem;
+    padding: 0 5rem;
+}
+
+.header__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .font {
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: bold;
+}
+
+.type__ex__letters {
+    margin: 0;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo__light, 
+.logo__dark {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo__light__subhead,
+.logo__dark__subhead {
+    order: 1;
+}
+
+.logo__dark__subhead {
+    color: white;
+}
+
+.logo__light__img--horiz,
+.logo__dark__img--horiz,
+.logo__other__img--grey,
+.logo__other__img--mono {
+    height: 5rem;
+}
+
+.logo__light__img--stack,
+.logo__dark__img--stack {
+    height: 8rem;
+}
+
+.logo__dark {
+    background-color: #161616;
+    
+}
+
+.logo__other {
+    grid-column-start: span 2;
+    padding: 2rem;
+}
+
+.logo__other__img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo__other__subhead {
+    text-align: center;
+}
+
+
+.spacing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spacing__logos__img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.spacing__logo__img--horiz {
+    width: 320px;
+    height:min-content;
+}
+
+.spacing__logo__img--stack {
+    width: 240px;
+}
+
+
+.spacing__favicon__img--sm {
+    width: 16px; 
+    height: auto;
+}
+
+.spacing__favicon__img--md {
+    width: 32px; 
+    height: auto;
+}
+
+.spacing__favicon__img--lg {
+    width: 48px; 
+    height: auto;
 }

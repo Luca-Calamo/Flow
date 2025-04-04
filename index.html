@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Testing in class exercises</h1>
+    <script>
+        function handlePointEvent (event) {
+            console.log( 'Pointer ID: ' + event.pointerId );
+            console.log( 'Pointer Type: ' + event.pointerType );
+            console.log( 'Is Primary:', event.isPrimary );
+        }
+
+        if (event.pointerType === 'mouse') {
+            console.log("Handled with mouse-specific logic.");
+        } else if (event.pointerType === 'pen') {
+                console.log("Handled with touch-specific logic.");
+            } else if (event.pointerType === 'touch') {
+                console.log("Handled with touch-specific logic.");
+            }
+        
+    </script>
 </body>
 </html>

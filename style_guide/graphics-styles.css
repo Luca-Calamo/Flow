@@ -1,0 +1,17 @@
+
+
+section {
+    margin: 150px 100px;
+}
+
+.graphics__title {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px auto;
+    color: #066051;
+}
+
+.graphics__hr {
+    border: 0.8px solid #066051;
+    width: 100%;
+}

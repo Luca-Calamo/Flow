@@ -1,12 +1,12 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
+    background-color: #dde3e2;
 }
 
 
 /* Nav bar styles */
 .nav {
-    background: #066051;
     list-style-type: none;
     margin: 0;
     font-size: 1.2rem;
@@ -15,6 +15,12 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    border-bottom: 1px solid rgba(6, 96, 81, 0.7);
+    background: rgba(221, 227, 226, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav__link--img {
@@ -36,9 +42,8 @@ body {
 }
 
 .nav__component .nav__link {
-    color: #fff;
+    color: #066051;
     text-align: center;
-    /* padding: 1.5rem 3rem; */
     padding: 1.5rem 2rem;
 }
 
@@ -50,12 +55,16 @@ body {
 .nav__link:hover {
     text-decoration: underline;
     background: #388074;
+    color: #fff;
 }
 
 .nav__link:active {
     background: #04443A;
+    color: #fff;
+
 }
 
 .active {
     background: #04443A;
+    color: #fff !important;
 }

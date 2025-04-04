@@ -1,7 +1,7 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    background-color: #dde3e2;
+    background-color: rgb(240, 245, 244);
 }
 
 
@@ -16,11 +16,10 @@ body {
     width: 100%;
     top: 0;
     border-bottom: 1px solid rgba(6, 96, 81, 0.7);
-    background: rgba(221, 227, 226, 0.7);
+    background: rgba(243, 247, 246, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(145, 145, 145, 0.1);
 }
 
 .nav__link--img {
@@ -54,8 +53,9 @@ body {
 
 .nav__link:hover {
     text-decoration: underline;
-    background: #388074;
+    background: #4d8a80;
     color: #fff;
+    text-decoration: none;
 }
 
 .nav__link:active {

@@ -1,0 +1,65 @@
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 60px;
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.hero__title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero__title--strong {
+    color: #066051;
+}
+
+.hero_studentinfo {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+.hero__img {
+    width: 700px;
+    border-radius: 15px;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto 80px auto;
+    width: 75%;
+    gap: 30px;
+}
+
+.navigation_box {
+    box-sizing: border-box;
+    border: #066051 solid 2px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 300;
+    color: #066051;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+.navigation_box:hover {
+    background-color: #066051;
+    color: white;
+    cursor: pointer;
+}

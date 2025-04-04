@@ -1,0 +1,49 @@
+.graphics__container {
+    margin: 150px 100px;
+}
+
+.graphics__title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #066051;
+}
+
+.graphics__hr {
+    border: 0.8px solid #066051;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.graphics__subtitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 80px auto 0 auto;
+    color: #066051;
+}
+
+.bodycopy {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.bodycopy--stress {
+    color: #066051;
+    font-weight: 500;
+}
+
+.icons__img,
+.buttons__img,
+.images__img {
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.title__container {
+    position: sticky;
+    top: 71.5px;
+    z-index: 10;
+    background-color: rgb(240, 245, 244);
+}

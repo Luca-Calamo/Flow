@@ -1,0 +1,172 @@
+body {
+    margin-top: 6rem;
+}
+
+main {
+    margin: 2rem;
+    padding: 0 5rem;
+}
+
+
+.header__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo__title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #066051;
+}
+
+.logo__hr {
+    border: 0.8px solid #066051;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.logo__subtitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 80px auto 0 auto;
+    color: #066051;
+}
+
+.tyepe__ex-subhead,
+.logo__light__subhead,
+.logo__dark__subhead,
+.logo__other__subhead,
+.spacing__subhead,
+.fav__subhead {
+    font-size: 30px;
+    font-weight: bold;
+    color: #066051;
+}
+
+.logo__text {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.title__container {
+    position: sticky;
+    top: 71px;
+    z-index: 10;
+    background-color: rgb(240, 245, 244);
+}
+
+.font {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+}
+
+.type__subhead {
+    font-size: 24px;
+}
+
+.type__ex__letters {
+    margin: 0;
+    font-size: 24px;
+
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo__light, 
+.logo__dark {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo__light__subhead,
+.logo__dark__subhead {
+    order: 1;
+}
+
+.logo__dark__subhead {
+    color: white;
+}
+
+.logo__light__img--horiz,
+.logo__dark__img--horiz,
+.logo__other__img--grey,
+.logo__other__img--mono {
+    height: 5rem;
+}
+
+.logo__light__img--stack,
+.logo__dark__img--stack {
+    height: 8rem;
+}
+
+.logo__dark {
+    background-color: #161616;
+    
+}
+
+.logo__other {
+    grid-column-start: span 2;
+    padding: 2rem;
+}
+
+.logo__other__img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo__other__subhead {
+    text-align: center;
+}
+
+
+.spacing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.spacing__logos__img {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.spacing__logo__img--horiz {
+    width: 320px;
+    height:min-content;
+}
+
+.spacing__logo__img--stack {
+    width: 240px;
+}
+
+.spacing__logo__img--fav {
+    width: 240px;
+}
+
+.spacing__favicons__img {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.spacing__favicon__img--sm {
+    width: 8rem; 
+    height:min-content;
+}
+
+.spacing__favicon__img--md {
+    width: 10rem; 
+    height:min-content;
+}
+
+.spacing__favicon__img--lg {
+    width: 12rem; 
+    height:min-content;
+}

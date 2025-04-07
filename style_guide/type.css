@@ -2,7 +2,7 @@
 
 } */
 .type__page {
-margin: 150px 100px;
+margin: 100px 100px;
 }
 
 .title__container {
@@ -34,7 +34,7 @@ h2 {
 
 .shirt_type {
     width: 100%;
-    height: 500px;
+    height: 520px;
     border-radius: 20px;
     object-fit: cover;
 }

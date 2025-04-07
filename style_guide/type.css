@@ -2,8 +2,7 @@
 
 } */
 .type__page {
-
-    margin: 100px 100px;
+    margin: 150px 100px;
     }
     
     .title__container {
@@ -35,7 +34,7 @@
     
     .shirt_type {
         width: 100%;
-        height: 520px;
+        height: 500px;
         border-radius: 20px;
         object-fit: cover;
     }
@@ -189,4 +188,3 @@
     }
     
     
-

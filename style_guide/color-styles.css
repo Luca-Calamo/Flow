@@ -2,6 +2,13 @@
   margin: 100px 100px;
 }
 
+.title__container {
+  position: sticky;
+  top: 71px;
+  z-index: 10;
+  background-color: rgb(240, 245, 244);
+}
+
 .section__title {
  font-size: 60px;
     font-weight: bold;
@@ -24,14 +31,32 @@
     font-weight: bold;
     margin: 80px auto 20px auto;
     color: #066051;
+    position: sticky;
+  top: 71px;
+  z-index: 10;
+  background-color: rgb(240, 245, 244);
 }
+
+
 
 .color-accessibility {
   font-size: 40px;
-    font-weight: bold;
-    margin: 80px auto 20px auto;
-    color: #066051;
+  font-weight: bold;
+  margin: 80px auto 20px auto;
+  color: #066051;
+  position: sticky;
+top: 71px;
+z-index: 10;
+background-color: rgb(240, 245, 244);
 }
+
+.sticky-header {
+  position: sticky;
+  top: 71px;
+  z-index: 10;
+  background-color: rgb(240, 245, 244);
+}
+
 
 .subtitle {
   font-size: 28px;

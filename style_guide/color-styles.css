@@ -26,6 +26,13 @@
     color: #066051;
 }
 
+.color-accessibility {
+  font-size: 40px;
+    font-weight: bold;
+    margin: 80px auto 20px auto;
+    color: #066051;
+}
+
 .subtitle {
   font-size: 28px;
   font-weight: bold;

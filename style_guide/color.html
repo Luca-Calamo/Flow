@@ -1,23 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color – Fits Style Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="color-styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
+
 <body>
-    <!-- Nav Bar -->
-    <nav class="nav">
-        <a href="index.html" class="nav__link nav__link--img"><img src="images/logo-dark.png" alt="Fits Logo" class="nav__img nav__link"></a>
-        <ul class="nav__right">
-           <li class="nav__component"><a href="index.html" class="nav__link">Home</a></li>
-           <li class="nav__component"><a href="logo.html" class="nav__link">Logo</a></li>
-           <li class="nav__component"><a href="color.html" class="nav__link active">Color</a></li>
-           <li class="nav__component"><a href="type.html" class="nav__link">Typography</a></li>
-           <li class="nav__component"><a href="graphics.html" class="nav__link">Graphics</a></li>
-           <li class="nav__component"><a href="refrence.html" class="nav__link">References</a></li>
-        </ul>
-     </nav>
+  <!-- Nav Bar -->
+  <nav class="nav">
+    <a href="index.html" class="nav__link--img"><img src="images/logo-dark.png" alt="Fits Logo"
+      class="nav__img"></a>
+    <ul class="nav__right">
+      <li class="nav__component"><a href="index.html" class="nav__link">Home</a></li>
+      <li class="nav__component"><a href="logo.html" class="nav__link">Logo</a></li>
+      <li class="nav__component"><a href="color.html" class="nav__link active">Color</a></li>
+      <li class="nav__component"><a href="type.html" class="nav__link">Typography</a></li>
+      <li class="nav__component"><a href="graphics.html" class="nav__link">Graphics</a></li>
+      <li class="nav__component"><a href="refrence.html" class="nav__link">References</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <h1 class="section__title">A Palette That Fits</h1>
+    <hr class="divider">
+    <p class="section__description">
+      The Fits color palette was built to feel just right, clean, modern, and helpful. Every color was chosen to support the app's purpose: helping people feel confident in their style, while keeping everything clear and accessible. <br>
+      Our main colors, green and soft blue, work together to create a smooth experience. Green keeps things grounded and trustworthy, while the blue adds calmness and space. They balance each other out, making the app feel both reliable and inviting. <br>
+      We also included a few soft accent colors (like for success, warning, and error) that are clear, but never harsh, perfect for keeping things gentle even when you're being notified or corrected.
+    </p>
+
+  <section class="color__mockup">
+     <section class="image-section">
+      <img src="images/colorsexample.png" alt="Fits app color usage example" class="color__mockup-img">
+     </section>
+  </section>
+    
+    
+   <div class="sticky-header">
+    <h2 class="color-section__title">Primary – Green</h2>
+    <hr class="divider">
+   </div>
+    
+  
+    <p class="subtitle">Steady. Clear. Down to Earth.</p>
+    <p class="section__description">
+      This deep green is our core color, you'll see it in buttons, top bars, and other key places throughout the app. It gives a feeling of balance and clarity, which is exactly what you want when picking out outfits or trying new styles. <br>
+      It's grounded and reliable, keeping the hole experience steady and easy to navigate.
+    </p>
+    <div class="color-grid">
+      <div class="color-box" style="background-color: #066051;">#066051</div>
+      <div class="color-box" style="background-color: #388074;">#388074</div>
+      <div class="color-box" style="background-color: #58948A;">#58948A</div>
+      <div class="color-box" style="background-color: #8CB6AF;">#8CB6AF</div>
+    </div>
+
+    <div class="sticky-header">
+      <h2 class="color-section__title">Secondary – Blue</h2>
+    <hr class="divider">
+    </div>
+   
+    
+    <p class="subtitle">Soft. Calm. Welcoming.</p>
+    <p class="section__description">
+      Our secondary color is a soft, light blue that shows up in backgrounds and cards. It keeps everything light and easy to read, without stealing the spotlight. <br>
+      Blue tones like this are known to reduce visual clutter and make things feel relaxed, which is perfect when you're scrolling through outfits or exploring your wardrobe. It also helps make the app more accessible, giving clear contrast while staying gentle on the eyes.
+    </p>
+    <div class="color-grid">
+      <div class="color-box2" style="background-color: #E0E8FF;">#E0E8FF</div>
+      <div class="color-box2" style="background-color: #E6EDFF;">E6EDFF#</div>
+      <div class="color-box2" style="background-color: #EAF0FF;">#EAF0FF</div>
+      <div class="color-box2" style="background-color: #CCD3E8;">#CCD3E8</div>
+    </div>
+
+    <div class="sticky-header">
+      <h2 class="color-section__title">Supporting Colors</h2>
+    <hr class="divider">
+    </div>
+    
+    
+    <p class="subtitle">Soft Feedback That's Easy on the Eyes.</p>
+    <p class="section__description">
+      These colors are used for communicating success, warnings, and errors. They're designed to be noticeable but never harsh, offering clear feedback while keeping the overall experience gentle.
+    </p>
+    <div class="color-grid">
+      <div class="color-box supporting" style="background-color: #7AC8B3;">#7AC8B3<br><span>Success</span></div>
+      <div class="color-box supporting" style="background-color: #F19F48;">#F19F48<br><span>Warning</span></div>
+      <div class="color-box supporting" style="background-color: #FF8284;">#FF8284<br><span>Error</span></div>
+    </div>
+
+    <div class="sticky-header">
+      <h2 class="color-accessibility">Color Accessibility</h2>
+    <hr class="divider">
+    </div>
+    
+    
+    <p class="subtitle">Primary Green on Secondary Blue</p>
+    <section class="color__mockup">
+      <section class="image-section">
+       <img src="images/greenonblue.png" alt="Fits app green and blue contrast" class="color__mockup-img">
+      </section>
+   </section>
+    <p class="section__description">
+      Even though this combo scored "good" for contrast, it actually performs better in our case because the green is used for visuals like icons and headlines, not for long text blocks. It still holds up well across screen sizes and adds a grounded, confident touch that fits our brand vibe.
+    </p>
+
+    <hr class="divider">
+    <p class="subtitle">Dark Text on Secondary Blue</p>
+    <section class="color__mockup">
+      <section class="image-section">
+       <img src="images/darktext-blue.png" alt="Fits app text and blue contrast" class="color__mockup-img">
+      </section>
+   </section>
+    <p class="section__description">
+      This is our go-to combo for longer text, and for good reason. The contrast is strong, the readability is excellent, and the vibe stays calm and clean. It's a great example of how Fits supports a stress-free browsing experience, even during longer wardrobe scrolls.
+    </p>
+
+    <hr class="divider">
+    <p class="subtitle">Dark Text on Light Green</p>
+    <section class="color__mockup">
+      <section class="image-section">
+       <img src="images/darktext-green.png" alt="Fits app text and light green contrast" class="color__mockup-img">
+      </section>
+   </section>
+    <p class="section__description">
+      Soft green with dark text gives us amazing contrast and a fresh, friendly look. It works well in success messages or subtle highlights without breaking the visual flow. It's a gentle way to say, “you did it,” without shouting.
+    </p>
+
+
+
+  </section>
 </body>
 </html>

@@ -2,8 +2,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { startCamera, stopCamera, capturePhoto } from "../utils/cameraUtils";
+import "../css/styles.css";
 
 export default function CameraView({ onPhotoCapture }) {
     const [category, setCategory] = useState("Top");
@@ -62,10 +62,24 @@ export default function CameraView({ onPhotoCapture }) {
             <canvas ref={canvasRef} className='hidden' />
 
             {/* Green header with navigation */}
-            <div className='bg-green-800 text-white p-4'>
+            <div className='bg-[#066051] text-white p-4'>
                 <div className='flex items-center'>
-                    <ChevronLeft className='mr-4' />
-                    <div className='flex space-x-4'>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='30'
+                        height='30'
+                        viewBox='0 0 30 30'
+                        fill='none'
+                    >
+                        <path
+                            d='M18.7501 22.4999L11.2501 14.9999L18.7501 7.49994'
+                            stroke='#ffffff'
+                            strokeWidth='2.4979'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                        />
+                    </svg>
+                    <div className='flex camMenu'>
                         {categories.map((cat) => (
                             <div
                                 key={cat}
@@ -102,17 +116,41 @@ export default function CameraView({ onPhotoCapture }) {
 
                 {/* Navigation arrows */}
                 <button
-                    className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-green-700 text-white p-2 rounded-full'
+                    className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#066051] text-white p-2 rounded-full'
                     onClick={() => switchCategory("prev")}
                 >
-                    <ChevronLeft size={24} />
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                    >
+                        <path
+                            d='M22 12H2M2 12L11 3M2 12L11 21'
+                            stroke='white'
+                            strokeWidth='2'
+                        />
+                    </svg>
                 </button>
 
                 <button
-                    className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-green-700 text-white p-2 rounded-full'
+                    className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#066051] text-white p-2 rounded-full'
                     onClick={() => switchCategory("next")}
                 >
-                    <ChevronRight size={24} />
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        viewBox='0 0 24 24'
+                        fill='none'
+                    >
+                        <path
+                            d='M2 12H22M22 12L13 3M22 12L13 21'
+                            stroke='white'
+                            strokeWidth='2'
+                        />
+                    </svg>
                 </button>
 
                 {/* Simple camera button */}

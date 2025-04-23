@@ -2,9 +2,11 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
 export default function PhotoView({ capturedImage, onRetakePhoto }) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const router = useRouter();
 
     const fullDescription =
         "It's a basic crew neck style with short sleeves and appears to be made from a standard cotton or cotton-blend fabric. The t-shirt has no visible graphics, text, patterns, or design elements. It's a classic unisex style that would serve as a versatile basic item in a wardrobe.";
@@ -27,6 +29,8 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
                         height='30'
                         viewBox='0 0 30 30'
                         fill='none'
+                        onClick={onRetakePhoto}
+                        className='cursor-pointer'
                     >
                         <path
                             d='M18.7501 22.4999L11.2501 14.9999L18.7501 7.49994'
@@ -49,13 +53,11 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
             {/* Photo display */}
             <div className='flex-1 bg-gray-100 p-4 flex flex-col'>
                 <div className='bg-white flex-1 flex items-center justify-center p-4 rounded-md shadow-sm'>
-                    {capturedImage && (
-                        <img
-                            src={capturedImage}
-                            alt='Captured item'
-                            className='max-h-full max-w-full object-contain'
-                        />
-                    )}
+                    <img
+                        src='/images/noBg_shirt.png' // Use the public folder path
+                        alt='Shirt'
+                        className='max-h-full max-w-full object-contain'
+                    />
                 </div>
 
                 {/* Description section */}

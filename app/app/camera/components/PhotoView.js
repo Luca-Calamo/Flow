@@ -2,10 +2,13 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter for navigation
+import { useRouter } from "next/navigation";
+import FolderSelection from "./FolderSelection";
+import "../css/styles.css";
 
 export default function PhotoView({ capturedImage, onRetakePhoto }) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [showFolderSelection, setShowFolderSelection] = useState(false);
     const router = useRouter();
 
     const fullDescription =
@@ -18,10 +21,14 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
         setIsExpanded(!isExpanded);
     };
 
+    const handleSaveToFolder = (selectedFolders) => {
+        console.log("Saving to folders:", selectedFolders);
+        // Here you would implement the actual saving logic
+    };
+
     return (
         <>
-            {/* Header with updated color */}
-            <div className='bg-[#066051] text-white p-4 flex justify-between items-center'>
+            <div className='header'>
                 <div className='flex items-center'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -34,7 +41,7 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
                     >
                         <path
                             d='M18.7501 22.4999L11.2501 14.9999L18.7501 7.49994'
-                            stroke='#ffffff'
+                            stroke='white'
                             strokeWidth='2.4979'
                             strokeLinecap='round'
                             strokeLinejoin='round'
@@ -50,9 +57,8 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
                 </button>
             </div>
 
-            {/* Photo display */}
-            <div className='flex-1 bg-gray-100 p-4 flex flex-col'>
-                <div className='bg-white flex-1 flex items-center justify-center p-4 rounded-md shadow-sm'>
+            <div className='photo-display'>
+                <div className='photo-container'>
                     <img
                         src='/images/noBg_shirt.png' // Use the public folder path
                         alt='Shirt'
@@ -84,15 +90,14 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
                         </div>
                     </div>
 
-                    <div className='mt-2 bg-white p-3 rounded-md shadow-sm border border-gray-200'>
-                        <p className='text-base leading-relaxed text-gray-800'>
+                    <div className='description-section'>
+                        <p className='description-text'>
                             {isExpanded ? fullDescription : shortDescription}
                         </p>
 
-                        {/* Move the toggle button closer to the text */}
                         <button
                             onClick={toggleDescription}
-                            className='text-[#066051] font-medium text-sm mt-2 flex items-center'
+                            className='toggle-button'
                         >
                             {isExpanded ? "See less" : "See more"}{" "}
                             <svg
@@ -117,11 +122,22 @@ export default function PhotoView({ capturedImage, onRetakePhoto }) {
                         </button>
                     </div>
 
-                    <button className='mt-6 bg-[#066051] text-white py-3 px-4 rounded-full w-full font-medium text-lg shadow-md hover:bg-green-700 transition-colors'>
+                    <button
+                        className='button-primary mt-6 w-full'
+                        onClick={() => setShowFolderSelection(true)}
+                    >
                         Choose Folder
                     </button>
                 </div>
             </div>
+
+            {/* Folder Selection Overlay */}
+            {showFolderSelection && (
+                <FolderSelection
+                    onClose={() => setShowFolderSelection(false)}
+                    onSave={handleSaveToFolder}
+                />
+            )}
         </>
     );
 }

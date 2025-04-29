@@ -1,4 +1,4 @@
-import styles from './wardrobeCardHome.module.css';
+import '../css/styles.css';
 export default function WardrobeCardHome() {
     return (
         <div className={styles.cardHome}>

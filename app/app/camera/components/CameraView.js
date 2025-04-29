@@ -73,7 +73,7 @@ export default function CameraView({ onPhotoCapture }) {
             <canvas ref={canvasRef} className='hidden' />
 
             {/* Green header with navigation */}
-            <div className='bg-[#066051] text-white p-4'>
+            <div className='header'>
                 <div className='flex items-center'>
                     <svg
                         xmlns='http://www.w3.org/2000/svg'
@@ -86,13 +86,13 @@ export default function CameraView({ onPhotoCapture }) {
                     >
                         <path
                             d='M18.7501 22.4999L11.2501 14.9999L18.7501 7.49994'
-                            stroke='#ffffff'
+                            stroke='white'
                             strokeWidth='2.4979'
                             strokeLinecap='round'
                             strokeLinejoin='round'
                         />
                     </svg>
-                    <div className='flex camMenu'>
+                    <div className='camMenu'>
                         {categories.map((cat) => (
                             <div
                                 key={cat}
@@ -111,7 +111,7 @@ export default function CameraView({ onPhotoCapture }) {
             </div>
 
             {/* Camera viewport */}
-            <div className='relative flex-1 bg-gray-200'>
+            <div className='camera-viewport'>
                 {/* Video element for camera feed */}
                 {isClient && (
                     <video
@@ -210,13 +210,16 @@ export default function CameraView({ onPhotoCapture }) {
                     )}
                     {!["Top", "Bottoms", "Shoes", "Hat"].includes(category) && (
                         // Render the default dotted line box for other categories
-                        <div className='border-4 border-dashed border-white rounded-xl w-4/5 h-4/5'></div>
+                        <div
+                            className='border-4 border-dashed border-white rounded-xl'
+                            style={{ width: "80%", height: "80%" }}
+                        ></div>
                     )}
                 </div>
 
                 {/* Navigation arrows */}
                 <button
-                    className='absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#066051] text-white p-2 rounded-full'
+                    className='nav-arrow nav-arrow-left'
                     onClick={() => switchCategory("prev")}
                 >
                     <svg
@@ -235,7 +238,7 @@ export default function CameraView({ onPhotoCapture }) {
                 </button>
 
                 <button
-                    className='absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#066051] text-white p-2 rounded-full'
+                    className='nav-arrow nav-arrow-right'
                     onClick={() => switchCategory("next")}
                 >
                     <svg
@@ -255,10 +258,7 @@ export default function CameraView({ onPhotoCapture }) {
 
                 {/* Simple camera button */}
                 <div className='absolute bottom-0 left-0 w-full bg-black flex items-center justify-center py-8'>
-                    <button
-                        className='w-16 h-16 bg-white rounded-full border-4 border-gray-300'
-                        onClick={takePhoto}
-                    />
+                    <button className='camera-button' onClick={takePhoto} />
                 </div>
             </div>
         </>

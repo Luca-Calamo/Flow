@@ -1,4 +1,5 @@
 import Top_Bar from "@/global-components/top_bar/top_bar";
+import Navbar from "@/global-components/bottom-navbar/navbar";
 
 export default function Home() {
     return (
@@ -19,12 +20,13 @@ export default function Home() {
                     Go to Camera
                 </a>
                 <a
-                href='/wardrobe'
-                className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
-            >
-                Go to Wardrobe
-            </a>
+                    href='/wardrobe'
+                    className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
+                >
+                    Go to Wardrobe
+                </a>
             </div>
+            <Navbar active='home' />
         </div>
     );
 }

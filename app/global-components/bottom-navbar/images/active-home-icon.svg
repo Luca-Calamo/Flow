@@ -1,0 +1,30 @@
+<svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="17" height="19" fill="#1E1E1E"/>
+<g id="Tab bar">
+<path d="M-132 -137C-132 -138.105 -131.105 -139 -130 -139H1388C1389.1 -139 1390 -138.105 1390 -137V371C1390 372.105 1389.1 373 1388 373H-130C-131.105 373 -132 372.105 -132 371V-137Z" fill="white"/>
+<path d="M-130 -138H1388V-140H-130V-138ZM1389 -137V371H1391V-137H1389ZM1388 372H-130V374H1388V372ZM-131 371V-137H-133V371H-131ZM-130 372C-130.552 372 -131 371.552 -131 371H-133C-133 372.657 -131.657 374 -130 374V372ZM1389 371C1389 371.552 1388.55 372 1388 372V374C1389.66 374 1391 372.657 1391 371H1389ZM1388 -138C1388.55 -138 1389 -137.552 1389 -137H1391C1391 -138.657 1389.66 -140 1388 -140V-138ZM-130 -140C-131.657 -140 -133 -138.657 -133 -137H-131C-131 -137.552 -130.552 -138 -130 -138V-140Z" fill="black" fill-opacity="0.1"/>
+<g id="Tab bar/Home">
+<g id="Tab bar_2" filter="url(#filter0_d_1898_11555)">
+<rect x="-32" y="-23" width="393" height="80" fill="white"/>
+</g>
+<g id="Home icon/primary">
+<g id="Group">
+<path id="Vector" d="M3.01447 18C1.90193 18 1 17.0745 1 15.9317V7.61883C1 6.99078 1.27861 6.39579 1.75554 6.00385L7.29651 1.45359C7.65054 1.16042 8.09578 1 8.55544 1C9.01509 1 9.46034 1.16042 9.81436 1.45359L15.3544 6.00385C15.8323 6.39579 16.1109 6.99078 16.1109 7.61883V15.9317C16.1109 17.0745 15.2089 18 14.0964 18H3.01447Z" stroke="#05574A" stroke-width="1.41664" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M6.19434 18.0002V12.8059C6.19434 12.3049 6.39334 11.8245 6.74757 11.4702C7.1018 11.116 7.58224 10.917 8.0832 10.917H9.02763C9.52858 10.917 10.009 11.116 10.3633 11.4702C10.7175 11.8245 10.9165 12.3049 10.9165 12.8059V18.0002" stroke="#05574A" stroke-width="1.41664" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_1898_11555" x="-47" y="-41" width="423" height="110" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-3"/>
+<feGaussianBlur stdDeviation="7.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1898_11555"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1898_11555" result="shape"/>
+</filter>
+</defs>
+</svg>

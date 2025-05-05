@@ -95,8 +95,8 @@ body {
 
 .img {
     width: 88px;
-    height: 88px;
-    justify-content: center;
+    height: 200px;
+    justify-content: end;
     /* margin-top: 25px; */
 }
 

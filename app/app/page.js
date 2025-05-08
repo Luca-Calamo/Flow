@@ -1,5 +1,6 @@
-import Top_Bar from '@/global-components/top_bar/top_bar';
-import Navbar from '@/global-components/bottom-navbar/navbar';
+
+import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
+import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 
 export default function Home() {
     return (

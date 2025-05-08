@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.img {
+    margin: 15px;
+    width: 173px;
+    height: 140px;
+}

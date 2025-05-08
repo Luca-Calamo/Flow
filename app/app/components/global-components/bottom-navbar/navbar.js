@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./navbar.module.css";
 import Image from "next/image";
 import HomeIcon from "./images/home-icon.svg";
@@ -10,10 +13,16 @@ import ActiveProfileIcon from "./images/active-profile-icon.svg";
 import ProfileIcon from "./images/profile-icon.svg";
 import CameraIcon from "./images/camera-icon.svg";
 
-export default function Navbar({ active }) {
+export default function Navbar() {
+    const [active, setActive] = useState("home");
+
     return (
         <div className={styles.navbar}>
-            <div className={styles.item}>
+            <a
+                href='/'
+                className={styles.item}
+                onClick={() => setActive("home")}
+            >
                 <Image
                     src={active === "home" ? ActiveHomeIcon : HomeIcon}
                     alt='home icon'
@@ -27,8 +36,12 @@ export default function Navbar({ active }) {
                 >
                     Home
                 </p>
-            </div>
-            <div className={styles.item}>
+            </a>
+            <a
+                href='/'
+                className={styles.item}
+                onClick={() => setActive("suggest")}
+            >
                 <Image
                     src={active === "suggest" ? ActiveSuggestIcon : SuggestIcon}
                     alt='suggest icon'
@@ -42,11 +55,15 @@ export default function Navbar({ active }) {
                 >
                     Suggest
                 </p>
-            </div>
-            <div>
+            </a>
+            <a href='/' onClick={() => setActive("camera")}>
                 <Image src={CameraIcon} alt='camera icon' />
-            </div>
-            <div className={styles.item}>
+            </a>
+            <a
+                href='/'
+                className={styles.item}
+                onClick={() => setActive("wardrobe")}
+            >
                 <Image
                     src={
                         active === "wardrobe"
@@ -64,8 +81,12 @@ export default function Navbar({ active }) {
                 >
                     Wardrobe
                 </p>
-            </div>
-            <div className={styles.item}>
+            </a>
+            <a
+                href='/'
+                className={styles.item}
+                onClick={() => setActive("profile")}
+            >
                 <Image
                     src={active === "profile" ? ActiveProfileIcon : ProfileIcon}
                     alt='profile icon'
@@ -79,7 +100,7 @@ export default function Navbar({ active }) {
                 >
                     Profile
                 </p>
-            </div>
+            </a>
         </div>
     );
 }

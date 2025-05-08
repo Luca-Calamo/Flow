@@ -17,6 +17,7 @@ export default function Home() {
                 onButtonChange={handleButtonChange}
                 initialActive='left'
             />
+
             <div className='flex-1 flex items-center justify-center w-full'>
                 <a
                     href='/camera'

@@ -1,13 +1,35 @@
+"use client";
+
 import styles from "./top_bar.css";
+import { useState } from "react";
 
 export default function Top_Bar({
     title,
     hasIcon,
     hasBar,
-    leftBtn = "Wheel",
-    rightBtn = "Canvas",
-    activeBtn = "left",
+    leftBtn = "Fits",
+    rightBtn = "Articles",
+    onButtonChange,
+    initialActive = "left",
 }) {
+    const [activeBtn, setActiveBtn] = useState(initialActive);
+
+    const handleLeftBtnClick = (e) => {
+        e.preventDefault();
+        setActiveBtn("left");
+        if (onButtonChange) {
+            onButtonChange("left", leftBtn);
+        }
+    };
+
+    const handleRightBtnClick = (e) => {
+        e.preventDefault();
+        setActiveBtn("right");
+        if (onButtonChange) {
+            onButtonChange("right", rightBtn);
+        }
+    };
+
     return (
         <div className='top-bar'>
             <div className='top-bar__main'>
@@ -36,6 +58,7 @@ export default function Top_Bar({
                         className={`btn1 ${
                             activeBtn === "left" ? "active" : ""
                         }`}
+                        onClick={handleLeftBtnClick}
                     >
                         {leftBtn}
                     </button>
@@ -43,6 +66,7 @@ export default function Top_Bar({
                         className={`btn2 ${
                             activeBtn === "right" ? "active" : ""
                         }`}
+                        onClick={handleRightBtnClick}
                     >
                         {rightBtn}
                     </button>

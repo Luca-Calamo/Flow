@@ -1,17 +1,21 @@
+"use client";
 
 import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 
 export default function Home() {
+    const handleButtonChange = (position, buttonText) => {
+        alert(`Button clicked: ${buttonText} (${position})`);
+    };
+
     return (
         <div className='flex flex-col items-center min-h-screen bg-white'>
             <Top_Bar
                 title='Title'
                 hasBar={true}
-                leftBtn='Wheel'
-                rightBtn='Canvas'
-                activeBtn='left'
                 hasIcon={true}
+                onButtonChange={handleButtonChange}
+                initialActive='left'
             />
             <div className='flex-1 flex items-center justify-center w-full'>
                 <a
@@ -33,7 +37,7 @@ export default function Home() {
                     Go to Wardrobe Home
                 </a>
             </div>
-            <Navbar active='home' />
+            <Navbar initialActive='home' />
         </div>
     );
 }

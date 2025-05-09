@@ -1,34 +1,24 @@
-// app/page.js - Main page component
-'use client';
+"use client";
 
-import { useState } from 'react';
-import CameraView from './components/CameraView';
-import PhotoView from './components/PhotoView';
+import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
+import Camera from "@/app/components/camera/webcam";
+import TakePhoto from "@/app/components/camera/navigation/takePhoto";
+import TopCamBar from "@/app/components/camera/navigation/topCamBar";
+import CircleButton from "@/app/components/buttons/circleButton";
 
 export default function Home() {
-    const [screen, setScreen] = useState('camera'); // 'camera' or 'photoView'
-    const [capturedImage, setCapturedImage] = useState(null);
-
-    const handlePhotoCapture = (imageData) => {
-        setCapturedImage(imageData);
-        setScreen('photoView');
-    };
-
-    const handleRetakePhoto = () => {
-        setCapturedImage(null);
-        setScreen('camera');
+    const handleTakePhoto = () => {
+        alert("Take Photo");
     };
 
     return (
-        <main className='flex flex-col h-screen bg-white'>
-            {screen === 'camera' ? (
-                <CameraView onPhotoCapture={handlePhotoCapture} />
-            ) : (
-                <PhotoView
-                    capturedImage={capturedImage}
-                    onRetakePhoto={handleRetakePhoto}
-                />
-            )}
-        </main>
+        <div className='flex flex-col items-center min-h-screen bg-white'>
+            <Top_Bar title='Camera' hasIcon={true} />
+            <TopCamBar />
+            <Camera />
+            <CircleButton onClick={handleTakePhoto} direction='right' />
+            <CircleButton onClick={handleTakePhoto} direction='left' />
+            <TakePhoto onTakePhoto={handleTakePhoto} />
+        </div>
     );
 }

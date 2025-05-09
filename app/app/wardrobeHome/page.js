@@ -26,6 +26,9 @@ export default function WarCard() {
                 <img className='arrow' src='images/arrow.png'></img>
             </div>
             <br></br>
+            <div>
+                <WardrobeCard />
+            </div>
             <CircleButton />
         </div>
     );

@@ -1,4 +1,4 @@
-import './css/styles.css';
+import styles from '@/app/components/buttons/css/circleButton.module.css';
 
 export default function SmallButton() {
     return (

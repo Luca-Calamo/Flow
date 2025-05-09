@@ -1,9 +1,25 @@
-import styles from '@/components/buttons/circleButton.module.css';
+"use client";
 
-export default function CircleButton() {
+import styles from "@/app/components/buttons/css/circleButton.module.css";
+import Image from "next/image";
+
+export default function CircleButton({ onClick, direction }) {
     return (
-        <div className={styles.circleBtn}>
-            <img className={styles.circleBtnImg}></img>
+        <div
+            className={` ${styles.button} ${
+                direction === "right"
+                    ? styles["buttonRight"]
+                    : styles["buttonLeft"]
+            }`}
+            onClick={onClick}
+        >
+            <Image
+                src={"/arrow.svg"}
+                alt={"arrow"}
+                className={styles.image}
+                width={24}
+                height={24}
+            />
         </div>
     );
 }

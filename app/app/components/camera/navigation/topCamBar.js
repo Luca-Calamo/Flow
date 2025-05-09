@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "@/app/components/camera/topCamBar.module.css";
+import styles from "@/app/components/camera/navigation/css/topCamBar.module.css";
 
 export default function TopCamBar() {
     const [activeButton, setActiveButton] = useState("tops");

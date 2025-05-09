@@ -11,12 +11,13 @@ export default function Home() {
     return (
         <div className='flex flex-col items-center min-h-screen bg-white'>
             <Top_Bar
-                title='Title'
+                title='Home'
                 hasBar={true}
                 hasIcon={true}
                 onButtonChange={handleButtonChange}
                 initialActive='left'
             />
+
             <div className='flex-1 flex items-center justify-center w-full'>
                 <a
                     href='/camera'

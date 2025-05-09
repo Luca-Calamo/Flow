@@ -1,0 +1,16 @@
+.bar {
+    width: 100%;
+    padding: 30px 0 50px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 100%;
+    width: 75px;
+    height: 75px;
+}

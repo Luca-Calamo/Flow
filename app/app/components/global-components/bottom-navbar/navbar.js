@@ -56,7 +56,7 @@ export default function Navbar() {
                     Suggest
                 </p>
             </a>
-            <a href='/' onClick={() => setActive("camera")}>
+            <a href='/camera' onClick={() => setActive("camera")}>
                 <Image src={CameraIcon} alt='camera icon' />
             </a>
             <a

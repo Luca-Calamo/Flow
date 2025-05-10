@@ -3,7 +3,7 @@
 import styles from "@/app/components/buttons/css/circleButton.module.css";
 import Image from "next/image";
 
-export default function RoundBtn({ onClick, direction }) {
+export default function CircleButton({ onClick, direction }) {
     return (
         <div
             className={` ${styles.button} ${

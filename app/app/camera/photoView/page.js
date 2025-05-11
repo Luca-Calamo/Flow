@@ -8,6 +8,10 @@ import LargeButton from "@/app/components/buttons/largeButton";
 import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
+    let onClick = () => {
+        return;
+    };
+
     return (
         <div className={styles.page}>
             <Top_Bar
@@ -15,6 +19,7 @@ export default function PhotoView() {
                 hasBtn={true}
                 btnTxt='Re-take photo'
                 btnType='secondary'
+                btnOnClick='/camera'
             />
             <Photo />
             <Description />

@@ -1,4 +1,6 @@
+
 import styles from "@/app/components/buttons/css/smallButton.module.css";
+
 
 export default function SmallButton({ text, onClick, type = "primary" }) {
     return (

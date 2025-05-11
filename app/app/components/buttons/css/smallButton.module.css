@@ -1,0 +1,22 @@
+.smlBtn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 5px 10px;
+}
+
+.smlBtnText {
+    font-size: 12px;
+}
+
+.primary {
+    background-color: #066051;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #fff;
+    border: 1px solid #03352d;
+    color: #03352d;
+}

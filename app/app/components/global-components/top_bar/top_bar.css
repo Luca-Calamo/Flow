@@ -6,9 +6,15 @@
 
 .top-bar__main {
     display: flex;
+    align-items: center;
 }
 
 .top-bar__icon {
+    position: absolute;
+    margin-left: 15px;
+}
+
+.top-bar__btn {
     position: absolute;
     margin-left: 15px;
 }

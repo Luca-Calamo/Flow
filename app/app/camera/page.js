@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
 import Camera from "@/app/components/camera/webcam";
-import TakePhoto from "@/app/components/camera/navigation/takePhoto";
 import TopCamBar from "@/app/components/camera/navigation/topCamBar";
 import CircleButton from "@/app/components/buttons/circleButton";
 import OutlineOverlay from "../components/camera/navigation/OutlineOverlay";
+import styles from "@/app/camera/camera.module.css";
 
 export default function Home() {
     const [activeOverlay, setActiveOverlay] = useState("tops");
@@ -43,7 +44,9 @@ export default function Home() {
             <OutlineOverlay overlay={activeOverlay} />
             <CircleButton onClick={nxtOverlay} direction='right' />
             <CircleButton onClick={prevOverlay} direction='left' />
-            <TakePhoto onTakePhoto={handleTakePhoto} />
+            <Link href='/camera/photoView' className={styles.bar}>
+                <div className={styles.button}></div>
+            </Link>
         </div>
     );
 }

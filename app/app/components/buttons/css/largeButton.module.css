@@ -1,0 +1,21 @@
+.button {
+    padding: 5px 24px;
+    border-radius: 20px;
+    color: red;
+    width: 100%;
+    text-align: center;
+}
+
+.primary {
+    background-color: #066051;
+    color: #fff;
+}
+
+.secondary {
+    background-color: #b2cec9;
+    color: #161616;
+}
+
+.text {
+    font-size: 20px;
+}

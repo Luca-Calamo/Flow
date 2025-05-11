@@ -2,11 +2,17 @@
 
 import styles from "./top_bar.css";
 import { useState } from "react";
+import Link from "next/link";
+import SmallButton from "../../buttons/smallButton";
 
 export default function Top_Bar({
     title,
     hasIcon,
     hasBar,
+    hasBtn,
+    btnTxt,
+    btnType,
+    btnOnClick,
     leftBtn = "Fits",
     rightBtn = "Articles",
     onButtonChange,
@@ -47,6 +53,13 @@ export default function Top_Bar({
                                 fill='white'
                             />
                         </svg>
+                    </div>
+                )}
+                {hasBtn && (
+                    <div className='top-bar__btn'>
+                        <Link href={btnOnClick}>
+                            <SmallButton text={btnTxt} type={btnType} />
+                        </Link>
                     </div>
                 )}
 

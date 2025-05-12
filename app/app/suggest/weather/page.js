@@ -3,7 +3,6 @@
 import { useState } from "react";
 import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
-import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
 import sunnyIcon from "@/public/images/suggest-sunny.png";
 import cloudyIcon from "@/public/images/suggest-cloudy.png";
@@ -47,7 +46,6 @@ export default function SuggestionMoodPage() {
                 back="/suggest/mood"
                 next="/suggest/plan"
             />
-            <Navbar />
         </div>
     );
 }

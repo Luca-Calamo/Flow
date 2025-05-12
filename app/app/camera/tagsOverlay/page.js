@@ -1,17 +1,24 @@
 "use client";
 
 import { createPortal } from "react-dom";
+import { useState } from "react";
 import styles from "@/app/camera/tagsOverlay/tagsOverlay.module.css";
 import SmallButton from "@/app/components/buttons/smallButton";
 import LargeButton from "@/app/components/buttons/largeButton";
+import TagButton from "@/app/components/buttons/tagButton";
 
 export default function TagsOverlay({ onClose }) {
+    const [isSelected, setIsSelected] = useState(false);
+
     const handleCloseClick = (e) => {
         e.preventDefault();
-        onClose();
+        if (onClose) {
+            onClose();
+        }
     };
     const onClick = (e) => {
         e.preventDefault();
+        console.log("clicked");
     };
 
     const modalContent = (
@@ -29,118 +36,49 @@ export default function TagsOverlay({ onClose }) {
                         <div className={styles.section}>
                             <h3>Type</h3>
                             <div className={styles.buttonContainer}>
-                                <SmallButton
-                                    type='secondary'
+                                <TagButton
+                                    type={isSelected ? "primary" : "secondary"}
                                     text={"T-shirt"}
-                                    onclick={onClick}
+                                    onClick={onClick}
                                 />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Weather</h3>
                             <div className={styles.buttonContainer}>
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Season</h3>
                             <div className={styles.buttonContainer}>
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Color</h3>
                             <div className={styles.buttonContainer}>
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
-                                <SmallButton
-                                    type='secondary'
-                                    text={"T-shirt"}
-                                />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"T-shirt"} />
                             </div>
                         </div>
                     </div>

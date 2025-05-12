@@ -19,9 +19,10 @@ export default function SuggestionPage() {
                 className={styles.wardrobeGif}
             />
             <RoundedButton
-                text='Get Outfit Suggestions'
-                href=''
-                type='primary'
+
+                text="Get Outfit Suggestions"
+                href="/suggest/mood"
+                type="primary"
                 className={styles.roundedButton}
             />
             <Navbar />

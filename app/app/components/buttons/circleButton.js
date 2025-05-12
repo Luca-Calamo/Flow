@@ -9,7 +9,7 @@ export default function CircleButton({ onClick, direction }) {
             className={` ${styles.button} ${
                 direction === "right"
                     ? styles["buttonRight"]
-                    : styles["buttonLeft"]
+                    : direction === "left" && styles["buttonLeft"]
             }`}
             onClick={onClick}
         >

@@ -6,6 +6,7 @@ import HelloHeader from "../components/suggest/HelloHeader";
 import Statusbar from "../components/global-components/statusbar/Statusbar";
 import wardrobeGif from "@/public/images/suggest-wardrobe-icon.gif";
 import RoundedButton from "../components/global-components/rounded-button/RoundedButton";
+import Navbar from "../components/global-components/bottom-navbar/navbar";
 
 export default function SuggestionPage() {
     return (
@@ -19,6 +20,7 @@ export default function SuggestionPage() {
                 type="primary"
                 className={styles.roundedButton}
             />
+            <Navbar />
         </div>
     );
 }

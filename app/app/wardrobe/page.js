@@ -5,7 +5,7 @@ export default function Wardrobe() {
     return (
         <div>
             <WardrobeCardHome />
-            {/* <div className='container'>
+            {/* <div className='contain er'>
                 <div className='card'>
                     <h2 className='card-title'>Build a Fit</h2>
                     <img
@@ -27,15 +27,3 @@ export default function Wardrobe() {
         </div>
     );
 }
-
-// app/
-// -wardrobe/
-// --page.js
-// --wardrobe.module.css
-
-// components/*css*/`
-//     - top_bar/
-//     - bottomBar/
-//     ---bottomBar.module.css
-//     ---bottomBar.js
-// `

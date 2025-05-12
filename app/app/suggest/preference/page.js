@@ -2,10 +2,9 @@
 
 import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
-import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
-export default function SuggestionMoodPage() {
+export default function SuggestionPreferPage() {
     return (
         <div>
             <Statusbar titleBar={true} title="Get My Look" />

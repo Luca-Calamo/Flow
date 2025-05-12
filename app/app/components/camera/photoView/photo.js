@@ -5,7 +5,7 @@ import Image from "next/image";
 import LargeButton from "../../buttons/largeButton";
 import SmallButton from "../../buttons/smallButton";
 
-export default function Photo() {
+export default function Photo({ onClick }) {
     return (
         <div className={styles.container}>
             <Image
@@ -19,7 +19,7 @@ export default function Photo() {
                 <LargeButton
                     text={"Add Tags"}
                     type={"primary"}
-                    onClick={() => {}}
+                    onClick={onClick}
                 />
             </div>
         </div>

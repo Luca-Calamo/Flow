@@ -5,22 +5,22 @@ import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
-import happyIcon from "@/public/images/suggest-happy.png";
-import calmIcon from "@/public/images/suggest-calm.png";
-import confidentIcon from "@/public/images/suggest-confident.png";
-import lazyIcon from "@/public/images/suggest-lazy.png";
-import downIcon from "@/public/images/suggest-down.png";
-import daringIcon from "@/public/images/suggest-daring.png";
+import sunnyIcon from "@/public/images/suggest-sunny.png";
+import cloudyIcon from "@/public/images/suggest-cloudy.png";
+import overcastIcon from "@/public/images/suggest-overcast.png";
+import rainyIcon from "@/public/images/suggest-rainy.png";
+import snowyIcon from "@/public/images/suggest-snowy.png";
+import windyIcon from "@/public/images/suggest-windy.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
 export default function SuggestionMoodPage() {
     const [moodItems, setMoodItems] = useState([
-        { icon: happyIcon, label: "Happy", selected: false },
-        { icon: calmIcon, label: "Calm", selected: false },
-        { icon: confidentIcon, label: "Confident", selected: false },
-        { icon: lazyIcon, label: "Lazy", selected: false },
-        { icon: downIcon, label: "Down", selected: false },
-        { icon: daringIcon, label: "Daring", selected: false },
+        { icon: sunnyIcon, label: "Sunny", selected: true },
+        { icon: cloudyIcon, label: "Cloudy", selected: false },
+        { icon: overcastIcon, label: "Overcast", selected: false },
+        { icon: rainyIcon, label: "Rainy", selected: false },
+        { icon: snowyIcon, label: "Snowy", selected: false },
+        { icon: windyIcon, label: "Windy", selected: false },
     ]);
 
     const handleItemClick = (index) => {

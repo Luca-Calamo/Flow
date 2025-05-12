@@ -16,7 +16,7 @@ export default function SuggestionPage() {
             <Image src={wardrobeGif} alt="wardrobe gif" className={styles.wardrobeGif} />
             <RoundedButton
                 text="Get Outfit Suggestions"
-                href=""
+                href="/suggest/mood"
                 type="primary"
                 className={styles.roundedButton}
             />

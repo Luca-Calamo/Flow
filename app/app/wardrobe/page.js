@@ -1,11 +1,11 @@
-// import WardrobeCardHome from '../components/wardrobe-components/wardrobeCardHome';
 import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
+// import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
 
 export default function Wardrobe() {
     return (
         <div>
-            {/* <WardrobeCardHome /> */}
-            <div className='container'>
+            <WardrobeCardHome />
+            {/* <div className='container'>
                 <div className='card'>
                     <h2 className='card-title'>Build a Fit</h2>
                     <img
@@ -23,7 +23,7 @@ export default function Wardrobe() {
                         alt='Shirt Icon'
                     ></img>
                 </div>
-            </div>{' '}
+            </div> */}
         </div>
     );
 }

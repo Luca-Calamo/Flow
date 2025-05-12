@@ -12,7 +12,7 @@ import snowyIcon from "@/public/images/suggest-snowy.png";
 import windyIcon from "@/public/images/suggest-windy.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
-export default function SuggestionMoodPage() {
+export default function SuggestionWeatherPage() {
     const [moodItems, setMoodItems] = useState([
         { icon: sunnyIcon, label: "Sunny", selected: true },
         { icon: cloudyIcon, label: "Cloudy", selected: false },

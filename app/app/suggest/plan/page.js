@@ -12,7 +12,7 @@ import formalIcon from "@/public/images/suggest-formal.png";
 import vacationIcon from "@/public/images/suggest-vacation.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
-export default function SuggestionMoodPage() {
+export default function SuggestionPlanPage() {
     const [moodItems, setMoodItems] = useState([
         { icon: workIcon, label: "Sunny", selected: false },
         { icon: dateIcon, label: "Cloudy", selected: false },

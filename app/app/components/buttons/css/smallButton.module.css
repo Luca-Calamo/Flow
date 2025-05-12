@@ -4,6 +4,8 @@
     align-items: center;
     border-radius: 100px;
     padding: 5px 10px;
+    width: 78px;
+    height: 28px;
 }
 
 .smlBtnText {

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
 import Photo from "@/app/components/camera/photoView/photo";
 import Description from "@/app/components/camera/photoView/description";
@@ -11,8 +12,10 @@ import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
     const [showOverlay, setShowOverlay] = useState(false);
-    let onClick = () => {
-        return;
+
+    const router = useRouter();
+    let clicked = () => {
+        router.push("/camera");
     };
 
     return (
@@ -22,7 +25,7 @@ export default function PhotoView() {
                 hasBtn={true}
                 btnTxt='Re-take photo'
                 btnType='secondary'
-                btnOnClick={onClick}
+                btnOnClick={clicked}
             />
             {showOverlay && (
                 <TagsOverlay onClose={() => setShowOverlay(false)}>

@@ -12,90 +12,64 @@ import WardrobeIcon from "./images/wardrobe-icon.svg";
 import ActiveProfileIcon from "./images/active-profile-icon.svg";
 import ProfileIcon from "./images/profile-icon.svg";
 import CameraIcon from "./images/camera-icon.svg";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-    const [active, setActive] = useState("home");
+    const pathname = usePathname();
 
     return (
         <div className={styles.navbar}>
-            <a
-                href='/'
-                className={styles.item}
-                onClick={() => setActive("home")}
-            >
-                <Image
-                    src={active === "home" ? ActiveHomeIcon : HomeIcon}
-                    alt='home icon'
-                />
+            <a href="/" className={styles.item}>
+                <Image src={pathname === "/" ? ActiveHomeIcon : HomeIcon} alt="home icon" />
                 <p
                     className={`${styles.text} ${
-                        active === "home"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === "/" ? styles["text-active"] : styles["text-inactive"]
                     }`}
                 >
                     Home
                 </p>
             </a>
-            <a
-                href='/'
-                className={styles.item}
-                onClick={() => setActive("suggest")}
-            >
+
+            <a href="/suggest" className={styles.item}>
                 <Image
-                    src={active === "suggest" ? ActiveSuggestIcon : SuggestIcon}
-                    alt='suggest icon'
+                    src={pathname === "/suggest" ? ActiveSuggestIcon : SuggestIcon}
+                    alt="suggest icon"
                 />
                 <p
                     className={`${styles.text} ${
-                        active === "suggest"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === "/suggest" ? styles["text-active"] : styles["text-inactive"]
                     }`}
                 >
                     Suggest
                 </p>
             </a>
-            <a href='/camera' onClick={() => setActive("camera")}>
-                <Image src={CameraIcon} alt='camera icon' />
+
+            <a href="/camera">
+                <Image src={CameraIcon} alt="camera icon" className={styles.cameraIcon} />
             </a>
-            <a
-                href='/'
-                className={styles.item}
-                onClick={() => setActive("wardrobe")}
-            >
+
+            <a href="/wardrobe" className={styles.item}>
                 <Image
-                    src={
-                        active === "wardrobe"
-                            ? ActiveWardrobeIcon
-                            : WardrobeIcon
-                    }
-                    alt='wardrobe icon'
+                    src={pathname === "/wardrobe" ? ActiveWardrobeIcon : WardrobeIcon}
+                    alt="wardrobe icon"
                 />
                 <p
                     className={`${styles.text} ${
-                        active === "wardrobe"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === "/wardrobe" ? styles["text-active"] : styles["text-inactive"]
                     }`}
                 >
                     Wardrobe
                 </p>
             </a>
-            <a
-                href='/'
-                className={styles.item}
-                onClick={() => setActive("profile")}
-            >
+
+            <a href="/profile" className={styles.item}>
                 <Image
-                    src={active === "profile" ? ActiveProfileIcon : ProfileIcon}
-                    alt='profile icon'
+                    src={pathname === "/profile" ? ActiveProfileIcon : ProfileIcon}
+                    alt="profile icon"
                 />
                 <p
                     className={`${styles.text} ${
-                        active === "profile"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === "/profile" ? styles["text-active"] : styles["text-inactive"]
                     }`}
                 >
                     Profile

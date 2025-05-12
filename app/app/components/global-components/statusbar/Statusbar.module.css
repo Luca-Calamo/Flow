@@ -1,0 +1,54 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* status bar */
+.statusBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 22.5px 7px 36px;
+    background-color: #066051;
+    color: #FFFFFF;
+    border-bottom: 1px solid #066051;
+    box-sizing: border-box;
+}
+
+.time {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.statusIcons {
+    width: 67px;
+    height: 21px;
+    object-fit: contain;
+}
+
+/* title bar */
+.titleBar {
+    background-color: #066051;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 32px 9px 16px;
+    border-top: 1px solid #066051;
+    box-sizing: border-box;
+}
+
+.backButton {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}

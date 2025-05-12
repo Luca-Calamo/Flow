@@ -11,12 +11,7 @@ export default function SuggestionMoodPage() {
             <Statusbar titleBar={true} title="Get My Look" />
             <HelloHeader />
 
-            <NextOrBackButton
-                showBack={true}
-                showSkip={true}
-                back="/suggest/weather"
-                next="/suggest/preference"
-            />
+            <NextOrBackButton showBack={true} showSkip={true} back="/suggest/plan" next="#" />
         </div>
     );
 }

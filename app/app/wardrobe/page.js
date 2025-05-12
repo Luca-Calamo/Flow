@@ -1,8 +1,10 @@
-import WardrobeCardHome from '../components/wardrobe-components/wardrobeCardHome';
+// import WardrobeCardHome from '../components/wardrobe-components/wardrobeCardHome';
+import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
 
 export default function Wardrobe() {
     return (
         <div>
+            {/* <WardrobeCardHome /> */}
             <div className='container'>
                 <div className='card'>
                     <h2 className='card-title'>Build a Fit</h2>

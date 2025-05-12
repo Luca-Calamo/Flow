@@ -5,22 +5,22 @@ import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
-import sunnyIcon from "@/public/images/suggest-sunny.png";
-import cloudyIcon from "@/public/images/suggest-cloudy.png";
-import overcastIcon from "@/public/images/suggest-overcast.png";
-import rainyIcon from "@/public/images/suggest-rainy.png";
-import snowyIcon from "@/public/images/suggest-snowy.png";
-import windyIcon from "@/public/images/suggest-windy.png";
+import workIcon from "@/public/images/suggest-work.png";
+import dateIcon from "@/public/images/suggest-date.png";
+import workoutIcon from "@/public/images/suggest-workout.png";
+import casualIcon from "@/public/images/suggest-casual.png";
+import formalIcon from "@/public/images/suggest-formal.png";
+import vacationIcon from "@/public/images/suggest-vacation.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
 export default function SuggestionMoodPage() {
     const [moodItems, setMoodItems] = useState([
-        { icon: sunnyIcon, label: "Sunny", selected: true },
-        { icon: cloudyIcon, label: "Cloudy", selected: false },
-        { icon: overcastIcon, label: "Overcast", selected: false },
-        { icon: rainyIcon, label: "Rainy", selected: false },
-        { icon: snowyIcon, label: "Snowy", selected: false },
-        { icon: windyIcon, label: "Windy", selected: false },
+        { icon: workIcon, label: "Sunny", selected: false },
+        { icon: dateIcon, label: "Cloudy", selected: false },
+        { icon: workoutIcon, label: "Overcast", selected: false },
+        { icon: casualIcon, label: "Rainy", selected: false },
+        { icon: formalIcon, label: "Snowy", selected: false },
+        { icon: vacationIcon, label: "Windy", selected: false },
     ]);
 
     const handleItemClick = (index) => {
@@ -36,16 +36,16 @@ export default function SuggestionMoodPage() {
             <Statusbar titleBar={true} title="Get My Look" />
             <HelloHeader />
             <OptionContainer
-                heading="How’s the weather?"
-                subheading="Let’s dress for the weather."
+                heading="What’s your plan?"
+                subheading="Let’s find your perfect look!"
                 items={moodItems}
                 onItemClick={handleItemClick}
             />
             <NextOrBackButton
                 showBack={true}
-                showSkip={false}
-                back="/suggest/mood"
-                next="/suggest/plan"
+                showSkip={true}
+                back="/suggest/weather"
+                next="/suggest/preference"
             />
             <Navbar />
         </div>

@@ -24,7 +24,7 @@
 }
 
 .statusIcons {
-    width: 67px;
+    width: auto;
     height: 21px;
     object-fit: contain;
 }

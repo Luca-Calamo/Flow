@@ -1,15 +1,21 @@
-" use client";
+"use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
 import Photo from "@/app/components/camera/photoView/photo";
 import Description from "@/app/components/camera/photoView/description";
 import LargeButton from "@/app/components/buttons/largeButton";
+import TagsOverlay from "@/app/camera/tagsOverlay/page";
 import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
-    let onClick = () => {
-        return;
+    const [showOverlay, setShowOverlay] = useState(false);
+
+    const router = useRouter();
+    let clicked = () => {
+        router.push("/camera");
     };
 
     return (
@@ -19,9 +25,14 @@ export default function PhotoView() {
                 hasBtn={true}
                 btnTxt='Re-take photo'
                 btnType='secondary'
-                btnOnClick='/camera'
+                btnOnClick={clicked}
             />
-            <Photo />
+            {showOverlay && (
+                <TagsOverlay onClose={() => setShowOverlay(false)}>
+                    CONTENT
+                </TagsOverlay>
+            )}
+            <Photo onClick={() => setShowOverlay(true)} />
             <Description />
             <div className={styles.buttonContainer}>
                 <Link href='/camera' className={styles.button}>

@@ -2,7 +2,6 @@
 
 import styles from "./top_bar.css";
 import { useState } from "react";
-import Link from "next/link";
 import SmallButton from "../../buttons/smallButton";
 
 export default function Top_Bar({
@@ -57,9 +56,11 @@ export default function Top_Bar({
                 )}
                 {hasBtn && (
                     <div className='top-bar__btn'>
-                        <Link href={btnOnClick}>
-                            <SmallButton text={btnTxt} type={btnType} />
-                        </Link>
+                        <SmallButton
+                            text={btnTxt}
+                            type={btnType}
+                            onClick={btnOnClick}
+                        />
                     </div>
                 )}
 

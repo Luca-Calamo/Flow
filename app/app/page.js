@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
-import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
+import Top_Bar from '@/app/components/global-components/top_bar/top_bar';
+import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 
 export default function Home() {
     const handleButtonChange = (position, buttonText) => {
@@ -36,6 +36,12 @@ export default function Home() {
                     className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
                 >
                     Go to Wardrobe Home
+                </a>
+                <a
+                    href='/articles'
+                    className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
+                >
+                    Go to Articles
                 </a>
             </div>
             <Navbar initialActive='home' />

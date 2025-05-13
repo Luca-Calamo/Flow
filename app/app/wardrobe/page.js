@@ -1,9 +1,11 @@
-import WardrobeCardHome from '../components/wardrobe-components/wardrobeCardHome';
+import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
+// import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
 
 export default function Wardrobe() {
     return (
         <div>
-            <div className='container'>
+            <WardrobeCardHome />
+            {/* <div className='contain er'>
                 <div className='card'>
                     <h2 className='card-title'>Build a Fit</h2>
                     <img
@@ -21,19 +23,7 @@ export default function Wardrobe() {
                         alt='Shirt Icon'
                     ></img>
                 </div>
-            </div>{' '}
+            </div> */}
         </div>
     );
 }
-
-// app/
-// -wardrobe/
-// --page.js
-// --wardrobe.module.css
-
-// components/*css*/`
-//     - top_bar/
-//     - bottomBar/
-//     ---bottomBar.module.css
-//     ---bottomBar.js
-// `

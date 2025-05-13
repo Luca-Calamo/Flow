@@ -4,8 +4,6 @@
     align-items: center;
     border-radius: 100px;
     padding: 5px 10px;
-    width: 78px;
-    height: 28px;
 }
 
 .smlBtnText {
@@ -18,12 +16,7 @@
 }
 
 .secondary {
-    background-color: #fff;
-    border: 1px solid #03352d;
-    color: #03352d;
-}
-
-.tertiary {
     background-color: none;
-    border: none;
+    border: 1px solid #000;
+    color: #000;
 }

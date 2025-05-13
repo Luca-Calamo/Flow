@@ -32,7 +32,7 @@ export default function SuggestionPlanPage() {
 
     return (
         <div>
-            <Statusbar titleBar={true} title="Get My Look" />
+            <Statusbar titleBar={true} title="Get My Look" exitLink="/suggest" />
             <HelloHeader />
             <OptionContainer
                 heading="What’s your plan?"

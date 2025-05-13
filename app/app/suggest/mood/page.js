@@ -32,7 +32,7 @@ export default function SuggestionMoodPage() {
 
     return (
         <div>
-            <Statusbar titleBar={true} title="Get My Look" />
+            <Statusbar titleBar={true} title="Get My Look" exitLink="/suggest" />
             <HelloHeader />
             <OptionContainer
                 heading="How’s your mood?"
@@ -40,12 +40,7 @@ export default function SuggestionMoodPage() {
                 items={moodItems}
                 onItemClick={handleItemClick}
             />
-            <NextOrBackButton
-                showBack={true}
-                showSkip={true}
-                back="/suggest"
-                next="/suggest/weather"
-            />
+            <NextOrBackButton showBack={false} showSkip={true} next="/suggest/weather" />
         </div>
     );
 }

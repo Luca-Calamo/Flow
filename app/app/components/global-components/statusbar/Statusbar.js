@@ -4,8 +4,14 @@ import Image from "next/image";
 import statusIcons from "@/public/images/statusbar-icons.svg";
 import styles from "./Statusbar.module.css";
 import backButton from "@/public/images/back-suggest.svg";
+import Link from "next/link";
 
-export default function Statusbar({ titleBar = false, title = "" }) {
+export default function Statusbar({
+    titleBar = false,
+    title = "",
+    exitLink = "#",
+    showExitButton = true,
+}) {
     return (
         <div className={styles.container}>
             <div className={styles.statusBar}>
@@ -14,7 +20,11 @@ export default function Statusbar({ titleBar = false, title = "" }) {
             </div>
             {titleBar && (
                 <div className={styles.titleBar}>
-                    <Image src={backButton} alt="back" className={styles.backButton} />
+                    {showExitButton && (
+                        <Link href={exitLink}>
+                            <Image src={backButton} alt="back" className={styles.exitButton} />
+                        </Link>
+                    )}
                     <h2 className={styles.title}>{title}</h2>
                 </div>
             )}

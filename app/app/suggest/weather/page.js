@@ -32,7 +32,7 @@ export default function SuggestionWeatherPage() {
 
     return (
         <div>
-            <Statusbar titleBar={true} title="Get My Look" />
+            <Statusbar titleBar={true} title="Get My Look" exitLink="/suggest" />
             <HelloHeader />
             <OptionContainer
                 heading="How’s the weather?"

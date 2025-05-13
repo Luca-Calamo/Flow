@@ -75,7 +75,12 @@ export default function SuggestionPreferPage() {
                 </div>
             </div>
 
-            <NextOrBackButton showBack={true} showSkip={true} back="/suggest/plan" next="#" />
+            <NextOrBackButton
+                showBack={true}
+                showSkip={true}
+                back="/suggest/plan"
+                next="/suggest/loading"
+            />
         </div>
     );
 }

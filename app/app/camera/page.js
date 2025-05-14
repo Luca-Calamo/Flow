@@ -2,19 +2,21 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
-import Camera from "@/app/components/camera/webcam";
+import Top_Bar from "@/app/components/global-components/topBar/topBar";
 import TopCamBar from "@/app/components/camera/navigation/topCamBar";
 import CircleButton from "@/app/components/buttons/circleButton";
-import OutlineOverlay from "../components/camera/navigation/OutlineOverlay";
+import OutlineOverlay from "@/app/components/camera/navigation/OutlineOverlay";
 import styles from "@/app/camera/camera.module.css";
+import Webcam from "react-webcam";
 
 export default function Home() {
     const [activeOverlay, setActiveOverlay] = useState("tops");
 
     const overlays = ["tops", "bottoms", "shoes", "hats"];
 
-    function nxtOverlay() {
+    const WebcamComponent = () => <Webcam />;
+
+    function nextOverlay() {
         const currentIndex = overlays.indexOf(activeOverlay);
         if (currentIndex === overlays.length - 1) {
             setActiveOverlay(overlays[0]);
@@ -37,12 +39,14 @@ export default function Home() {
     };
 
     return (
-        <div className='flex flex-col items-center min-h-screen bg-white'>
+        <div className={styles.page}>
             <Top_Bar title='Camera' hasIcon={true} />
             <TopCamBar active={activeOverlay} setActive={setActiveOverlay} />
-            <Camera />
+            <div className={styles.webcam}>
+                <WebcamComponent />
+            </div>
             <OutlineOverlay overlay={activeOverlay} />
-            <CircleButton onClick={nxtOverlay} direction='right' />
+            <CircleButton onClick={nextOverlay} direction='right' />
             <CircleButton onClick={prevOverlay} direction='left' />
             <Link href='/camera/photoView' className={styles.bar}>
                 <div className={styles.button}></div>

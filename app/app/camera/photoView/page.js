@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
+import Top_Bar from "@/app/components/global-components/topBar/topBar";
 import Photo from "@/app/components/camera/photoView/photo";
 import Description from "@/app/components/camera/photoView/description";
 import LargeButton from "@/app/components/buttons/largeButton";

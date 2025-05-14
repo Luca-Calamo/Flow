@@ -1,24 +1,18 @@
 "use client";
 
 import { createPortal } from "react-dom";
-import { useState } from "react";
 import styles from "@/app/camera/tagsOverlay/tagsOverlay.module.css";
 import SmallButton from "@/app/components/buttons/smallButton";
 import LargeButton from "@/app/components/buttons/largeButton";
 import TagButton from "@/app/components/buttons/tagButton";
+import Image from "next/image";
 
 export default function TagsOverlay({ onClose }) {
-    const [isSelected, setIsSelected] = useState(false);
-
     const handleCloseClick = (e) => {
         e.preventDefault();
         if (onClose) {
             onClose();
         }
-    };
-    const onClick = (e) => {
-        e.preventDefault();
-        console.log("clicked");
     };
 
     const modalContent = (
@@ -26,20 +20,26 @@ export default function TagsOverlay({ onClose }) {
             <div className={styles.wrapper}>
                 <div className={styles.modal}>
                     <header className={styles.header}>
-                        <SmallButton
+                        <div
+                            className={styles.button}
                             onClick={handleCloseClick}
-                            text={"X"}
-                            type='teritary'
-                        />
+                        >
+                            <Image
+                                src={"/images/closeOverlay.svg"}
+                                alt={"back arrow"}
+                                className={styles.image}
+                                width={30}
+                                height={30}
+                            />
+                        </div>
                     </header>
                     <div className={styles.content}>
                         <div className={styles.section}>
                             <h3>Type</h3>
                             <div className={styles.buttonContainer}>
                                 <TagButton
-                                    type={isSelected ? "primary" : "secondary"}
+                                    type={"secondary"}
                                     text={"T-shirt"}
-                                    onClick={onClick}
                                 />
                                 <TagButton type='secondary' text={"T-shirt"} />
                                 <TagButton type='secondary' text={"T-shirt"} />

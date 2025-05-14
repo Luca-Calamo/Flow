@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./top_bar.css";
+import styles from "./topBar.css";
 import { useState } from "react";
 import SmallButton from "../../buttons/smallButton";
 
@@ -60,6 +60,7 @@ export default function Top_Bar({
                             text={btnTxt}
                             type={btnType}
                             onClick={btnOnClick}
+                            spacing='full'
                         />
                     </div>
                 )}

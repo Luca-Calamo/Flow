@@ -3,7 +3,8 @@
 import Image from "next/image";
 import statusIcons from "@/public/images/statusbar-icons.svg";
 import styles from "./Statusbar.module.css";
-import exitButton from "@/public/images/exit-suggest.svg";
+import exitButton from "@/public/images/exit-statusbar.svg";
+import backButton from "@/public/images/back-statusbar.svg";
 import Link from "next/link";
 
 export default function Statusbar({
@@ -11,6 +12,8 @@ export default function Statusbar({
     title = "",
     exitLink = "#",
     showExitButton = true,
+    backLink = "#",
+    showbackButton = false,
 }) {
     return (
         <div className={styles.container}>
@@ -22,7 +25,20 @@ export default function Statusbar({
                 <div className={styles.titleBar}>
                     {showExitButton && (
                         <Link href={exitLink}>
-                            <Image src={exitButton} alt="exit" className={styles.exitButton} />
+                            <Image
+                                src={exitButton}
+                                alt="exit"
+                                className={styles.exitAndBackButton}
+                            />
+                        </Link>
+                    )}
+                    {showbackButton && (
+                        <Link href={backLink}>
+                            <Image
+                                src={backButton}
+                                alt="back"
+                                className={styles.exitAndBackButton}
+                            />
                         </Link>
                     )}
                     <h2 className={styles.title}>{title}</h2>

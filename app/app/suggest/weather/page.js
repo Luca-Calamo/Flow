@@ -8,7 +8,7 @@ import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBa
 
 export default function SuggestionWeatherPage() {
     const [weatherItems, setWeatherItems] = useState([]);
-
+    // Replacing .then() with async/await for practice.
     useEffect(() => {
         const fetchWeatherItems = async () => {
             try {

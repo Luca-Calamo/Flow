@@ -1,33 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
 import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
-import sunnyIcon from "@/public/images/suggest-sunny.png";
-import cloudyIcon from "@/public/images/suggest-cloudy.png";
-import overcastIcon from "@/public/images/suggest-overcast.png";
-import rainyIcon from "@/public/images/suggest-rainy.png";
-import snowyIcon from "@/public/images/suggest-snowy.png";
-import windyIcon from "@/public/images/suggest-windy.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
 export default function SuggestionWeatherPage() {
-    const [moodItems, setMoodItems] = useState([
-        { icon: sunnyIcon, label: "Sunny", selected: true },
-        { icon: cloudyIcon, label: "Cloudy", selected: false },
-        { icon: overcastIcon, label: "Overcast", selected: false },
-        { icon: rainyIcon, label: "Rainy", selected: false },
-        { icon: snowyIcon, label: "Snowy", selected: false },
-        { icon: windyIcon, label: "Windy", selected: false },
-    ]);
+    const [weatherItems, setWeatherItems] = useState([]);
+
+    useEffect(() => {
+        fetch("/suggestOptions.json")
+            .then((response) => response.json())
+            .then((data) => {
+                const weatherData = data.filter((item) => item.category === "weather");
+                setWeatherItems(weatherData);
+            })
+            .catch((error) => console.error("Error fetching weather items:", error));
+    }, []);
 
     const handleItemClick = (index) => {
-        const updatedItems = moodItems.map((item, i) => ({
+        const updatedItems = weatherItems.map((item, i) => ({
             ...item,
             selected: i === index,
         }));
-        setMoodItems(updatedItems);
+        setWeatherItems(updatedItems);
     };
 
     return (
@@ -37,7 +34,7 @@ export default function SuggestionWeatherPage() {
             <OptionContainer
                 heading="How’s the weather?"
                 subheading="Let’s dress for the weather."
-                items={moodItems}
+                items={weatherItems}
                 onItemClick={handleItemClick}
             />
             <NextOrBackButton

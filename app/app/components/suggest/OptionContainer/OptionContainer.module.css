@@ -1,6 +1,8 @@
 .container {
     text-align: center;
     padding: 0 20px;
+    height: 385px;
+    width: auto;
 }
 
 .heading {
@@ -40,9 +42,4 @@
     border-radius: 15px;
     padding: 5px;
     margin: -5px;
-}
-
-.icon {
-    width: 80px;
-    height: 80px;
 }

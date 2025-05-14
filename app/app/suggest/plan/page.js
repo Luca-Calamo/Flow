@@ -1,35 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HelloHeader from "@/app/components/suggest/HelloHeader";
 import Statusbar from "@/app/components/global-components/statusbar/Statusbar";
 import OptionContainer from "@/app/components/suggest/OptionContainer/OptionContainer";
-import workIcon from "@/public/images/suggest-work.png";
-import dateIcon from "@/public/images/suggest-date.png";
-import workoutIcon from "@/public/images/suggest-workout.png";
-import casualIcon from "@/public/images/suggest-casual.png";
-import formalIcon from "@/public/images/suggest-formal.png";
-import vacationIcon from "@/public/images/suggest-vacation.png";
 import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBackButton";
 
 export default function SuggestionPlanPage() {
-    const [moodItems, setMoodItems] = useState([
-        { icon: workIcon, label: "Work", selected: false },
-        { icon: dateIcon, label: "Date", selected: false },
-        { icon: workoutIcon, label: "Workout", selected: false },
-        { icon: casualIcon, label: "Casual", selected: false },
-        { icon: formalIcon, label: "Formal", selected: false },
-        { icon: vacationIcon, label: "Vacation", selected: false },
-    ]);
+    const [planItems, setPlanItems] = useState([]);
+
+    useEffect(() => {
+        fetch("/suggestOptions.json")
+            .then((response) => response.json())
+            .then((data) => {
+                const planData = data.filter((item) => item.category === "plan");
+                setPlanItems(planData);
+            })
+            .catch((error) => console.error("Error fetching plan items:", error));
+    }, []);
 
     const handleItemClick = (index) => {
-        const updatedItems = moodItems.map((item, i) => ({
+        const updatedItems = planItems.map((item, i) => ({
             ...item,
             selected: i === index,
         }));
-        setMoodItems(updatedItems);
+        setPlanItems(updatedItems);
     };
-
     return (
         <div>
             <Statusbar titleBar={true} title="Get My Look" exitLink="/suggest" />
@@ -37,7 +33,7 @@ export default function SuggestionPlanPage() {
             <OptionContainer
                 heading="What’s your plan?"
                 subheading="Let’s find your perfect look!"
-                items={moodItems}
+                items={planItems}
                 onItemClick={handleItemClick}
             />
             <NextOrBackButton

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "Black t-shirt",
+        "description": "It's a basic crew neck style with short sleeves and appears to be made from a standard cotton or cotton-blend fabric. The t-shirt has no visible graphics, text, patterns, or design elements. It's a classic unisex style that would serve as a versatile basic item in a wardrobe.",
+        "image": "/images/noBg_shirt.png",
+        "tags": ["T-shirt", "warm", "spring"],
+        "outfits": []
+    },
+    {
+        "id": 2,
+        "name": "Denim Jacket",
+        "description": "Classic blue denim jacket with silver buttons.",
+        "image": "/images/denim-jacket.png",
+        "tags": ["jacket", "blue", "casual", "outerwear"]
+    },
+    {
+        "id": 3,
+        "name": "Black Sneakers",
+        "description": "Comfortable black sneakers for everyday wear.",
+        "image": "/images/black-sneakers.png",
+        "tags": ["shoes", "black", "casual", "footwear"]
+    }
+]

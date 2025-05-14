@@ -17,6 +17,8 @@
 .top-bar__btn {
     position: absolute;
     margin-left: 15px;
+    width: 92px;
+    height: 24px;
 }
 
 .top-bar__title {

@@ -13,10 +13,10 @@ export default function SuggestionPage() {
         <div>
             <Statusbar />
             <HelloHeader />
-            <Image src={wardrobeGif} alt="wardrobe gif" className={styles.wardrobeGif} />
+            <Image src={wardrobeGif} alt="wardrobe gif" className={styles.wardrobeGif} priority />
             <RoundedButton
                 text="Get Outfit Suggestions"
-                href=""
+                href="/suggest/mood"
                 type="primary"
                 className={styles.roundedButton}
             />

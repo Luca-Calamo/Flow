@@ -22,7 +22,7 @@ export default function LoadingPage() {
         <div>
             <Statusbar titleBar={true} title="Get My Look" showExitButton={false} />
             <div className={styles.container}>
-                <Image src={loadingGif} alt="generating" className={styles.gif} />
+                <Image src={loadingGif} alt="generating" className={styles.gif} priority />
                 <p className={styles.text}>Generating...</p>
             </div>
         </div>

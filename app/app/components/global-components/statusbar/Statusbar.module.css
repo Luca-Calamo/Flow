@@ -24,7 +24,7 @@
 }
 
 .statusIcons {
-    width: 67px;
+    width: auto;
     height: 21px;
     object-fit: contain;
 }
@@ -41,7 +41,7 @@
     box-sizing: border-box;
 }
 
-.backButton {
+.exitButton {
     width: 30px;
     height: 30px;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import Top_Bar from "@/app/components/global-components/top_bar/top_bar";
+import Top_Bar from "@/app/components/global-components/topBar/topBar";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 
 export default function Home() {

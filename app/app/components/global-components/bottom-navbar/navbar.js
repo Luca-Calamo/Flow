@@ -19,57 +19,84 @@ export default function Navbar() {
 
     return (
         <div className={styles.navbar}>
-            <a href="/" className={styles.item}>
-                <Image src={pathname === "/" ? ActiveHomeIcon : HomeIcon} alt="home icon" />
+            <a href='/' className={styles.item}>
+                <Image
+                    src={pathname === "/" ? ActiveHomeIcon : HomeIcon}
+                    alt='home icon'
+                />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/" ? styles["text-active"] : styles["text-inactive"]
+                        pathname === "/"
+                            ? styles["text-active"]
+                            : styles["text-inactive"]
                     }`}
                 >
                     Home
                 </p>
             </a>
 
-            <a href="/suggest" className={styles.item}>
+            <a href='/suggest' className={styles.item}>
                 <Image
-                    src={pathname === "/suggest" ? ActiveSuggestIcon : SuggestIcon}
-                    alt="suggest icon"
+                    src={
+                        pathname === "/suggest"
+                            ? ActiveSuggestIcon
+                            : SuggestIcon
+                    }
+                    alt='suggest icon'
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/suggest" ? styles["text-active"] : styles["text-inactive"]
+                        pathname === "/suggest"
+                            ? styles["text-active"]
+                            : styles["text-inactive"]
                     }`}
                 >
                     Suggest
                 </p>
             </a>
 
-            <a href="/camera">
-                <Image src={CameraIcon} alt="camera icon" className={styles.cameraIcon} />
+            <a href='/camera'>
+                <Image
+                    src={CameraIcon}
+                    alt='camera icon'
+                    className={styles.cameraIcon}
+                />
             </a>
 
-            <a href="/wardrobe" className={styles.item}>
+            <a href='/wardrobe' className={styles.item}>
                 <Image
-                    src={pathname === "/wardrobe" ? ActiveWardrobeIcon : WardrobeIcon}
-                    alt="wardrobe icon"
+                    src={
+                        pathname === "/wardrobe"
+                            ? ActiveWardrobeIcon
+                            : WardrobeIcon
+                    }
+                    alt='wardrobe icon'
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/wardrobe" ? styles["text-active"] : styles["text-inactive"]
+                        pathname === "/wardrobe"
+                            ? styles["text-active"]
+                            : styles["text-inactive"]
                     }`}
                 >
                     Wardrobe
                 </p>
             </a>
 
-            <a href="/profile" className={styles.item}>
+            <a href='/profile' className={styles.item}>
                 <Image
-                    src={pathname === "/profile" ? ActiveProfileIcon : ProfileIcon}
-                    alt="profile icon"
+                    src={
+                        pathname === "/profile"
+                            ? ActiveProfileIcon
+                            : ProfileIcon
+                    }
+                    alt='profile icon'
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/profile" ? styles["text-active"] : styles["text-inactive"]
+                        pathname === "/profile"
+                            ? styles["text-active"]
+                            : styles["text-inactive"]
                     }`}
                 >
                     Profile

@@ -14,12 +14,12 @@ import NextOrBackButton from "@/app/components/suggest/NextOrBackButton/NextOrBa
 
 export default function SuggestionPlanPage() {
     const [moodItems, setMoodItems] = useState([
-        { icon: workIcon, label: "Sunny", selected: false },
-        { icon: dateIcon, label: "Cloudy", selected: false },
-        { icon: workoutIcon, label: "Overcast", selected: false },
-        { icon: casualIcon, label: "Rainy", selected: false },
-        { icon: formalIcon, label: "Snowy", selected: false },
-        { icon: vacationIcon, label: "Windy", selected: false },
+        { icon: workIcon, label: "Work", selected: false },
+        { icon: dateIcon, label: "Date", selected: false },
+        { icon: workoutIcon, label: "Workout", selected: false },
+        { icon: casualIcon, label: "Casual", selected: false },
+        { icon: formalIcon, label: "Formal", selected: false },
+        { icon: vacationIcon, label: "Vacation", selected: false },
     ]);
 
     const handleItemClick = (index) => {

@@ -1,0 +1,111 @@
+[
+    {
+        "icon": "/images/suggest-happy.png",
+        "label": "Happy",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-calm.png",
+        "label": "Calm",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-confident.png",
+        "label": "Confident",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-lazy.png",
+        "label": "Lazy",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-down.png",
+        "label": "Down",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-daring.png",
+        "label": "Daring",
+        "selected": false,
+        "category": "mood"
+    },
+    {
+        "icon": "/images/suggest-sunny.png",
+        "label": "Sunny",
+        "selected": true,
+        "category": "weather",
+        "_comment": "Assume today is sunny, so it is selected (true) by default ."
+    },
+    {
+        "icon": "/images/suggest-cloudy.png",
+        "label": "Cloudy",
+        "selected": false,
+        "category": "weather"
+    },
+    {
+        "icon": "/images/suggest-overcast.png",
+        "label": "Overcast",
+        "selected": false,
+        "category": "weather"
+    },
+    {
+        "icon": "/images/suggest-rainy.png",
+        "label": "Rainy",
+        "selected": false,
+        "category": "weather"
+    },
+    {
+        "icon": "/images/suggest-snowy.png",
+        "label": "Snowy",
+        "selected": false,
+        "category": "weather"
+    },
+    {
+        "icon": "/images/suggest-windy.png",
+        "label": "Windy",
+        "selected": false,
+        "category": "weather"
+    },
+    {
+        "icon": "/images/suggest-work.png",
+        "label": "Work",
+        "selected": false,
+        "category": "plan"
+    },
+    {
+        "icon": "/images/suggest-date.png",
+        "label": "Date",
+        "selected": false,
+        "category": "plan"
+    },
+    {
+        "icon": "/images/suggest-workout.png",
+        "label": "Workout",
+        "selected": false,
+        "category": "plan"
+    },
+    {
+        "icon": "/images/suggest-casual.png",
+        "label": "Casual",
+        "selected": false,
+        "category": "plan"
+    },
+    {
+        "icon": "/images/suggest-formal.png",
+        "label": "Formal",
+        "selected": false,
+        "category": "plan"
+    },
+    {
+        "icon": "/images/suggest-vacation.png",
+        "label": "Vacation",
+        "selected": false,
+        "category": "plan"
+    }
+]

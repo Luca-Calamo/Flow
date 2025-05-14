@@ -15,7 +15,7 @@ export default function SelectionGrid({ heading, subheading, items, onItemClick 
                         className={`${styles.item} ${item.selected ? styles.selected : ""}`}
                         onClick={() => onItemClick(index)}
                     >
-                        <Image src={item.icon} alt={item.label} className={styles.icon} />
+                        <Image src={item.icon} alt={item.label} width={80} height={80} priority />
                         <p>{item.label}</p>
                     </div>
                 ))}

@@ -10,13 +10,18 @@ export default function SuggestionWeatherPage() {
     const [weatherItems, setWeatherItems] = useState([]);
 
     useEffect(() => {
-        fetch("/suggestOptions.json")
-            .then((response) => response.json())
-            .then((data) => {
+        const fetchWeatherItems = async () => {
+            try {
+                const response = await fetch("/suggestOptions.json");
+                const data = await response.json();
                 const weatherData = data.filter((item) => item.category === "weather");
                 setWeatherItems(weatherData);
-            })
-            .catch((error) => console.error("Error fetching weather items:", error));
+            } catch (error) {
+                console.error("Error fetching weather items:", error);
+            }
+        };
+
+        fetchWeatherItems();
     }, []);
 
     const handleItemClick = (index) => {

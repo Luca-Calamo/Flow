@@ -1,0 +1,91 @@
+.heading {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.saveAllButton {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+    margin: 20px 22px 0 300px;
+}
+
+.outfitContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    justify-items: center;
+    margin: 13px 16px 0 16px;
+}
+
+.outfit {
+    width: 173px;
+    height: 140px;
+}
+
+.navButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 16px 0 16px;
+}
+
+.navButton {
+    font-size: 20px;
+    font-weight: 400;
+    width: 173px;
+    height: 40px;
+}
+
+/* save button & snackbar */
+
+.outfitWrapper {
+    position: relative;
+}
+
+.saveButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.saveIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.snackbar {
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #066051;
+    color: #FFFFFF;
+    width: 280px;
+    height: 34px;
+    padding: 8px 15px 8px 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.snackbarText {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.snackbar.show {
+    opacity: 1;
+}
+
+.snackbarClose {
+    color: #FFFFFF;
+    font-size: 36px;
+}

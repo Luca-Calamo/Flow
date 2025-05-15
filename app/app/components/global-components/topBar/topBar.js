@@ -3,8 +3,9 @@
 import styles from "./topBar.css";
 import { useState } from "react";
 import SmallButton from "../../buttons/smallButton";
+import { useRouter } from "next/navigation"; // Import useRouter for navigation
 
-export default function Top_Bar({
+export default function TopBar({
     title,
     hasIcon,
     hasBar,
@@ -18,6 +19,7 @@ export default function Top_Bar({
     initialActive = "left",
 }) {
     const [activeBtn, setActiveBtn] = useState(initialActive);
+    const router = useRouter();
 
     const handleLeftBtnClick = (e) => {
         e.preventDefault();
@@ -35,11 +37,15 @@ export default function Top_Bar({
         }
     };
 
+    const handleIconClick = () => {
+        router.back();
+    };
+
     return (
         <div className='top-bar'>
             <div className='top-bar__main'>
                 {hasIcon && (
-                    <div className='top-bar__icon'>
+                    <div className='top-bar__icon' onClick={handleIconClick}>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='25'

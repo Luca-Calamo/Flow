@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import Top_Bar from "@/app/components/global-components/topBar/topBar";
+import TopBar from "@/app/components/global-components/topBar/topBar";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
-
 
 export default function Home() {
     const handleButtonChange = (position, buttonText) => {
@@ -11,7 +10,7 @@ export default function Home() {
 
     return (
         <div className='flex flex-col items-center min-h-screen bg-white'>
-            <Top_Bar
+            <TopBar
                 title='Home'
                 hasBar={true}
                 hasIcon={true}

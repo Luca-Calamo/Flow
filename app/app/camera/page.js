@@ -16,6 +16,23 @@ export default function Home() {
 
     const WebcamComponent = () => <Webcam />;
 
+    function overlayOption(direction) {
+        const currentIndex = overlays.indexOf(activeOverlay);
+        if (direction === "right") {
+            if (currentIndex === overlays.length - 1) {
+                setActiveOverlay(overlays[0]);
+                return;
+            }
+            setActiveOverlay(overlays[currentIndex + 1]);
+        } else if (direction === "left") {
+            if (currentIndex === 0) {
+                setActiveOverlay(overlays[overlays.length - 1]);
+                return;
+            }
+            setActiveOverlay(overlays[currentIndex - 1]);
+        }
+    }
+
     function nextOverlay() {
         const currentIndex = overlays.indexOf(activeOverlay);
         if (currentIndex === overlays.length - 1) {
@@ -46,8 +63,14 @@ export default function Home() {
                 <WebcamComponent />
             </div>
             <OutlineOverlay overlay={activeOverlay} />
-            <CircleButton onClick={nextOverlay} direction='right' />
-            <CircleButton onClick={prevOverlay} direction='left' />
+            <CircleButton
+                onClick={() => overlayOption("right")}
+                direction='right'
+            />
+            <CircleButton
+                onClick={() => overlayOption("left")}
+                direction='left'
+            />
             <Link href='/camera/photoView' className={styles.bar}>
                 <div className={styles.button}></div>
             </Link>

@@ -1,11 +1,20 @@
 import ArticleCard from '@/app/components/articles/articleCard';
 import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
-import Top_Bar from '@/app/components/global-components/top_bar/top_bar';
+import TopBar from '@/app/components/global-components/topBar/topBar';
+import SmallButton from '@/app/components/buttons/smallButton';
 import styles from '@/app/articles/css/styles.module.css';
 export default function Articles() {
     return (
         <div className={styles.body}>
-            <Top_Bar title='Articles' hasBar={true} hasIcon={true} />
+            <TopBar title='Articles' hasBar={true} hasIcon={true} />
+            <div className={styles.btncontainer}>
+                <div className={styles.button}>
+                    <SmallButton text='Build' />
+                </div>
+                <div className={styles.button}>
+                    <SmallButton text='Tags' />
+                </div>
+            </div>
             <div className={styles.container}>
                 <ArticleCard src='/images/Black-Dress-Shoes.png' />
                 <ArticleCard src='/images/Black-Dress-Pants.png' />

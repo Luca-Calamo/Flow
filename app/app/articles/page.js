@@ -1,12 +1,17 @@
-import ArticleCard from '@/app/components/articles/articleCard';
-import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
-import TopBar from '@/app/components/global-components/topBar/topBar';
-import SmallButton from '@/app/components/buttons/smallButton';
-import styles from '@/app/articles/css/styles.module.css';
+import ArticleCard from "@/app/components/articles/articleCard";
+import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
+import TopBar from "@/app/components/global-components/topBar/topBar";
+import SmallButton from "@/app/components/buttons/smallButton";
+import styles from "@/app/articles/css/styles.module.css";
 export default function Articles() {
     return (
         <div className={styles.body}>
-            <TopBar title='Articles' hasBar={true} hasIcon={true} />
+            <TopBar
+                title='Articles'
+                hasBar={true}
+                hasIcon={true}
+                initialActive='right'
+            />
             <div className={styles.btncontainer}>
                 <div className={styles.button}>
                     <SmallButton text='Build' />

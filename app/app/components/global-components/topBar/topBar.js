@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import styles from "./topBar.css";
-import { useState } from "react";
-import SmallButton from "../../buttons/smallButton";
+import styles from './topBar.css';
+import { useState } from 'react';
+import SmallButton from '../../buttons/smallButton';
 
-export default function Top_Bar({
+export default function TopBar({
     title,
     hasIcon,
     hasBar,
@@ -12,26 +12,26 @@ export default function Top_Bar({
     btnTxt,
     btnType,
     btnOnClick,
-    leftBtn = "Fits",
-    rightBtn = "Articles",
+    leftBtn = 'Fits',
+    rightBtn = 'Articles',
     onButtonChange,
-    initialActive = "left",
+    initialActive = 'left',
 }) {
     const [activeBtn, setActiveBtn] = useState(initialActive);
 
     const handleLeftBtnClick = (e) => {
         e.preventDefault();
-        setActiveBtn("left");
+        setActiveBtn('left');
         if (onButtonChange) {
-            onButtonChange("left", leftBtn);
+            onButtonChange('left', leftBtn);
         }
     };
 
     const handleRightBtnClick = (e) => {
         e.preventDefault();
-        setActiveBtn("right");
+        setActiveBtn('right');
         if (onButtonChange) {
-            onButtonChange("right", rightBtn);
+            onButtonChange('right', rightBtn);
         }
     };
 
@@ -71,7 +71,7 @@ export default function Top_Bar({
                 <div className='top-bar__navbar'>
                     <button
                         className={`btn1 ${
-                            activeBtn === "left" ? "active" : ""
+                            activeBtn === 'left' ? 'active' : ''
                         }`}
                         onClick={handleLeftBtnClick}
                     >
@@ -79,7 +79,7 @@ export default function Top_Bar({
                     </button>
                     <button
                         className={`btn2 ${
-                            activeBtn === "right" ? "active" : ""
+                            activeBtn === 'right' ? 'active' : ''
                         }`}
                         onClick={handleRightBtnClick}
                     >

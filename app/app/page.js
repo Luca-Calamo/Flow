@@ -43,6 +43,13 @@ export default function Home() {
                 >
                     Go to Articles
                 </a>
+
+                <a
+                    href='/individual-fits'
+                    className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
+                >
+                    Go to Indi Fits
+                </a>
             </div>
             <Navbar initialActive='home' />
         </div>

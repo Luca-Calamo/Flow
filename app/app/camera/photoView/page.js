@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Top_Bar from "@/app/components/global-components/topBar/topBar";
+import TopBar from "@/app/components/global-components/topBar/topBar";
 import Photo from "@/app/components/camera/photoView/photo";
 import Description from "@/app/components/camera/photoView/description";
 import LargeButton from "@/app/components/buttons/largeButton";
@@ -20,7 +20,7 @@ export default function PhotoView() {
 
     return (
         <div className={styles.page}>
-            <Top_Bar
+            <TopBar
                 title='Photo View'
                 hasBtn={true}
                 btnTxt='Re-take photo'

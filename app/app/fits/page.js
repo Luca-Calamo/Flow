@@ -1,9 +1,9 @@
-import WardrobeCard from "@/app/components/wardrobeHome-comp/warHomeCard";
-import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
-import Top_Bar from "@/app/components/global-components/topBar/topBar";
-import styles from "@/app/wardrobeHome/css/styles.module.css";
-import SmallButton from "@/app/components/buttons/smallButton";
-import LargeButton from "@/app/components/buttons/largeButton";
+import WardrobeCard from '@/app/components/wardrobeHome-comp/warHomeCard';
+import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
+import Top_Bar from '@/app/components/global-components/topBar/topBar';
+import styles from '@/app/fits/css/styles.module.css';
+import SmallButton from '@/app/components/buttons/smallButton';
+import LargeButton from '@/app/components/buttons/largeButton';
 
 export default function WarCard() {
     return (

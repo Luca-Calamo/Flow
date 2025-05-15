@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import styles from "./topBar.css";
 import { useState } from "react";
@@ -13,27 +13,20 @@ export default function TopBar({
     btnTxt,
     btnType,
     btnOnClick,
-    leftBtn = 'Fits',
-    rightBtn = 'Articles',
-    onButtonChange,
-    initialActive = 'left',
+    leftBtn = "Fits",
+    rightBtn = "Articles",
+    initialActive = "left",
 }) {
     const [activeBtn, setActiveBtn] = useState(initialActive);
     const router = useRouter();
+    const handleButtonClick = (event, whichButton) => {
+        event.preventDefault();
+        setActiveBtn(whichButton);
 
-    const handleLeftBtnClick = (e) => {
-        e.preventDefault();
-        setActiveBtn('left');
-        if (onButtonChange) {
-            onButtonChange('left', leftBtn);
-        }
-    };
-
-    const handleRightBtnClick = (e) => {
-        e.preventDefault();
-        setActiveBtn('right');
-        if (onButtonChange) {
-            onButtonChange('right', rightBtn);
+        if (whichButton === "left") {
+            router.push("/fits");
+        } else if (whichButton === "right") {
+            router.push("/articles");
         }
     };
 
@@ -77,17 +70,17 @@ export default function TopBar({
                 <div className='top-bar__navbar'>
                     <button
                         className={`btn1 ${
-                            activeBtn === 'left' ? 'active' : ''
+                            activeBtn === "left" ? "active" : ""
                         }`}
-                        onClick={handleLeftBtnClick}
+                        onClick={(e) => handleButtonClick(e, "left")}
                     >
                         {leftBtn}
                     </button>
                     <button
                         className={`btn2 ${
-                            activeBtn === 'right' ? 'active' : ''
+                            activeBtn === "right" ? "active" : ""
                         }`}
-                        onClick={handleRightBtnClick}
+                        onClick={(e) => handleButtonClick(e, "right")}
                     >
                         {rightBtn}
                     </button>

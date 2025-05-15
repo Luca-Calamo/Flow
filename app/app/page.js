@@ -32,7 +32,7 @@ export default function Home() {
                     Go to Wardrobe
                 </a>
                 <a
-                    href='/wardrobeHome'
+                    href='/fits'
                     className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
                 >
                     Go to Wardrobe Home

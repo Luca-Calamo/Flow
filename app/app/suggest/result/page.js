@@ -13,6 +13,8 @@ import { useState } from "react";
 import saveOutline from "@/public/images/save-outline.svg";
 import saveFilled from "@/public/images/save-filled.svg";
 import RoundedButton from "@/app/components/global-components/rounded-button/RoundedButton";
+import { v4 as uuidv4 } from "uuid";
+import { useMemo } from "react";
 
 export default function SuggestionResultPage() {
     const [savedOutfits, setSavedOutfits] = useState([]);
@@ -52,7 +54,20 @@ export default function SuggestionResultPage() {
         setShowSnackbar(false);
     };
 
-    const outfits = [outfit01, outfit02, outfit03, outfit04, outfit05, outfit06];
+    /*
+    Prevent flickering by generating uuids only once with useMemo.
+    Using uuid for practice.
+    */
+    const outfits = useMemo(() => {
+        return [
+            { src: outfit01, id: uuidv4() },
+            { src: outfit02, id: uuidv4() },
+            { src: outfit03, id: uuidv4() },
+            { src: outfit04, id: uuidv4() },
+            { src: outfit05, id: uuidv4() },
+            { src: outfit06, id: uuidv4() },
+        ];
+    }, []);
 
     return (
         <div>
@@ -66,8 +81,13 @@ export default function SuggestionResultPage() {
 
             <div className={styles.outfitContainer}>
                 {outfits.map((outfit, index) => (
-                    <div key={index} className={styles.outfitWrapper}>
-                        <Image src={outfit} alt={`outfit${index + 1}`} className={styles.outfit} />
+                    <div key={outfit.id} className={styles.outfitWrapper}>
+                        <Image
+                            src={outfit.src}
+                            alt={`outfit${index + 1}`}
+                            className={styles.outfit}
+                            priority
+                        />
                         <button className={styles.saveButton} onClick={() => toggleSave(index)}>
                             <Image
                                 src={savedOutfits.includes(index) ? saveFilled : saveOutline}

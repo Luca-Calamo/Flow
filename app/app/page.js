@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import TopBar from "@/app/components/global-components/topBar/topBar";
-import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
+import TopBar from '@/app/components/global-components/topBar/topBar';
+import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 
 export default function Home() {
     const handleButtonChange = (position, buttonText) => {
@@ -49,6 +49,15 @@ export default function Home() {
                     className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
                 >
                     Go to Indi Fits
+                </a>
+
+                <br></br>
+
+                <a
+                    href='/individual-fits2'
+                    className='px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600 transition'
+                >
+                    Go to Indi Fits 2
                 </a>
             </div>
             <Navbar initialActive='home' />

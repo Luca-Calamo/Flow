@@ -12,7 +12,13 @@ export default function IndiFits() {
                 <div className={styles.button}>
                     <SmallButton text='Edit' />
                 </div>
-                <p className={styles.text}>Back to Wardrobe</p>
+                <div className={styles.txtBtn}>
+                    <img
+                        className={styles.bckBtn}
+                        src='/images/arrow-black.svg'
+                    ></img>
+                    <p className={styles.text}>Back to Wardrobe</p>
+                </div>
             </div>
             <div className={styles.body}>
                 <IndividualFits src=' /images/Fit1.png' />

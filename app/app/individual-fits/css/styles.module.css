@@ -1,0 +1,30 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: black;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #e0e8ff;
+}
+
+.btncontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.button {
+    align-items: flex-end;
+}

@@ -2,7 +2,7 @@ import IndividualFits from '@/app/components/individual-fits/IndiFitsCard';
 import TopBar from '@/app/components/global-components/topBar/topBar';
 import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 import SmallButton from '@/app/components/buttons/smallButton';
-import styles from '@/app/individual-fits/css/styles.module.css';
+import styles from '@/app/individual-fits3/css/styles.module.css';
 import Link from 'next/link';
 
 export default function IndiFits() {
@@ -24,7 +24,7 @@ export default function IndiFits() {
                 </Link>
             </div>
             <div className={styles.body}>
-                <IndividualFits src=' /images/Fit1.png' />
+                <IndividualFits src=' /images/Fit3.png' />
             </div>
             <Navbar />
         </div>

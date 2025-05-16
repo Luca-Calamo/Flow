@@ -3,6 +3,7 @@ import TopBar from '@/app/components/global-components/topBar/topBar';
 import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 import SmallButton from '@/app/components/buttons/smallButton';
 import styles from '@/app/individual-fits2/css/styles.module.css';
+import Link from 'next/link';
 
 export default function IndiFits() {
     return (
@@ -12,13 +13,15 @@ export default function IndiFits() {
                 <div className={styles.button}>
                     <SmallButton text='Edit' />
                 </div>
-                <div className={styles.txtBtn}>
-                    <img
-                        className={styles.bckBtn}
-                        src='/images/arrow-black.svg'
-                    ></img>
-                    <p className={styles.text}>Back to Wardrobe</p>
-                </div>
+                <Link href='/fits'>
+                    <div className={styles.txtBtn}>
+                        <img
+                            className={styles.bckBtn}
+                            src='/images/arrow-black.svg'
+                        ></img>
+                        <p className={styles.text}>Back to Wardrobe</p>
+                    </div>
+                </Link>
             </div>
             <div className={styles.body}>
                 <IndividualFits src=' /images/Fit2.png' />

@@ -6,9 +6,6 @@ export default function IndividualFits({ src }) {
         <div>
             <div className={styles.card}>
                 <img className={styles.img} src={src}></img>
-                {/* <img className={styles.shirtImg} src={src}></img>
-                <img className={styles.pantsImg} src={src}></img>
-                <img className={styles.shoesImg} src={src}></img> */}
             </div>
         </div>
     );

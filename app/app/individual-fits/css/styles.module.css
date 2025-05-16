@@ -17,9 +17,10 @@
 
 .btncontainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
+    gap: 90px;
     width: 100%;
     margin-top: 12px;
     margin-bottom: 12px;
@@ -27,4 +28,13 @@
 
 .button {
     align-items: flex-end;
+}
+
+.txtBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.bckBtn {
+    margin-right: 5px;
 }

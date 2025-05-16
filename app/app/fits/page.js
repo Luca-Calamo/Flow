@@ -3,7 +3,7 @@ import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 import Top_Bar from '@/app/components/global-components/topBar/topBar';
 import styles from '@/app/fits/css/styles.module.css';
 import SmallButton from '@/app/components/buttons/smallButton';
-import LargeButton from '@/app/components/buttons/largeButton';
+import Link from 'next/link';
 
 export default function WarCard() {
     return (
@@ -20,22 +20,24 @@ export default function WarCard() {
                 </div>
 
                 <div className={styles.container}>
-                    <WardrobeCard src='/images/outfit01.png' />
-                    <WardrobeCard src='/images/outfit2.png' />
-                    <WardrobeCard src='/images/outfit03.png' />
-                    <WardrobeCard src='/images/outfit04.png' />
-                    <WardrobeCard src='/images/outfit05.png' />
+                    <Link href='/individual-fits2'>
+                        <WardrobeCard src='/images/outfit01.png' />
+                    </Link>
+                    <Link href='/individual-fits'>
+                        <WardrobeCard src='/images/outfit2.png' />
+                    </Link>
+                    <Link href='/individual-fits4'>
+                        <WardrobeCard src='/images/outfit03.png' />
+                    </Link>
+                    <Link href='/individual-fits5'>
+                        <WardrobeCard src='/images/outfit04.png' />
+                    </Link>
+                    <Link href='/individual-fits3'>
+                        <WardrobeCard src='/images/outfit05.png' />
+                    </Link>
                 </div>
                 <Navbar />
             </div>
         </div>
     );
 }
-
-// export default function SmallButton() {
-//     return (
-//         <div className='container'>
-//             <SmallButton />
-//         </div>
-//     );
-// }

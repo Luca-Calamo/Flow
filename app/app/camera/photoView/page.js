@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import photoData from "@/data/db.json";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import TopBar from "@/app/components/global-components/topBar/topBar";
@@ -12,11 +14,15 @@ import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
     const [showOverlay, setShowOverlay] = useState(false);
-
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const photo = searchParams.get("photo");
+
     let clicked = () => {
         router.push("/camera");
     };
+
+    const item = photoData.find((p) => p.src === photo);
 
     return (
         <div className={styles.page}>
@@ -32,13 +38,16 @@ export default function PhotoView() {
                     CONTENT
                 </TagsOverlay>
             )}
-            <Photo onClick={() => setShowOverlay(true)} />
-            <Description />
+            <Photo src={item?.src} onClick={() => setShowOverlay(true)} />
+            <Description
+                shortText={item?.descriptionShort}
+                longText={item?.descriptionLong}
+            />
             <div className={styles.buttonContainer}>
                 <Link href='/camera' className={styles.button}>
                     <LargeButton text={"Add Another"} type={"secondary"} />
                 </Link>
-                <Link href='/' className={styles.button}>
+                <Link href='/articles' className={styles.button}>
                     <LargeButton text={"Save"} type={"primary"} />
                 </Link>
             </div>

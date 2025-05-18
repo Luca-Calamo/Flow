@@ -4,6 +4,7 @@ import Top_Bar from '@/app/components/global-components/topBar/topBar';
 import styles from '@/app/fits/css/styles.module.css';
 import SmallButton from '@/app/components/buttons/smallButton';
 import Link from 'next/link';
+import FitsCard from '@/app/components/fits-card/fitscard';
 
 export default function WarCard() {
     return (
@@ -35,6 +36,12 @@ export default function WarCard() {
                     <Link href='/individual-fits3'>
                         <WardrobeCard src='/images/outfit05.png' />
                     </Link>
+                    <FitsCard
+                        shirts='/images/Black-Polo.png'
+                        pants='/images/Black-Dress-Pants.png'
+                        shoes='/images/Leather-Running-Shoes.png'
+                        hats='images/Green-Beanie.png'
+                    />
                 </div>
                 <Navbar />
             </div>

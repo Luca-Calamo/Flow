@@ -18,10 +18,13 @@ export default function AllPhotosView() {
         );
 
         fetch("/carousel.json")
-            .then((res) => res.join())
+            .then((res) => res.json())
             .then((data) => {
-                const visiblePhotos = photoData.slice(0, storedIndex);
+                const visiblePhotos = data.slice(0, storedIndex);
                 setPhotos(visiblePhotos);
+            })
+            .catch((err) => {
+                console.error("Error fetching photos:", err);
             });
     }, []);
 
@@ -42,10 +45,10 @@ export default function AllPhotosView() {
                 {photos.map((photoObj, index) => (
                     <button
                         key={index}
-                        onClick={() => handleCardClick(photoObj.src)}
+                        onClick={() => handleCardClick(photoObj.image)}
                         className={styles.articleCardButton}
                     >
-                        <ArticleCard src={photoObj.src} />
+                        <ArticleCard src={photoObj.image} />
                     </button>
                 ))}
             </div>

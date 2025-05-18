@@ -56,7 +56,7 @@ export default function Home() {
             router.push("/camera/allPhotosView");
         } else {
             router.push(
-                `/camera/photoView?photo=${encodeURIComponent(nextPhoto.src)}`
+                `/camera/photoView?photo=${encodeURIComponent(nextPhoto.image)}`
             );
         }
 

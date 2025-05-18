@@ -24,7 +24,7 @@ export default function PhotoView() {
             .then(setPhotoData);
     }, []);
 
-    const item = photoData.find((p) => p.src === photo);
+    const item = photoData.find((p) => p.image === photo);
 
     return (
         <div className={styles.page}>
@@ -38,11 +38,22 @@ export default function PhotoView() {
             {showOverlay && (
                 <TagsOverlay onClose={() => setShowOverlay(false)} />
             )}
-            <Photo src={item?.src} onClick={() => setShowOverlay(true)} />
-            <Description
-                shortText={item?.descriptionShort}
-                longText={item?.descriptionLong}
-            />
+            {item && (
+                <>
+                    <div className='photo'>
+                        <Photo
+                            src={item?.image}
+                            onClick={() => setShowOverlay(true)}
+                        />
+                    </div>
+
+                    <Description
+                        shortText={item?.descriptionShort}
+                        longText={item?.descriptionLong}
+                    />
+                </>
+            )}
+
             <div className={styles.buttonContainer}>
                 <Link href='/camera' className={styles.button}>
                     <LargeButton text={"Add Another"} type={"secondary"} />

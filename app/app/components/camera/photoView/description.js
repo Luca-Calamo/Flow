@@ -10,15 +10,6 @@ export default function Description({ shortText, longText }) {
     return (
         <div className={styles.component}>
             <div className={styles.header}>
-                <div className={styles.listen}>
-                    <Image
-                        src={"/images/listen-icon.svg"}
-                        width={30}
-                        height={30}
-                        alt={"listen icon"}
-                    />
-                    <h3>Listen</h3>
-                </div>
                 <h2 className={styles.title}>Description</h2>
 
                 <Image

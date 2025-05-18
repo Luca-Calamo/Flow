@@ -1,59 +1,78 @@
-import Link from 'next/link';
-import articles from '@/data/articles'; // <-- no /[id]
-
+import articles from '@/data/articles/articles'; // adjust path if needed
 import styles from '@/app/components/fits-card/css/styles.module.css';
+import Link from 'next/link';
+
+// 🧩 Mini-component to render an image based on article ID
+// function ArticleImage({ id }) {
+//     const article = articles.find((item) => item.id === id);
+
+//     if (!article) {
+//         return <p>Item not found</p>;
+//     }
+
+//     return (
+//         <Link href={`/articles/${id}`}>
+//             <img
+//                 src={article.image}
+//                 alt={article.title}
+//                 className={styles[type] || ''}
+//             />
+//         </Link>
+//     );
+// }
+
+function ArticleImage({ id, type }) {
+    const article = articles.find((item) => item.id === id);
+
+    if (!article) {
+        return <p>Item not found</p>;
+    }
+
+    return (
+        <Link href={`/articles/${id}`}>
+            <img
+                src={article.image}
+                alt={article.title}
+                className={styles[type] || ''}
+            />
+        </Link>
+    );
+}
 
 export default function FitsCard({ shirtId, hatId, pantsId, shoesId }) {
-    // helper to get article by ID
-    const getArticle = (id) => articles.find((article) => article.id === id);
-
-    const shirt = getArticle(shirtId);
-    const hat = getArticle(hatId);
-    const pants = getArticle(pantsId);
-    const shoes = getArticle(shoesId);
-
     return (
         <div className={styles.card}>
             <div className={styles.clothingItem}>
-                <Link href={`/articles/${shirt.id}`}>
-                    <img src={shirt.image} alt={shirt.title} />
-                </Link>
+                <ArticleImage id={shirtId} type='shirts' />
             </div>
             <div className={styles.clothingItem}>
-                <Link href={`/articles/${hat.id}`}>
-                    <img src={hat.image} alt={hat.title} />
-                </Link>
+                <ArticleImage id={hatId} type='hats' />
             </div>
             <div className={styles.clothingItem}>
-                <Link href={`/articles/${pants.id}`}>
-                    <img src={pants.image} alt={pants.title} />
-                </Link>
+                <ArticleImage id={pantsId} type='pants' />
             </div>
             <div className={styles.clothingItem}>
-                <Link href={`/articles/${shoes.id}`}>
-                    <img src={shoes.image} alt={shoes.title} />
-                </Link>
+                <ArticleImage id={shoesId} type='shoes' />
             </div>
         </div>
     );
 }
 
-// import styles from '@/app/components/fits-card/css/styles.module.css';
-
-// export default function FitsCard({ shirts, hats, pants, shoes }) {
+// 🧥 Main card component to show 4 clothing items
+// export default function FitsCard({ shirtId, hatId, pantsId, shoesId }) {
 //     return (
 //         <div className={styles.card}>
 //             <div className={styles.clothingItem}>
-//                 <img className={styles.shirts} src={shirts} alt='Shirt' />
+//                 <ArticleImage id={shirtId} />
 //             </div>
 //             <div className={styles.clothingItem}>
-//                 <img className={styles.hats} src={hats} alt='Hat' />
+//                 <ArticleImage id={hatId} />
 //             </div>
 //             <div className={styles.clothingItem}>
-//                 <img className={styles.pants} src={pants} alt='Pants' />
+//                 <ArticleImage id={pantsId} />
 //             </div>
 //             <div className={styles.clothingItem}>
-//                 <img className={styles.shoes} src={shoes} alt='Shoes' />
+//                 <ArticleImage id={shoesId} />
 //             </div>
 //         </div>
 //     );

@@ -22,21 +22,45 @@ export default function WarCard() {
 
                 <div className={styles.container}>
                     <Link href='/individual-fits2'>
-                        <WardrobeCard src='/images/outfit01.png' />
+                        <FitsCard
+                            shirtId={1}
+                            hatId={15}
+                            pantsId={8}
+                            shoesId={12}
+                        />
                     </Link>
                     <Link href='/individual-fits'>
-                        <WardrobeCard src='/images/outfit2.png' />
+                        <FitsCard
+                            shirtId={4}
+                            hatId={16}
+                            pantsId={8}
+                            shoesId={13}
+                        />
                     </Link>
                     <Link href='/individual-fits4'>
-                        <WardrobeCard src='/images/outfit03.png' />
+                        <FitsCard
+                            shirtId={5}
+                            hatId={14}
+                            pantsId={9}
+                            shoesId={11}
+                        />
                     </Link>
                     <Link href='/individual-fits5'>
-                        <WardrobeCard src='/images/outfit04.png' />
+                        <FitsCard
+                            shirtId={3}
+                            hatId={16}
+                            pantsId={7}
+                            shoesId={18}
+                        />
                     </Link>
                     <Link href='/individual-fits3'>
-                        <WardrobeCard src='/images/outfit05.png' />
+                        <FitsCard
+                            shirtId={2}
+                            hatId={17}
+                            pantsId={6}
+                            shoesId={10}
+                        />
                     </Link>
-                    <FitsCard shirtId={1} hatId={15} pantsId={8} shoesId={12} />
                 </div>
                 <Navbar />
             </div>

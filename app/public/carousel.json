@@ -3,112 +3,128 @@
         "id": 1,
         "image": "/images/Black-Tee.png",
         "title": "Black T-shirt",
-        "description": "Comfortable black t-shirt made from 100% cotton. Perfect for everyday wear.",
+        "descriptionShort": "It's a basic crew neck style with short sleeves and appears to be made from a standard cotton or cotton-blend fabric...",
+        "descriptionLong": "It's a basic crew neck style with short sleeves and appears to be made from a standard cotton or cotton-blend fabric. The t-shirt has no visible graphics, text, patterns, or design elements. It's a classic unisex style that would serve as a versatile basic item in a wardrobe.",
         "tags": ["T-shirt", "warm", "spring"]
     },
     {
         "id": 2,
         "image": "/images/Black-Polo.png",
         "title": "Black Polo",
-        "description": "Stylish black polo shirt made from breathable fabric. Ideal for casual outings or semi-formal events.",
+        "descriptionShort": "A sleek charcoal gray polo shirt crafted from what appears to be a performance fabric with subtle texture...",
+        "descriptionLong": "A sleek charcoal gray polo shirt crafted from what appears to be a performance fabric with subtle texture. Features a traditional collar, short sleeves, and a three-button placket. The modern cut and technical-looking material suggest moisture-wicking properties, making it suitable for both casual wear and athletic activities.",
         "tags": ["T-shirt", "black", "casual"]
     },
     {
         "id": 3,
         "image": "/images/Blue-Polo.png",
         "title": "Blue Polo",
-        "description": "Classic blue polo shirt with a modern fit. Great for layering or wearing on its own.",
+        "descriptionShort": "A classic navy blue polo shirt featuring a traditional fold-down collar and partial button placket...",
+        "descriptionLong": "A classic navy blue polo shirt featuring a traditional fold-down collar and partial button placket. Appears to be crafted from smooth piqué cotton with short sleeves and a comfortable regular fit. This timeless style bridges the gap between casual and smart casual, making it appropriate for various occasions.",
         "tags": ["T-shirt", "blue", "casual"]
     },
     {
         "id": 4,
         "image": "/images/Grey-Tee.png",
         "title": "Grey T-shirt",
-        "description": "Lightweight grey t-shirt made from soft cotton. Perfect for summer days.",
+        "descriptionShort": "A fitted gray t-shirt with a clean crew neck design and short sleeves...",
+        "descriptionLong": "A fitted gray t-shirt with a clean crew neck design and short sleeves. Made from what appears to be a smooth, possibly moisture-wicking athletic fabric with a slight sheen. The streamlined silhouette makes it ideal for layering or wearing alone for workouts or casual everyday wear.",
         "tags": ["T-shirt", "grey", "summer"]
     },
     {
         "id": 5,
         "image": "/images/White-Longsleeve.png",
         "title": "White Longsleeve Shirt",
-        "description": "Classic white long-sleeve shirt made from breathable fabric. Perfect for layering.",
+        "descriptionShort": "A clean white long-sleeve t-shirt featuring a classic crew neck design...",
+        "descriptionLong": "A clean white long-sleeve t-shirt featuring a classic crew neck design. Crafted from what appears to be standard cotton jersey fabric, it provides additional arm coverage and warmth. This essential layering piece works well under sweaters or jackets in cooler weather or can be worn on its own for a simple, minimalist look.",
         "tags": ["T-shirt", "white", "casual"]
     },
     {
         "id": 6,
         "image": "/images/Black-Dress-Pants.png",
         "title": "Black Dress Pants",
-        "description": "Classic black dress pants made from high-quality fabric. Perfect for formal occasions or business meetings.",
+        "descriptionShort": "Sophisticated black dress pants crafted from what appears to be a wool or wool-blend fabric with a subtle sheen...",
+        "descriptionLong": "Sophisticated black dress pants crafted from what appears to be a wool or wool-blend fabric with a subtle sheen. Features a flat front design, sharp pressed center crease, and tailored silhouette. These refined slacks are suitable for business professional environments, formal occasions, or can be paired with more casual pieces for smart casual attire.",
         "tags": ["pants", "black", "formal"]
     },
     {
         "id": 7,
         "image": "/images/Cargo-Jeans.png",
         "title": "Cargo Jeans",
-        "description": "Stylish cargo jeans with multiple pockets. Made from durable denim, perfect for casual outings.",
+        "descriptionShort": "Loose-fitting blue denim jeans designed with an intentionally oversized, baggy silhouette...",
+        "descriptionLong": "Loose-fitting blue denim jeans designed with an intentionally oversized, baggy silhouette. Features multiple large utility cargo pockets on the sides and legs, combining streetwear aesthetics with functional storage. The relaxed cut and utility-focused design reflect contemporary urban fashion trends.",
         "tags": ["pants", "blue", "casual"]
     },
     {
         "id": 8,
         "image": "/images/Sweatpants.png",
         "title": "Sweatpants",
-        "description": "Comfortable sweatpants made from soft fabric. Ideal for lounging or casual outings.",
+        "descriptionShort": "Contemporary dark gray jogger pants combining athletic functionality with street style...",
+        "descriptionLong": "Contemporary dark gray jogger pants combining athletic functionality with street style. Features an elastic waistband likely with drawstring, tapered legs, and elastic cuffs at the ankles. Made from what appears to be a soft, possibly cotton-blend or technical fabric, offering comfort and mobility for both active and leisure wear.",
         "tags": ["pants", "grey", "casual"]
     },
     {
         "id": 9,
         "image": "/images/Ripped-Jeans.png",
         "title": "Ripped Jeans",
-        "description": "Stylish ripped jeans made from durable denim. Perfect for a casual look.",
+        "descriptionShort": "Light-wash denim jeans featuring extensive distressing and multiple tears across the front thighs and knees...",
+        "descriptionLong": "Light-wash denim jeans featuring extensive distressing and multiple tears across the front thighs and knees. Cut in a straight or slightly tapered leg silhouette with traditional five-pocket styling. The deliberate worn aesthetic creates a casual, lived-in look perfect for creating relaxed outfits with an edge.",
         "tags": ["pants", "blue", "casual"]
     },
     {
         "id": 10,
         "image": "/images/Black-Dress-Shoes.png",
         "title": "Black Dress Shoes",
-        "description": "Classic black dress shoes made from high-quality leather. Perfect for formal occasions.",
+        "descriptionShort": "Elegant black leather oxford dress shoes with a formal aesthetic...",
+        "descriptionLong": "Elegant black leather oxford dress shoes with a formal aesthetic. Showcases a sleek silhouette with closed lacing, minimal stitching, and a polished leather finish. The refined shape features a slightly pointed toe and modest heel height. These timeless shoes are essential for formal attire, business professional settings, and special occasions.",
         "tags": ["shoes", "black", "formal"]
     },
     {
         "id": 11,
         "image": "/images/Chelsea-Boots.png",
         "title": "Chelsea Boots",
-        "description": "Stylish Chelsea boots made from high-quality leather. Perfect for both casual and formal occasions.",
+        "descriptionShort": "Refined brown leather Chelsea boots featuring the signature elastic side panels for easy slip-on wear...",
+        "descriptionLong": "Refined brown leather Chelsea boots featuring the signature elastic side panels for easy slip-on wear. The polished leather upper has a rich patina, complemented by a moderate heel and slightly pointed toe. These versatile boots blend classic British design with contemporary styling, suitable for both casual and more formal ensembles.",
         "tags": ["shoes", "brown", "casual", "formal"]
     },
     {
         "id": 12,
         "image": "/images/Leather-Running-Shoes.png",
         "title": "Leather Running Shoes",
-        "description": "Comfortable leather running shoes designed for performance. Ideal for workouts or casual wear.",
+        "descriptionShort": "Versatile brown leather oxford shoes bridging casual and semi-formal styles...",
+        "descriptionLong": "Versatile brown leather oxford shoes bridging casual and semi-formal styles. Features include distinctive contrast stitching, rounded toes, traditional lace-up closure, and rubber outsoles for comfort and traction. The relaxed interpretation of the classic oxford design makes these suitable for business casual settings or smart weekend wear.",
         "tags": ["shoes", "brown", "casual"]
     },
     {
         "id": 13,
         "image": "/images/Timbs.png",
         "title": "Timberlands",
-        "description": "Stylish Timberland boots made from durable leather. Perfect for outdoor adventures.",
+        "descriptionShort": "Robust tan leather boots designed for work or hiking environments...",
+        "descriptionLong": "Robust tan leather boots designed for work or hiking environments. Features include a padded ankle collar, metal hardware with durable laces, and thick rubber lug soles providing excellent traction on varied terrain. The practical design combines durability and comfort while the wheat/tan color offers a more casual look than traditional black or dark brown work boots.",
         "tags": ["shoes", "brown", "casual"]
     },
     {
         "id": 14,
         "image": "/images/Blue-Baseball-Cap.png",
         "title": "Blue Baseball Cap",
-        "description": "Classic blue baseball cap made from breathable fabric. Perfect for sunny days.",
+        "descriptionShort": "A traditional six-panel baseball cap in vibrant blue featuring a structured front with a small embroidered logo...",
+        "descriptionLong": "A traditional six-panel baseball cap in vibrant blue featuring a structured front with a small embroidered logo. Includes an adjustable strap at the back for customized fit. Perfect for casual wear or sun protection during outdoor activities.",
         "tags": ["hats", "blue", "casual"]
     },
     {
         "id": 15,
         "image": "/images/Green-Beanie.png",
         "title": "Green Beanie",
-        "description": "Stylish green beanie made from soft fabric. Perfect for keeping warm in winter.",
+        "descriptionShort": "A cozy olive green beanie crafted from knitted fabric with a classic silhouette...",
+        "descriptionLong": "A cozy olive green beanie crafted from knitted fabric with a classic silhouette. Features a traditional folded edge at the bottom that can be adjusted for different styles and warmth levels. This versatile winter accessory combines practicality with a military-inspired color that complements many outfits.",
         "tags": ["hats", "green", "winter", "casual"]
     },
     {
         "id": 16,
         "image": "/images/Yellow-Bucket-Hat.png",
         "title": "Yellow Bucket Hat",
-        "description": "Trendy yellow bucket hat made from lightweight fabric. Ideal for summer outings.",
+        "descriptionShort": "A cheerful yellow bucket hat made from what appears to be sturdy cotton or canvas material...",
+        "descriptionLong": "A cheerful yellow bucket hat made from what appears to be sturdy cotton or canvas material. Features the characteristic all-around downward-sloping brim providing excellent sun protection. The vibrant color and casual silhouette make it a playful accessory for spring and summer outfits.",
         "tags": ["hats", "yellow", "summer", "casual"]
     },
     {

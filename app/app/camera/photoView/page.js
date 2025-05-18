@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import TopBar from "@/app/components/global-components/topBar/topBar";
 import Photo from "@/app/components/camera/photoView/photo";
@@ -12,11 +13,18 @@ import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
     const [showOverlay, setShowOverlay] = useState(false);
-
+    const [photoData, setPhotoData] = useState([]);
     const router = useRouter();
-    let clicked = () => {
-        router.push("/camera");
-    };
+    const searchParams = useSearchParams();
+    const photo = searchParams.get("photo");
+
+    useEffect(() => {
+        fetch("/carousel.json")
+            .then((res) => res.json())
+            .then(setPhotoData);
+    }, []);
+
+    const item = photoData.find((p) => p.image === photo);
 
     return (
         <div className={styles.page}>
@@ -25,20 +33,32 @@ export default function PhotoView() {
                 hasBtn={true}
                 btnTxt='Re-take photo'
                 btnType='secondary'
-                btnOnClick={clicked}
+                btnOnClick={() => router.push("/camera")}
             />
             {showOverlay && (
-                <TagsOverlay onClose={() => setShowOverlay(false)}>
-                    CONTENT
-                </TagsOverlay>
+                <TagsOverlay onClose={() => setShowOverlay(false)} />
             )}
-            <Photo onClick={() => setShowOverlay(true)} />
-            <Description />
+            {item && (
+                <>
+                    <div className='photo'>
+                        <Photo
+                            src={item?.image}
+                            onClick={() => setShowOverlay(true)}
+                        />
+                    </div>
+
+                    <Description
+                        shortText={item?.descriptionShort}
+                        longText={item?.descriptionLong}
+                    />
+                </>
+            )}
+
             <div className={styles.buttonContainer}>
                 <Link href='/camera' className={styles.button}>
                     <LargeButton text={"Add Another"} type={"secondary"} />
                 </Link>
-                <Link href='/' className={styles.button}>
+                <Link href='/articles' className={styles.button}>
                     <LargeButton text={"Save"} type={"primary"} />
                 </Link>
             </div>

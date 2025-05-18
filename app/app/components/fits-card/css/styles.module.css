@@ -1,0 +1,70 @@
+.card {
+    width: 173px;
+    height: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px; /* Total 8px spacing (2 gaps) */
+    padding: 4px;
+    border-radius: 12px;
+    background-color: #f0f4f8;
+    margin: 15px;
+    justify-content: center;
+    align-content: center;
+}
+
+.clothingItem {
+    width: 82px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .clothingItem img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+} */
+
+.shirts {
+    display: flex;
+    width: 42px;
+    height: 53px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 42/53;
+}
+
+.pants {
+    display: flex;
+    width: 32px;
+    height: 70px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 16/35;
+}
+
+.shoes {
+    display: flex;
+    width: 55px;
+    height: 42px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 55/42;
+}
+
+.hats {
+    display: flex;
+    width: 50px;
+    height: 28.151px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    aspect-ratio: 50/28.15;
+}

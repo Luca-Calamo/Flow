@@ -3,6 +3,7 @@ import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 import Top_Bar from '@/app/components/global-components/topBar/topBar';
 import styles from '@/app/fits/css/styles.module.css';
 import SmallButton from '@/app/components/buttons/smallButton';
+import BuildCard from '@/app/components/build-card/build-card';
 import Link from 'next/link';
 import FitsCard from '@/app/components/fits-card/fitscard';
 
@@ -61,6 +62,7 @@ export default function WarCard() {
                             shoesId={10}
                         />
                     </Link>
+                    <BuildCard id={1} type='shirts' />
                 </div>
                 <Navbar />
             </div>

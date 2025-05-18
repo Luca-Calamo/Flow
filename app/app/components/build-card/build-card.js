@@ -1,33 +1,70 @@
-export default function FitBuilder() {
-    const [fit, setFit] = useState({
-        hats: 17,
-        shirts: 17,
-        pants: 17,
-        shoes: 17,
-    });
-    const [activeType, setActiveType] = useState(null);
+'use client';
 
-    function handleSelect(type, id) {
-        setFit((prev) => ({ ...prev, [type]: id }));
+import { useState } from 'react';
+import articles from '@/data/articles/articles';
+import styles from './css/styles.module.css';
+import modalStyles from './css/modal.module.css';
+
+function ArticleImage({ id, type }) {
+    const article = articles.find((item) => item.id === id);
+
+    if (!article) {
+        return <p>Item not found</p>;
     }
 
     return (
-        <div className={styles.card}>
-            {['hats', 'shirts', 'pants', 'shoes'].map((type) => (
-                <ArticleSlot
-                    key={type}
-                    type={type}
-                    selectedId={fit[type]}
-                    onClick={setActiveType}
-                />
-            ))}
-            {activeType && (
-                <ArticleOverlay
-                    type={activeType}
-                    onSelect={handleSelect}
-                    onClose={() => setActiveType(null)}
-                />
+        <img
+            src={article.image}
+            alt={article.title}
+            className={styles[type] || ''}
+        />
+    );
+}
+
+export default function BuildCard({ id: defaultId, type, idRange }) {
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedId, setSelectedId] = useState(defaultId);
+
+    const filteredArticles = idRange
+        ? articles.filter(
+              (article) => article.id >= idRange[0] && article.id <= idRange[1]
+          )
+        : articles.filter((article) => article.type === type);
+
+    return (
+        <>
+            <div className={styles.card} onClick={() => setModalOpen(true)}>
+                <div className={styles.clothingItem}>
+                    <ArticleImage id={selectedId} type={type} />
+                </div>
+            </div>
+
+            {isModalOpen && (
+                <div
+                    className={modalStyles.overlay}
+                    onClick={() => setModalOpen(false)}
+                >
+                    <div
+                        className={modalStyles.modalGrid}
+                        onClick={(e) => e.stopPropagation()} // Prevent closing on internal click
+                    >
+                        <div className={modalStyles.grid}>
+                            {filteredArticles.map((article) => (
+                                <img
+                                    key={article.id}
+                                    src={article.image}
+                                    alt={article.title}
+                                    className={modalStyles.optionImage}
+                                    onClick={() => {
+                                        setSelectedId(article.id);
+                                        setModalOpen(false);
+                                    }}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
             )}
-        </div>
+        </>
     );
 }

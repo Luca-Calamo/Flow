@@ -15,7 +15,7 @@
     },
     {
         "id": 3,
-        "image": "app/public/images/Blue-Polo.png",
+        "image": "/images/Blue-Polo.png",
         "title": "Blue Polo",
         "description": "Classic blue polo shirt with a modern fit. Great for layering or wearing on its own.",
         "tags": ["T-shirt", "blue", "casual"]
@@ -50,7 +50,7 @@
     },
     {
         "id": 8,
-        "image": "app/public/images/Sweatpants.png",
+        "image": "/images/Sweatpants.png",
         "title": "Sweatpants",
         "description": "Comfortable sweatpants made from soft fabric. Ideal for lounging or casual outings.",
         "tags": ["pants", "grey", "casual"]
@@ -112,7 +112,7 @@
         "tags": ["hats", "yellow", "summer", "casual"]
     },
     {
-        "id": 16,
+        "id": 17,
         "image": "/images/No-Item-Cross.png",
         "title": "No Item",
         "description": "No item selected.",

@@ -18,16 +18,13 @@
 .btncontainer {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     gap: 90px;
     width: 100%;
     margin-top: 12px;
     margin-bottom: 12px;
-}
-
-.button {
-    align-items: flex-end;
+    padding-left: 20px;
 }
 
 .txtBtn {

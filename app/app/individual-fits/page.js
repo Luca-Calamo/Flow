@@ -10,9 +10,6 @@ export default function IndiFits() {
         <div className={styles.container}>
             <TopBar title='Fits' hasIcon={true} />
             <div className={styles.btncontainer}>
-                <div className={styles.button}>
-                    <SmallButton text='Edit' />
-                </div>
                 <Link href='/fits'>
                     <div className={styles.txtBtn}>
                         <img

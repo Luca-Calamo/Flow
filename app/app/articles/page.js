@@ -1,9 +1,31 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import ArticleCard from "@/app/components/articles/articleCard";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
 import TopBar from "@/app/components/global-components/topBar/topBar";
 import SmallButton from "@/app/components/buttons/smallButton";
 import styles from "@/app/articles/css/styles.module.css";
 export default function Articles() {
+    const router = useRouter();
+    const [articles, setArticles] = useState([]);
+
+    useEffect(() => {
+        fetch("/carousel.json")
+            .then((res) => res.json())
+            .then(setArticles)
+            .catch((err) => {
+                console.error("Error fetching articles:", err);
+            });
+    }, []);
+
+    const handleCardClick = (article) => {
+        router.push(
+            `/articles/singleArticle?article=${encodeURIComponent(article)}`
+        );
+    };
+
     return (
         <div className={styles.body}>
             <TopBar
@@ -21,22 +43,18 @@ export default function Articles() {
                 </div>
             </div>
             <div className={styles.container}>
-                <ArticleCard src='/images/Black-Dress-Shoes.png' />
-                <ArticleCard src='/images/Black-Dress-Pants.png' />
-                <ArticleCard src='/images/Black-Polo.png' />
-                <ArticleCard src='/images/Black-Tee.png' />
-                <ArticleCard src='/images/Blue-Baseball-Cap.png' />
-                <ArticleCard src='/images/Blue-Polo.png' />
-                <ArticleCard src='/images/Cargo-Jeans.png' />
-                <ArticleCard src='/images/Chelsea-Boots.png' />
-                <ArticleCard src='/images/Green-Beanie.png' />
-                <ArticleCard src='/images/Grey-Tee.png' />
-                <ArticleCard src='/images/Leather-Running-Shoes.png' />
-                <ArticleCard src='/images/Ripped-Jeans.png' />
-                <ArticleCard src='/images/Sweatpants.png' />
-                <ArticleCard src='/images/Timbs.png' />
-                <ArticleCard src='/images/White-Longsleeve.png' />
-                <ArticleCard src='/images/Yellow-Bucket-Hat.png' />
+                {articles.map((item, index) => {
+                    console.log("Rendering article:", item);
+                    return (
+                        <button
+                            key={index}
+                            onClick={() => handleCardClick(item.image)}
+                            className={styles.articleCardButton}
+                        >
+                            <ArticleCard src={item.image} />
+                        </button>
+                    );
+                })}
             </div>
             <Navbar />
         </div>

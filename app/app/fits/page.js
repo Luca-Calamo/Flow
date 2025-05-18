@@ -36,12 +36,7 @@ export default function WarCard() {
                     <Link href='/individual-fits3'>
                         <WardrobeCard src='/images/outfit05.png' />
                     </Link>
-                    <FitsCard
-                        shirts='/images/Black-Polo.png'
-                        pants='/images/Black-Dress-Pants.png'
-                        shoes='/images/Leather-Running-Shoes.png'
-                        hats='images/Green-Beanie.png'
-                    />
+                    <FitsCard shirtId={1} hatId={15} pantsId={8} shoesId={12} />
                 </div>
                 <Navbar />
             </div>

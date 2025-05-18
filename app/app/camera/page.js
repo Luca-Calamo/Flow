@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import photoData from "@/data/db.json";
 import { useRouter } from "next/navigation";
 import TopBar from "@/app/components/global-components/topBar/topBar";
 import TopCamBar from "@/app/components/camera/navigation/topCamBar";
@@ -14,10 +13,9 @@ export default function Home() {
     const router = useRouter();
     const [activeOverlay, setActiveOverlay] = useState("tops");
     const [photoIndex, setPhotoIndex] = useState(0);
+    const [photoData, setPhotoData] = useState([]);
 
     const overlays = ["tops", "bottoms", "shoes", "hats"];
-
-    const WebcamComponent = () => <Webcam />;
 
     useEffect(() => {
         const storedIndex = parseInt(
@@ -25,7 +23,13 @@ export default function Home() {
             10
         );
         setPhotoIndex(storedIndex);
+
+        fetch("/carousel.json")
+            .then((res) => res.json())
+            .then(setPhotoData);
     }, []);
+
+    const WebcamComponent = () => <Webcam />;
 
     function overlayOption(direction) {
         const currentIndex = overlays.indexOf(activeOverlay);

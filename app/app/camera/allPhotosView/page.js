@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import photoData from "@/data/db.json";
 import { useRouter } from "next/navigation";
 import TopBar from "@/app/components/global-components/topBar/topBar";
 import ArticleCard from "@/app/components/articles/articleCard";
@@ -17,8 +16,13 @@ export default function AllPhotosView() {
             localStorage.getItem("photoIndex") || "0",
             10
         );
-        const visiblePhotos = photoData.slice(0, storedIndex);
-        setPhotos(visiblePhotos);
+
+        fetch("/carousel.json")
+            .then((res) => res.join())
+            .then((data) => {
+                const visiblePhotos = photoData.slice(0, storedIndex);
+                setPhotos(visiblePhotos);
+            });
     }, []);
 
     const handleCardClick = (photo) => {

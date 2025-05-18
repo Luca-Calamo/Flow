@@ -1,9 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import photoData from "@/data/db.json";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import TopBar from "@/app/components/global-components/topBar/topBar";
 import Photo from "@/app/components/camera/photoView/photo";
@@ -14,13 +13,16 @@ import styles from "@/app/camera/photoView/photoView.module.css";
 
 export default function PhotoView() {
     const [showOverlay, setShowOverlay] = useState(false);
+    const [photoData, setPhotoData] = useState([]);
     const router = useRouter();
     const searchParams = useSearchParams();
     const photo = searchParams.get("photo");
 
-    let clicked = () => {
-        router.push("/camera");
-    };
+    useEffect(() => {
+        fetch("/carousel.json")
+            .then((res) => res.json())
+            .then(setPhotoData);
+    }, []);
 
     const item = photoData.find((p) => p.src === photo);
 
@@ -31,12 +33,10 @@ export default function PhotoView() {
                 hasBtn={true}
                 btnTxt='Re-take photo'
                 btnType='secondary'
-                btnOnClick={clicked}
+                btnOnClick={() => router.push("/camera")}
             />
             {showOverlay && (
-                <TagsOverlay onClose={() => setShowOverlay(false)}>
-                    CONTENT
-                </TagsOverlay>
+                <TagsOverlay onClose={() => setShowOverlay(false)} />
             )}
             <Photo src={item?.src} onClick={() => setShowOverlay(true)} />
             <Description

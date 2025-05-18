@@ -1,43 +1,43 @@
-// components/Carousel.js
 'use client';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const Carousel = ({ images }) => {
-    const [current, setCurrent] = useState(0);
+// const Carousel = () => {
+//     const [items, setItems] = useState([]);
 
-    const nextSlide = () => setCurrent((current + 1) % images.length);
-    const prevSlide = () =>
-        setCurrent((current - 1 + images.length) % images.length);
+//     useEffect(() => {
+//         fetch('carousel.json')
+//             .then((res) => res.json())
+//             .then((data) => setItems(data));
+//     }, []);
 
-    return (
-        <div className='relative w-full max-w-xl mx-auto overflow-hidden'>
-            <div
-                className='flex transition-transform duration-500 ease-in-out'
-                style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-                {images.map((src, idx) => (
-                    <img
-                        key={idx}
-                        src={src}
-                        className='w-full flex-shrink-0'
-                        alt={`Slide ${idx}`}
-                    />
-                ))}
-            </div>
-            <button
-                onClick={prevSlide}
-                className='absolute left-2 top-1/2 -translate-y-1/2 bg-white px-2 py-1'
-            >
-                ❮
-            </button>
-            <button
-                onClick={nextSlide}
-                className='absolute right-2 top-1/2 -translate-y-1/2 bg-white px-2 py-1'
-            >
-                ❯
-            </button>
-        </div>
-    );
-};
+//     const settings = {
+//         dots: true,
+//         infinite: true,
+//         speed: 500,
+//         slidesToShow: 3,
+//         slidesToScroll: 1,
+//     };
 
-export default Carousel;
+//     return (
+//         <div className='carousel-container'>
+//             <Slider {...settings}>
+//                 {items.map((item) => (
+//                     <div key={item.id}>
+//                         <img
+//                             src={item.image}
+//                             alt={item.title}
+//                             style={{ width: '100%' }}
+//                         />
+//                         <h3>{item.title}</h3>
+//                         <p>{item.description}</p>
+//                     </div>
+//                 ))}
+//             </Slider>
+//         </div>
+//     );
+// };
+
+// export default Carousel;

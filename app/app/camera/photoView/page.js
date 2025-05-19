@@ -55,12 +55,23 @@ export default function PhotoView() {
             )}
 
             <div className={styles.buttonContainer}>
-                <Link href='/camera' className={styles.button}>
-                    <LargeButton text={"Add Another"} type={"secondary"} />
-                </Link>
-                <Link href='/articles' className={styles.button}>
-                    <LargeButton text={"Save"} type={"primary"} />
-                </Link>
+                <div className={styles.button}>
+                    <LargeButton
+                        text={"Add Another"}
+                        type={"secondary"}
+                        onClick={() => router.push("/camera")}
+                    />
+                </div>
+                <div className={styles.button}>
+                    <LargeButton
+                        text={"Save"}
+                        type={"primary"}
+                        onClick={() => {
+                            localStorage.removeItem("photoIndex");
+                            router.push("/articles");
+                        }}
+                    />
+                </div>
             </div>
         </div>
     );

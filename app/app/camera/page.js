@@ -52,18 +52,21 @@ export default function Home() {
         const currentIndex = photoIndex;
         const nextPhoto = photoData[photoIndex];
 
+        let nextUrl = "";
         if (photoIndex > 0) {
-            router.push("/camera/allPhotosView");
+            nextUrl = "/camera/allPhotosView";
         } else {
-            router.push(
-                `/camera/photoView?photo=${encodeURIComponent(nextPhoto.image)}`
-            );
+            nextUrl = `/camera/photoView?photo=${encodeURIComponent(
+                nextPhoto.image
+            )}`;
         }
 
         const newIndex = currentIndex + 1;
-
         localStorage.setItem("photoIndex", newIndex.toString());
         setPhotoIndex(newIndex);
+
+        // Go to loading page, passing the nextUrl as a query param
+        router.push(`/camera/loading?next=${encodeURIComponent(nextUrl)}`);
     };
 
     return (

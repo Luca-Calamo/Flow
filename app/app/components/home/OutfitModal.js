@@ -12,7 +12,7 @@ export default function OutfitModal({ outfit, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"> 
       <div className="bg-white rounded-2xl p-6 w-80 flex flex-col items-center relative">
         <button
           onClick={onClose}

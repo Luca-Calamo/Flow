@@ -21,14 +21,16 @@ export default function OutfitModal({ outfit, onClose }) {
         </button>
         <h3 className="text-xl font-semibold mb-4">Suggested Fit</h3>
         <div className="flex flex-wrap justify-center items-center mb-4">
-          {outfit.images.map((img, idx) => (
-            <img
-              key={idx}
-              src={img}
-              alt={`outfit item ${idx + 1}`}
-              className="w-24 h-24 object-contain m-1 rounded"
-            />
-          ))}
+        {Array.isArray(outfit?.images) &&
+  outfit.images.map((img, idx) => (
+    <img
+      key={idx}
+      src={img}
+      alt={`outfit item ${idx + 1}`}
+      className="w-24 h-24 object-contain m-1 rounded"
+    />
+  ))}
+
         </div>
         <RoundedButton
           text="Save to Wardrobe"

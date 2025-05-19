@@ -14,31 +14,43 @@ export default function HomePage() {
       <Statusbar />
       <TopBar title="Fits" />
 
-      {/* Today’s Suggestions */}
-      <section className="flex-1 flex flex-col">
-        <div className="bg-[#A3C3B6] px-4 py-2">
-          <h2 className="text-base font-medium text-black">Today’s Suggestions</h2>
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <OutfitCarousel direction="vertical" onCardClick={setModalOutfit} />
-        </div>
-      </section>
+      {/* Main content area between TopBar and Navbar */}
+      <div className="flex-1 flex flex-col overflow-hidden pb-24">
 
-      {/* All Time Favourites */}
-      <section className="flex-1 flex flex-col">
-        <div className="bg-[#A3C3B6] px-4 py-2">
-          <h2 className="text-base font-medium text-black">Your all time favourites</h2>
-        </div>
-        <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
-      </section>
+        {/* Today's Suggestions */}
+        <section className="flex flex-col h-[40vh]">
+        <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[40px] px-4 flex items-center">
+            <h2 className="font-roboto text-[28px] text-black">Today’s Suggestions</h2>
+          </div>
+          {/* Carousel container takes remaining height in this section and scrolls vertically */}
+          <div className="flex-1 overflow-y-auto py-2">
+            <OutfitCarousel direction="vertical" onCardClick={setModalOutfit} />
+          </div>
+        </section>
 
-      {/* Forgotten Fits */}
-      <section className="flex-1 flex flex-col">
-        <div className="bg-[#A3C3B6] px-4 py-2">
-          <h2 className="text-base font-medium text-black">Forgotten fits</h2>
-        </div>
-        <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
-      </section>
+        {/* All Time Favourites */}
+        <section className="flex flex-col h-[30vh] mt-2">
+        <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
+            <h2 className="font-roboto text-[20px] text-black">Your all time favourites</h2>
+          </div>
+          {/* Carousel takes available height and scrolls horizontally */}
+          <div className="h-full overflow-x-auto px-4 py-2">
+            <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
+          </div>
+        </section>
+
+        {/* Forgotten Fits */}
+        <section className="flex flex-col h-[30vh] mt-2">
+          <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
+            <h2 className="font-roboto text-[20px] text-black">Forgotten fits</h2>
+          </div>
+          {/* Carousel takes available height and scrolls horizontally */}
+          <div className="h-full overflow-x-auto px-4 py-2">
+            <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
+          </div>
+        </section>
+
+      </div> {/* End of main content area */}
 
       <Navbar />
 

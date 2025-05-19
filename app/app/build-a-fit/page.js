@@ -1,10 +1,38 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import BuildCard from '@/app/components/build-card/build-card';
 import styles from '@/app/build-a-fit/css/styles.module.css';
 import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
 import Top_Bar from '@/app/components/global-components/topBar/topBar';
+import SmallButton from '@/app/components/buttons/smallButton';
 import Link from 'next/link';
 
 export default function BuildAFit() {
+    const router = useRouter();
+
+    // ✅ Initial clothing IDs — make sure they are valid article IDs!
+    const [hatId, setHatId] = useState(14);
+    const [shirtId, setShirtId] = useState(1);
+    const [pantsId, setPantsId] = useState(7);
+    const [shoesId, setShoesId] = useState(10);
+
+    const handleSave = () => {
+        const newFit = {
+            hatId,
+            shirtId,
+            pantsId,
+            shoesId,
+        };
+
+        const savedFits = JSON.parse(localStorage.getItem('savedFits') || '[]');
+        savedFits.push(newFit);
+        localStorage.setItem('savedFits', JSON.stringify(savedFits));
+
+        router.push('/fits'); // Navigate to fits page after saving
+    };
+
     return (
         <div className={styles.body}>
             <Top_Bar title='Build a Fit' hasIcon={true} />
@@ -14,23 +42,47 @@ export default function BuildAFit() {
                         <img
                             className={styles.bckBtn}
                             src='/images/arrow-black.svg'
-                        ></img>
+                            alt='Back'
+                        />
                         <p className={styles.text}>Back to Wardrobe</p>
                     </div>
                 </Link>
+                <SmallButton text='Save' onClick={handleSave} />
+            </div>
+
+            <div className={styles.container}>
+                <BuildCard
+                    type='hats'
+                    idRange={[14, 17]}
+                    selectedId={hatId}
+                    setSelectedId={setHatId}
+                />
             </div>
             <div className={styles.container}>
-                <BuildCard id={14} type='hats' idRange={[14, 17]} />
+                <BuildCard
+                    type='shirts'
+                    idRange={[1, 5]}
+                    selectedId={shirtId}
+                    setSelectedId={setShirtId}
+                />
             </div>
             <div className={styles.container}>
-                <BuildCard id={1} type='shirts' idRange={[1, 5]} />
+                <BuildCard
+                    type='pants'
+                    idRange={[6, 9]}
+                    selectedId={pantsId}
+                    setSelectedId={setPantsId}
+                />
             </div>
             <div className={styles.container}>
-                <BuildCard id={7} type='pants' idRange={[6, 9]} />
+                <BuildCard
+                    type='shoes'
+                    idRange={[10, 13]}
+                    selectedId={shoesId}
+                    setSelectedId={setShoesId}
+                />
             </div>
-            <div className={styles.container}>
-                <BuildCard id={10} type='shoes' idRange={[10, 13]} />
-            </div>
+
             <Navbar />
         </div>
     );

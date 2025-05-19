@@ -34,7 +34,7 @@ export default function OutfitCarousel({ direction, onCardClick }) {
   }
 
   return (
-    <div className="overflow-x-auto snap-x snap-mandatory flex gap-4 py-2 h-[190px]">
+    <div className="overflow-x-auto snap-x snap-mandatory flex gap-6 py-2 h-[190px]">
       {outfitImages.map((img, idx) => (
         <div key={idx} className="snap-center flex-shrink-0">
           <OutfitCard image={img} onClick={() => onCardClick(img)} />

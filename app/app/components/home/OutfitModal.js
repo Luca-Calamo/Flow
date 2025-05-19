@@ -1,6 +1,7 @@
 "use client";
 import RoundedButton from "../global-components/rounded-button/RoundedButton";
 import { useRouter } from "next/navigation";
+import ClothingItemCard from "../ClothingItemCard/ClothingItemCard";
 
 export default function OutfitModal({ outfit, onClose }) {
   const router = useRouter();
@@ -19,18 +20,14 @@ export default function OutfitModal({ outfit, onClose }) {
         >
           ×
         </button>
-        <h3 className="text-xl font-semibold mb-4">Suggested Fit</h3>
+        <h3 className="text-2xl font-roboto font-regular text-black mb-4">
+           Suggested Fit
+       </h3>
         <div className="flex flex-wrap justify-center items-center mb-4">
-        {Array.isArray(outfit?.images) &&
-  outfit.images.map((img, idx) => (
-    <img
-      key={idx}
-      src={img}
-      alt={`outfit item ${idx + 1}`}
-      className="w-24 h-24 object-contain m-1 rounded"
-    />
-  ))}
-
+          <ClothingItemCard src="/images/Black-Polo.png" />
+          <ClothingItemCard src="/images/Black-Hat.png" />
+          <ClothingItemCard src="/images/Black-Dress-Pants.png" />
+          <ClothingItemCard src="/images/Black-Dress-Shoes.png" />
         </div>
         <RoundedButton
           text="Save to Wardrobe"

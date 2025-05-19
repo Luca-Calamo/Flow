@@ -7,13 +7,12 @@ export default function OutfitModal({ outfit, onClose }) {
   const router = useRouter();
 
   const handleSave = () => {
-    // Here you could add logic to save the outfit, then navigate
     router.push("/wardrobe");
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"> 
-      <div className="bg-white rounded-2xl p-6 w-80 flex flex-col items-center relative">
+    <div onClick={onClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm"> 
+      <div onClick={e => e.stopPropagation()} className="bg-white rounded-2xl p-6 w-80 flex flex-col items-center relative">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-2xl font-bold text-gray-400 hover:text-gray-600"

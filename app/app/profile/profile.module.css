@@ -1,0 +1,79 @@
+.ourterContainer {
+    background-color: #E0E8FF;
+    min-height: 100vh;
+}
+
+.contentContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 170px 22px 0px 22px;
+}
+
+.profileInfo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-left: 16px;
+}
+
+.profilePic {
+    width: 100px;
+    height: 103px;
+    border-radius: 50%;
+    border: 2px solid #066051;
+    object-fit: cover;
+}
+
+.profileText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.email {
+    font-size: 14px;
+}
+
+.editButton {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #066051;
+    border-radius: 40px;
+    background-color: #B2CEC9;
+    margin-bottom: 40px;
+}
+
+.settingsContainer {
+    background-color: #B2CEC9;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.settingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1.5px solid #FFFFFF;
+}
+
+.settingRow:last-child {
+    border-bottom: none;
+}
+
+.arrow {
+    font-size: 26px;
+    font-weight: bold;
+}

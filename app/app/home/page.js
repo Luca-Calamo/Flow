@@ -31,7 +31,7 @@ export default function HomePage() {
         {/* All Time Favourites */}
         <section className="flex flex-col h-[30vh] mt-2">
         <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
-            <h2 className="font-roboto text-[20px] text-black">Your all time favourites</h2>
+            <h2 className="font-roboto text-[20px] text-black">Your All Time Favourites</h2>
           </div>
           {/* Carousel takes available height and scrolls horizontally */}
           <div className="h-full overflow-x-auto px-4 py-2">
@@ -42,7 +42,7 @@ export default function HomePage() {
         {/* Forgotten Fits */}
         <section className="flex flex-col h-[30vh] mt-2">
           <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
-            <h2 className="font-roboto text-[20px] text-black">Forgotten fits</h2>
+            <h2 className="font-roboto text-[20px] text-black">Forgotten Fits</h2>
           </div>
           {/* Carousel takes available height and scrolls horizontally */}
           <div className="h-full overflow-x-auto px-4 py-2">

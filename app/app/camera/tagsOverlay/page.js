@@ -41,44 +41,50 @@ export default function TagsOverlay({ onClose }) {
                                     type={"secondary"}
                                     text={"T-shirt"}
                                 />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"Jacket"} />
+                                <TagButton type='secondary' text={"Pants"} />
+                                <TagButton type='secondary' text={"Hat"} />
+                                <TagButton type='secondary' text={"Shorts"} />
+                                <TagButton type='secondary' text={"Polo"} />
+                                <TagButton
+                                    type='secondary'
+                                    text={"Button up"}
+                                />
+                                <TagButton
+                                    type='secondary'
+                                    text={"Sweatpants"}
+                                />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Weather</h3>
                             <div className={styles.buttonContainer}>
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"Warm"} />
+                                <TagButton type='secondary' text={"Hot"} />
+                                <TagButton type='secondary' text={"Cold"} />
+                                <TagButton type='secondary' text={"Rainy"} />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Season</h3>
                             <div className={styles.buttonContainer}>
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"Summer"} />
+                                <TagButton type='secondary' text={"Fall"} />
+                                <TagButton type='secondary' text={"Winter"} />
+                                <TagButton type='secondary' text={"Spring"} />
                             </div>
                         </div>
                         <div className={styles.section}>
                             <h3>Color</h3>
                             <div className={styles.buttonContainer}>
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
-                                <TagButton type='secondary' text={"T-shirt"} />
+                                <TagButton type='secondary' text={"Red"} />
+                                <TagButton type='secondary' text={"Green"} />
+                                <TagButton type='secondary' text={"Blue"} />
+                                <TagButton type='secondary' text={"Yellow"} />
+                                <TagButton type='secondary' text={"Black"} />
+                                <TagButton type='secondary' text={"White"} />
+                                <TagButton type='secondary' text={"Grey "} />
+                                <TagButton type='secondary' text={"Brown"} />
                             </div>
                         </div>
                     </div>

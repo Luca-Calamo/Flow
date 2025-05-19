@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./navbar.module.css";
-import Image from "next/image";
-import HomeIcon from "./images/home-icon.svg";
-import ActiveHomeIcon from "./images/active-home-icon.svg";
-import ActiveSuggestIcon from "./images/active-suggest-icon.svg";
-import SuggestIcon from "./images/suggest-icon.svg";
-import ActiveWardrobeIcon from "./images/active-wardrobe-icon.svg";
-import WardrobeIcon from "./images/wardrobe-icon.svg";
-import ActiveProfileIcon from "./images/active-profile-icon.svg";
-import ProfileIcon from "./images/profile-icon.svg";
-import CameraIcon from "./images/camera-icon.svg";
-import { usePathname } from "next/navigation";
+import { useState } from 'react';
+import styles from './navbar.module.css';
+import Image from 'next/image';
+import HomeIcon from './images/home-icon.svg';
+import ActiveHomeIcon from './images/active-home-icon.svg';
+import ActiveSuggestIcon from './images/active-suggest-icon.svg';
+import SuggestIcon from './images/suggest-icon.svg';
+import ActiveWardrobeIcon from './images/active-wardrobe-icon.svg';
+import WardrobeIcon from './images/wardrobe-icon.svg';
+import ActiveProfileIcon from './images/active-profile-icon.svg';
+import ProfileIcon from './images/profile-icon.svg';
+import CameraIcon from './images/camera-icon.svg';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -21,14 +21,14 @@ export default function Navbar() {
         <div className={styles.navbar}>
             <a href='/' className={styles.item}>
                 <Image
-                    src={pathname === "/" ? ActiveHomeIcon : HomeIcon}
+                    src={pathname === '/' ? ActiveHomeIcon : HomeIcon}
                     alt='home icon'
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === '/'
+                            ? styles['text-active']
+                            : styles['text-inactive']
                     }`}
                 >
                     Home
@@ -38,7 +38,7 @@ export default function Navbar() {
             <a href='/suggest' className={styles.item}>
                 <Image
                     src={
-                        pathname === "/suggest"
+                        pathname === '/suggest'
                             ? ActiveSuggestIcon
                             : SuggestIcon
                     }
@@ -46,9 +46,9 @@ export default function Navbar() {
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/suggest"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === '/suggest'
+                            ? styles['text-active']
+                            : styles['text-inactive']
                     }`}
                 >
                     Suggest
@@ -63,20 +63,18 @@ export default function Navbar() {
                 />
             </a>
 
-            <a href='/wardrobe' className={styles.item}>
+            <a href='/fits' className={styles.item}>
                 <Image
                     src={
-                        pathname === "/wardrobe"
-                            ? ActiveWardrobeIcon
-                            : WardrobeIcon
+                        pathname === '/fits' ? ActiveWardrobeIcon : WardrobeIcon
                     }
                     alt='wardrobe icon'
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/wardrobe"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === '/fits'
+                            ? styles['text-active']
+                            : styles['text-inactive']
                     }`}
                 >
                     Wardrobe
@@ -86,7 +84,7 @@ export default function Navbar() {
             <a href='/profile' className={styles.item}>
                 <Image
                     src={
-                        pathname === "/profile"
+                        pathname === '/profile'
                             ? ActiveProfileIcon
                             : ProfileIcon
                     }
@@ -94,9 +92,9 @@ export default function Navbar() {
                 />
                 <p
                     className={`${styles.text} ${
-                        pathname === "/profile"
-                            ? styles["text-active"]
-                            : styles["text-inactive"]
+                        pathname === '/profile'
+                            ? styles['text-active']
+                            : styles['text-inactive']
                     }`}
                 >
                     Profile

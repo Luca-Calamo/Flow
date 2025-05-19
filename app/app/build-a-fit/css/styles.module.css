@@ -18,13 +18,14 @@
 
 .btncontainer {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    /* justify-content: flex-end; */
     align-items: center;
-    gap: 90px;
+    gap: 120px;
     width: 100%;
     margin-top: 12px;
     margin-bottom: 12px;
+    /* padding-right: 10px; */
     padding-left: 20px;
 }
 

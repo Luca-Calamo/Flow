@@ -12,6 +12,7 @@ import TagsOverlay from "@/app/camera/tagsOverlay/page"; // Adjust the import pa
 export default function FitsPage() {
     const [savedFits, setSavedFits] = useState([]);
     const [showTagsOverlay, setShowTagsOverlay] = useState(false);
+    const [selectedTags, setSelectedTags] = useState([]);
 
     // Load saved fits on mount
     useEffect(() => {
@@ -112,8 +113,17 @@ export default function FitsPage() {
                     </div>
                 ))}
             </div>
-            {showTagsOverlay && <TagsOverlay onClose={() => setShowTagsOverlay(false)} />}
 
+            {showTagsOverlay && (
+                <TagsOverlay
+                    selectedTags={selectedTags}
+                    onClose={() => setShowTagsOverlay(false)} // Close the overlay
+                    onSave={(tags) => {
+                        setSelectedTags(tags); // Update selected tags
+                        setShowTagsOverlay(false); // Close the overlay after saving
+                    }}
+                />
+            )}
             <Navbar />
         </div>
     );

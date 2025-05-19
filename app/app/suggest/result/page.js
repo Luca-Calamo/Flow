@@ -108,7 +108,7 @@ export default function SuggestionResultPage() {
                 />
                 <RoundedButton
                     text="Go to Wardrobe"
-                    href="/wardrobeHome"
+                    href="/fits"
                     type="primary"
                     className={styles.navButton}
                 />

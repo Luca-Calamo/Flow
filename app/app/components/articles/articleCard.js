@@ -1,4 +1,4 @@
-import styles from '@/app/components/articles/css/styles.module.css';
+import styles from "@/app/components/articles/css/styles.module.css";
 
 export default function ArticleCard({ src }) {
     return (

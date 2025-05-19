@@ -1,0 +1,51 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 50px 24px;
+    width: 370px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 36px;
+    z-index: 2;
+}
+
+.avatarRow {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.avatarImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #067563;
+}

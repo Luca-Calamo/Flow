@@ -1,0 +1,108 @@
+.ourterContainer {
+    background-color: #E0E8FF;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+
+.contentContainer {
+    margin: 0 auto;
+    padding: 110px 22px 0 22px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 32px 0 12px 0;
+}
+
+.settingsContainer {
+    background: #b2cec9b5;
+    border-radius: 20px;
+}
+
+.settingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1.5px solid #FFFFFF;
+}
+
+.settingRow:last-child {
+    border-bottom: none;
+}
+
+.optionText {
+    margin-left: 175px;
+}
+
+.arrow {
+    font-size: 24px;
+    line-height: 0;
+}
+
+.switch {
+    width: 50px;
+    height: 20px;
+    border-radius: 16px;
+    background: #959595;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.switchCircle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    transition: transform 0.2s;
+}
+
+.switch.on {
+    background: #066051;
+}
+
+.switch.on .switchCircle {
+    transform: translateX(24px);
+}
+
+.radioBtn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #959595;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radioDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #066051;
+}
+
+.darkMode {
+    background-color: #232323;
+    color: #FFFFFF;
+}
+
+.darkMode .settingsContainer {
+    background-color: #565656;
+}
+
+.darkMode .settingRow {
+    border-bottom: 1.5px solid #8a8a8a;
+    color: #FFFFFF;
+}
+
+.darkMode .settingRow:last-child {
+    border-bottom: none;
+}

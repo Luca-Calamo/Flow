@@ -1,0 +1,63 @@
+.ourterContainer {
+    background-color: #E0E8FF;
+    min-height: 100vh;
+}
+
+.contentContainer {
+    margin: 0 auto;
+    padding: 125px 22px 0 22px;
+}
+
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.profilePic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #067563;
+    object-fit: cover;
+    background-color: #FFFFFF;
+}
+
+.avatarEditBtn {
+    position: absolute;
+    right: 100px;
+    bottom: 8px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 16px;
+    border: 1.5px solid #c6c6c6;
+    border-radius: 10px;
+    background: #ffffffad;
+}
+
+.saveBtn {
+    background: #066051;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 6px 15px;
+    width: 220px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}

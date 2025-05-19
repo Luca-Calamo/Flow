@@ -1,3 +1,83 @@
+//working article without tags filtering
+'use client';
+
+import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import ArticleCard from '@/app/components/articles/articleCard';
+import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
+import TopBar from '@/app/components/global-components/topBar/topBar';
+import SmallButton from '@/app/components/buttons/smallButton';
+import styles from '@/app/articles/css/styles.module.css';
+import TagsOverlay from '@/app/camera/tagsOverlay/page';
+import Link from "next/link";
+
+export default function Articles() {
+    const router = useRouter();
+    const [articles, setArticles] = useState([]);
+    const [showOverlay, setShowOverlay] = useState(false); // State to control the overlay visibility
+
+    useEffect(() => {
+        fetch('/carousel.json')
+            .then((res) => res.json())
+            .then(setArticles)
+            .catch((err) => {
+                console.error('Error fetching articles:', err);
+            });
+    }, []);
+
+    const handleCardClick = (article) => {
+        router.push(
+            `/articles/singleArticle?article=${encodeURIComponent(article)}`
+        );
+    };
+
+    // Handle opening the Tags overlay
+    const handleTagsButtonClick = () => {
+        setShowOverlay(true); // Set the state to true to show the overlay
+    };
+
+    return (
+        <div className={styles.body}>
+            <TopBar
+                title='Articles'
+                hasBar={true}
+                hasIcon={true}
+                initialActive='right'
+            />
+            <div className={styles.btncontainer}>
+                <Link href="/build-a-fit">
+                    <div className={styles.button}>
+                        <SmallButton text="Build" />
+                    </div>
+                </Link>
+                <div className={styles.button}>
+                    <SmallButton text='Tags' onClick={handleTagsButtonClick} />{' '}
+                    {/* Open overlay on click */}
+                </div>
+            </div>
+            <div className={styles.container}>
+                {articles.map((item, index) => {
+                    console.log('Rendering article:', item);
+                    return (
+                        <button
+                            key={index}
+                            onClick={() => handleCardClick(item.image)}
+                            className={styles.articleCardButton}
+                        >
+                            <ArticleCard src={item.image} />
+                        </button>
+                    );
+                })}
+            </div>
+            <Navbar />
+
+            {/* Show the TagsOverlay if showOverlay is true */}
+            {showOverlay && (
+                <TagsOverlay onClose={() => setShowOverlay(false)} />
+            )}
+        </div>
+    );
+}
 
 // 'use client';
 
@@ -110,81 +190,3 @@
 //         </div>
 //     );
 // }
-
-//working article without tags filtering
-'use client';
-
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import ArticleCard from '@/app/components/articles/articleCard';
-import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
-import TopBar from '@/app/components/global-components/topBar/topBar';
-import SmallButton from '@/app/components/buttons/smallButton';
-import styles from '@/app/articles/css/styles.module.css';
-import TagsOverlay from '@/app/camera/tagsOverlay/page';
-
-export default function Articles() {
-    const router = useRouter();
-    const [articles, setArticles] = useState([]);
-    const [showOverlay, setShowOverlay] = useState(false); // State to control the overlay visibility
-
-    useEffect(() => {
-        fetch('/carousel.json')
-            .then((res) => res.json())
-            .then(setArticles)
-            .catch((err) => {
-                console.error('Error fetching articles:', err);
-            });
-    }, []);
-
-    const handleCardClick = (article) => {
-        router.push(
-            `/articles/singleArticle?article=${encodeURIComponent(article)}`
-        );
-    };
-
-    // Handle opening the Tags overlay
-    const handleTagsButtonClick = () => {
-        setShowOverlay(true); // Set the state to true to show the overlay
-    };
-
-    return (
-        <div className={styles.body}>
-            <TopBar
-                title='Articles'
-                hasBar={true}
-                hasIcon={true}
-                initialActive='right'
-            />
-            <div className={styles.btncontainer}>
-                <div className={styles.button}>
-                    <SmallButton text='Build' />
-                </div>
-                <div className={styles.button}>
-                    <SmallButton text='Tags' onClick={handleTagsButtonClick} />{' '}
-                    {/* Open overlay on click */}
-                </div>
-            </div>
-            <div className={styles.container}>
-                {articles.map((item, index) => {
-                    console.log('Rendering article:', item);
-                    return (
-                        <button
-                            key={index}
-                            onClick={() => handleCardClick(item.image)}
-                            className={styles.articleCardButton}
-                        >
-                            <ArticleCard src={item.image} />
-                        </button>
-                    );
-                })}
-            </div>
-            <Navbar />
-
-            {/* Show the TagsOverlay if showOverlay is true */}
-            {showOverlay && (
-                <TagsOverlay onClose={() => setShowOverlay(false)} />
-            )}
-        </div>
-    );
-}

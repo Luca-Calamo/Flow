@@ -4,12 +4,12 @@ import OutfitCard from "./OutfitCard";
 import WideCard from "./wideCard"; 
 
 const todaysCards = [
-  "/images/todaysCard11.png",
-  "/images/todaysCard22.png",
-  "/images/todaysCard33.png",
-  "/images/todaysCard44.png",
-  "/images/todaysCard55.png",
-  "/images/todaysCard66.png",
+  "/images/todaysCard1.png",
+  "/images/todaysCard2.png",
+  "/images/todaysCard3.png",
+  "/images/todaysCard4.png",
+  "/images/todaysCard5.png",
+  "/images/todaysCard6.png",
 ];
 
 const outfitImages = [

@@ -1,15 +1,15 @@
 // trying to incoporate tags filtering
 
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import ArticleCard from '@/app/components/articles/articleCard'; // Your ArticleCard component
-import Navbar from '@/app/components/global-components/bottom-navbar/navbar';
-import TopBar from '@/app/components/global-components/topBar/topBar';
-import SmallButton from '@/app/components/buttons/smallButton';
-import TagsOverlay from '@/app/camera/tagsOverlay/page'; // Your existing TagsOverlay component
-import styles from '@/app/articles/css/styles.module.css';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import ArticleCard from "@/app/components/articles/articleCard"; // Your ArticleCard component
+import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
+import TopBar from "@/app/components/global-components/topBar/topBar";
+import SmallButton from "@/app/components/buttons/smallButton";
+import TagsOverlay from "@/app/camera/tagsOverlay/page"; // Your existing TagsOverlay component
+import styles from "@/app/articles/css/styles.module.css";
 
 export default function Articles() {
     const router = useRouter();
@@ -19,19 +19,17 @@ export default function Articles() {
 
     // Fetch articles from your data source (or /carousel.json)
     useEffect(() => {
-        fetch('/carousel.json')
+        fetch("/carousel.json")
             .then((res) => res.json())
             .then(setArticles)
             .catch((err) => {
-                console.error('Error fetching articles:', err);
+                console.error("Error fetching articles:", err);
             });
     }, []);
 
     // Handle article card click (navigate to single article)
     const handleCardClick = (article) => {
-        router.push(
-            `/articles/singleArticle?article=${encodeURIComponent(article)}`
-        );
+        router.push(`/articles/singleArticle?article=${encodeURIComponent(article)}`);
     };
 
     // Filter articles based on selected tags
@@ -47,7 +45,7 @@ export default function Articles() {
         const tagSet = new Set();
         articlesList.forEach((article) => {
             article.tags?.forEach((tag) => {
-                if (tag && tag.trim() !== '') {
+                if (tag && tag.trim() !== "") {
                     tagSet.add(tag);
                 }
             });
@@ -57,27 +55,19 @@ export default function Articles() {
 
     // Log selectedTags after update
     useEffect(() => {
-        console.log('Selected Tags:', selectedTags);
+        console.log("Selected Tags:", selectedTags);
     }, [selectedTags]);
 
     return (
         <div className={styles.body}>
-            <TopBar
-                title='Articles'
-                hasBar={true}
-                hasIcon={true}
-                initialActive='right'
-            />
+            <TopBar title="Articles" hasBar={true} hasIcon={true} initialActive="right" />
 
             <div className={styles.btncontainer}>
                 <div className={styles.button}>
-                    <SmallButton text='Build' />
+                    <SmallButton text="Build" />
                 </div>
                 <div className={styles.button}>
-                    <SmallButton
-                        text='Tags'
-                        onClick={() => setShowOverlay(true)}
-                    />
+                    <SmallButton text="Tags" onClick={() => setShowOverlay(true)} />
                 </div>
             </div>
 
@@ -89,8 +79,7 @@ export default function Articles() {
                         onClick={() => handleCardClick(item.title)} // You can use an ID or title for unique identifier
                         className={styles.articleCardButton}
                     >
-                        <ArticleCard src={item.image} />{' '}
-                        {/* Pass the article image */}
+                        <ArticleCard src={item.image} /> {/* Pass the article image */}
                     </button>
                 ))}
             </div>

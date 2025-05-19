@@ -15,7 +15,7 @@ export default function accessibilityPage() {
     const [labels, setLabels] = useState(false);
 
     return (
-        <div className={styles.ourterContainer}>
+        <div className={`${styles.ourterContainer} ${dark ? styles.darkMode : ""}`}>
             <Statusbar
                 titleBar={true}
                 title="Accessibility Settings"

@@ -1,6 +1,7 @@
 .ourterContainer {
     background-color: #E0E8FF;
     min-height: 100vh;
+    transition: background-color 0.3s ease;
 }
 
 .contentContainer {
@@ -85,4 +86,22 @@
     height: 12px;
     border-radius: 50%;
     background: #066051;
+}
+
+.darkMode {
+    background-color: #232323;
+    color: #FFFFFF;
+}
+
+.darkMode .settingsContainer {
+    background-color: #565656;
+}
+
+.darkMode .settingRow {
+    border-bottom: 1.5px solid #8a8a8a;
+    color: #FFFFFF;
+}
+
+.darkMode .settingRow:last-child {
+    border-bottom: none;
 }

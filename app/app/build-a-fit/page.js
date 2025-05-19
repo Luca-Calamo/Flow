@@ -12,7 +12,6 @@ import Link from 'next/link';
 export default function BuildAFit() {
     const router = useRouter();
 
-    // ✅ Initial clothing IDs — make sure they are valid article IDs!
     const [hatId, setHatId] = useState(14);
     const [shirtId, setShirtId] = useState(1);
     const [pantsId, setPantsId] = useState(7);
@@ -30,7 +29,7 @@ export default function BuildAFit() {
         savedFits.push(newFit);
         localStorage.setItem('savedFits', JSON.stringify(savedFits));
 
-        router.push('/fits'); // Navigate to fits page after saving
+        router.push('/fits');
     };
 
     return (

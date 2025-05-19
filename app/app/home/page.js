@@ -5,6 +5,7 @@ import TopBar from "../components/global-components/topBar/topBar";
 import Navbar from "../components/global-components/bottom-navbar/navbar";
 import OutfitCarousel from "../components/home/OutfitCarousel";
 import OutfitModal from "../components/home/OutfitModal";
+import Image from 'next/image';
 
 export default function HomePage() {
   const [modalOutfit, setModalOutfit] = useState(null);
@@ -12,7 +13,7 @@ export default function HomePage() {
   return (
     <div className="h-screen flex flex-col bg-[#E0E8FF]">
       <Statusbar />
-      <TopBar title="Fits" />
+      <TopBar />
 
       {/* Main content area between TopBar and Navbar */}
       <div className="flex-1 flex flex-col overflow-hidden pb-24">

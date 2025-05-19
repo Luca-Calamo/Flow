@@ -4,17 +4,15 @@ import styles from "./topBar.css";
 import { useState } from "react";
 import SmallButton from "../../buttons/smallButton";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function TopBar({
-    title,
     hasIcon,
     hasBar,
     hasBtn,
     btnTxt,
     btnType,
     btnOnClick,
-    leftBtn = "Fits",
-    rightBtn = "Articles",
     initialActive = "left",
 }) {
     const [activeBtn, setActiveBtn] = useState(initialActive);
@@ -35,8 +33,8 @@ export default function TopBar({
     };
 
     return (
-        <div className='top-bar'>
-            <div className='top-bar__main'>
+        <div className='top-bar pt-4'>
+            <div className='top-bar__main flex items-center justify-center'>
                 {hasIcon && (
                     <div className='top-bar__icon' onClick={handleIconClick}>
                         <svg
@@ -64,7 +62,13 @@ export default function TopBar({
                     </div>
                 )}
 
-                <h1 className='top-bar__title'>{title}</h1>
+                <Image
+                    src="/images/whiteLogo.png"
+                    alt="Fits logo"
+                    width={90}
+                    height={35}
+                    priority
+                    />
             </div>
             {hasBar && (
                 <div className='top-bar__navbar'>

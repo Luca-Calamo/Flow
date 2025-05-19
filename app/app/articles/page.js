@@ -10,6 +10,7 @@ import TopBar from "@/app/components/global-components/topBar/topBar";
 import SmallButton from "@/app/components/buttons/smallButton";
 import TagsOverlay from "@/app/camera/tagsOverlay/page"; // Your existing TagsOverlay component
 import styles from "@/app/articles/css/styles.module.css";
+import Link from "next/link";
 
 export default function Articles() {
     const router = useRouter();
@@ -63,9 +64,11 @@ export default function Articles() {
             <TopBar title="Articles" hasBar={true} hasIcon={true} initialActive="right" />
 
             <div className={styles.btncontainer}>
-                <div className={styles.button}>
-                    <SmallButton text="Build" />
-                </div>
+                <Link href="/build-a-fit">
+                    <div className={styles.button}>
+                        <SmallButton text="Build" />
+                    </div>
+                </Link>
                 <div className={styles.button}>
                     <SmallButton text="Tags" onClick={() => setShowOverlay(true)} />
                 </div>

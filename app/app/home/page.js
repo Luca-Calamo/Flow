@@ -20,30 +20,30 @@ export default function HomePage() {
 
         {/* Today's Suggestions */}
         <section className="flex flex-col h-[28vh]">
-        <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[40px] px-4 flex items-center">
+        <div className="bg-[#B2CEC9] border-[2px] border-[#8CB6AF] h-[40px] px-4 flex items-center">
             <h2 className="font-roboto text-[28px] text-black">Today’s Suggestions</h2>
           </div>
-          <div className="flex-1 overflow-y-auto py-1">
+          <div className="flex-1 overflow-y-auto py-2">
             <OutfitCarousel direction="vertical" onCardClick={setModalOutfit} />
           </div>
         </section>
 
         {/* All Time Favourites */}
         <section className="flex flex-col h-[25vh] mt-1">
-        <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
+          <div className="bg-[#B2CEC9] border-[2px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
             <h2 className="font-roboto text-[20px] text-black">Your All Time Favourites</h2>
           </div>
-          <div className="flex-1 overflow-hidden py-1">
+          <div className="flex-1 overflow-hidden py-2">
             <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
           </div>
         </section>
 
         {/* Forgotten Fits */}
         <section className="flex flex-col h-[25vh] mt-1">
-          <div className="bg-[#B2CEC9] border-[1.5px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
+          <div className="bg-[#B2CEC9] border-[2px] border-[#8CB6AF] h-[30px] px-4 flex items-center">
             <h2 className="font-roboto text-[20px] text-black">Forgotten Fits</h2>
           </div>
-          <div className="flex-1 overflow-hidden py-1">
+          <div className="flex-1 overflow-hidden py-2">
             <OutfitCarousel direction="horizontal" onCardClick={setModalOutfit} />
           </div>
         </section>

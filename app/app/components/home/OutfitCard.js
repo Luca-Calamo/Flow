@@ -8,7 +8,7 @@ export default function OutfitCard({ image, onClick, className = "" }) {
       <img
         src={image}
         alt="outfit"
-        className="object-contain w-32 h-32"
+        className="object-contain w-40 h-40"
         draggable={false}
       />
     </div>

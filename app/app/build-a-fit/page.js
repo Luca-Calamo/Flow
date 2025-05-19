@@ -34,7 +34,7 @@ export default function BuildAFit() {
 
     return (
         <div className={styles.body}>
-            <Top_Bar title='Build a Fit' hasIcon={true} />
+            <Top_Bar title='Build a Fit' hasIcon={false} />
             <div className={styles.btncontainer}>
                 <Link href='/fits'>
                     <div className={styles.txtBtn}>

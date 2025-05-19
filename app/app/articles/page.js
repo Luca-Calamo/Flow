@@ -61,7 +61,7 @@ export default function Articles() {
 
     return (
         <div className={styles.body}>
-            <TopBar title="Articles" hasBar={true} hasIcon={true} initialActive="right" />
+            <TopBar title="Articles" hasBar={true} hasIcon={false} initialActive="right" />
 
             <div className={styles.btncontainer}>
                 <Link href="/build-a-fit">

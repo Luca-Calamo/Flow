@@ -3,12 +3,12 @@ import { useState } from "react";
 import OutfitCard from "./OutfitCard";
 
 const todaysCards = [
-  "/images/todaysCard001.png",
-  "/images/todaysCard002.png",
-  "/images/todaysCard003.png",
-  "/images/todaysCard004.png",
-  "/images/todaysCard005.png",
-  "/images/todaysCard006.png",
+  "/images/todaysCard11.png",
+  "/images/todaysCard22.png",
+  "/images/todaysCard33.png",
+  "/images/todaysCard44.png",
+  "/images/todaysCard55.png",
+  "/images/todaysCard66.png",
 ];
 
 const outfitImages = [

@@ -4,7 +4,7 @@ const articles = [
         image: '/images/Black-Tee.png',
         title: 'Black T-shirt',
         description:
-            'Comfortable black t-shirt made from 100% cotton. Perfect for everyday wear.',
+            'Comfortable Black t-shirt made from 100% cotton. Perfect for everyday wear.',
         tags: ['T-shirt', 'warm', 'spring'],
     },
     {
@@ -12,16 +12,16 @@ const articles = [
         image: '/images/Black-Polo.png',
         title: 'Black Polo',
         description:
-            'Stylish black polo shirt made from breathable fabric. Ideal for casual outings or semi-formal events.',
-        tags: ['T-shirt', 'black', 'casual'],
+            'Stylish Black polo shirt made from breathable fabric. Ideal for casual outings or semi-formal events.',
+        tags: ['T-shirt', 'Black', 'casual'],
     },
     {
         id: 3,
         image: '/images/Blue-Polo.png',
         title: 'Blue Polo',
         description:
-            'Classic blue polo shirt with a modern fit. Great for layering or wearing on its own.',
-        tags: ['T-shirt', 'blue', 'casual'],
+            'Classic Blue polo shirt with a modern fit. Great for layering or wearing on its own.',
+        tags: ['T-shirt', 'Blue', 'casual'],
     },
     {
         id: 4,
@@ -44,8 +44,8 @@ const articles = [
         image: '/images/Black-Dress-Pants.png',
         title: 'Black Dress Pants',
         description:
-            'Classic black dress pants made from high-quality fabric. Perfect for formal occasions or business meetings.',
-        tags: ['pants', 'black', 'formal'],
+            'Classic Black dress Pants made from high-quality fabric. Perfect for formal occasions or business meetings.',
+        tags: ['Pants', 'Black', 'formal'],
     },
     {
         id: 7,
@@ -53,15 +53,15 @@ const articles = [
         title: 'Cargo Jeans',
         description:
             'Stylish cargo jeans with multiple pockets. Made from durable denim, perfect for casual outings.',
-        tags: ['pants', 'blue', 'casual'],
+        tags: ['Pants', 'Blue', 'casual'],
     },
     {
         id: 8,
-        image: '/images/Sweatpants.png',
-        title: 'Sweatpants',
+        image: '/images/SweatPants.png',
+        title: 'SweatPants',
         description:
-            'Comfortable sweatpants made from soft fabric. Ideal for lounging or casual outings.',
-        tags: ['pants', 'grey', 'casual'],
+            'Comfortable sweatPants made from soft fabric. Ideal for lounging or casual outings.',
+        tags: ['Pants', 'grey', 'casual'],
     },
     {
         id: 9,
@@ -69,15 +69,15 @@ const articles = [
         title: 'Ripped Jeans',
         description:
             'Stylish ripped jeans made from durable denim. Perfect for a casual look.',
-        tags: ['pants', 'blue', 'casual'],
+        tags: ['Pants', 'Blue', 'casual'],
     },
     {
         id: 10,
         image: '/images/Black-Dress-Shoes.png',
         title: 'Black Dress Shoes',
         description:
-            'Classic black dress shoes made from high-quality leather. Perfect for formal occasions.',
-        tags: ['shoes', 'black', 'formal'],
+            'Classic Black dress Shoes made from high-quality leather. Perfect for formal occasions.',
+        tags: ['Shoes', 'Black', 'formal'],
     },
     {
         id: 11,
@@ -85,15 +85,15 @@ const articles = [
         title: 'Chelsea Boots',
         description:
             'Stylish Chelsea boots made from high-quality leather. Perfect for both casual and formal occasions.',
-        tags: ['shoes', 'brown', 'casual', 'formal'],
+        tags: ['Shoes', 'brown', 'casual', 'formal'],
     },
     {
         id: 12,
         image: '/images/Leather-Running-Shoes.png',
         title: 'Leather Running Shoes',
         description:
-            'Comfortable leather running shoes designed for performance. Ideal for workouts or casual wear.',
-        tags: ['shoes', 'brown', 'casual'],
+            'Comfortable leather running Shoes designed for performance. Ideal for workouts or casual wear.',
+        tags: ['Shoes', 'brown', 'casual'],
     },
     {
         id: 13,
@@ -101,23 +101,23 @@ const articles = [
         title: 'Timberlands',
         description:
             'Stylish Timberland boots made from durable leather. Perfect for outdoor adventures.',
-        tags: ['shoes', 'brown', 'casual'],
+        tags: ['Shoes', 'brown', 'casual'],
     },
     {
         id: 14,
         image: '/images/Blue-Baseball-Cap.png',
         title: 'Blue Baseball Cap',
         description:
-            'Classic blue baseball cap made from breathable fabric. Perfect for sunny days.',
-        tags: ['hats', 'blue', 'casual'],
+            'Classic Blue baseball cap made from breathable fabric. Perfect for sunny days.',
+        tags: ['Hat', 'Blue', 'casual'],
     },
     {
         id: 15,
         image: '/images/Green-Beanie.png',
         title: 'Green Beanie',
         description:
-            'Stylish green beanie made from soft fabric. Perfect for keeping warm in winter.',
-        tags: ['hats', 'green', 'winter', 'casual'],
+            'Stylish Green beanie made from soft fabric. Perfect for keeping warm in winter.',
+        tags: ['Hat', 'Green', 'winter', 'casual'],
     },
     {
         id: 16,
@@ -125,7 +125,7 @@ const articles = [
         title: 'Yellow Bucket Hat',
         description:
             'Trendy yellow bucket hat made from lightweight fabric. Ideal for summer outings.',
-        tags: ['hats', 'yellow', 'summer', 'casual'],
+        tags: ['Hat', 'yellow', 'summer', 'casual'],
     },
     {
         id: 17,
@@ -139,8 +139,8 @@ const articles = [
         image: '/images/Brown-Dress-Shoes.png',
         title: 'Brown Dress Shoes',
         description:
-            'Stylish brown dress shoes made from high-quality leather. Perfect for formal occasions.',
-        tags: ['shoes', 'brown', 'casual'],
+            'Stylish brown dress Shoes made from high-quality leather. Perfect for formal occasions.',
+        tags: ['Shoes', 'brown', 'casual'],
     },
 ];
 

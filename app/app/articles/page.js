@@ -41,7 +41,7 @@ export default function Articles() {
             <TopBar
                 title='Articles'
                 hasBar={true}
-                hasIcon={true}
+                hasIcon={false}
                 initialActive='right'
             />
             <div className={styles.btncontainer}>

@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .text {
@@ -36,4 +36,8 @@
 
 .bckBtn {
     margin-right: 5px;
+}
+
+.outerContainer {
+    padding-bottom: 80px;
 }

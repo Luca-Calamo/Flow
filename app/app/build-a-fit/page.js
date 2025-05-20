@@ -48,40 +48,40 @@ export default function BuildAFit() {
                 </Link>
                 <SmallButton text='Save' onClick={handleSave} />
             </div>
-
-            <div className={styles.container}>
-                <BuildCard
-                    type='hats'
-                    idRange={[14, 17]}
-                    selectedId={hatId}
-                    setSelectedId={setHatId}
-                />
+            <div className={styles.outerContainer}>
+                <div className={styles.container}>
+                    <BuildCard
+                        type='hats'
+                        idRange={[14, 17]}
+                        selectedId={hatId}
+                        setSelectedId={setHatId}
+                    />
+                </div>
+                <div className={styles.container}>
+                    <BuildCard
+                        type='shirts'
+                        idRange={[1, 5]}
+                        selectedId={shirtId}
+                        setSelectedId={setShirtId}
+                    />
+                </div>
+                <div className={styles.container}>
+                    <BuildCard
+                        type='pants'
+                        idRange={[6, 9]}
+                        selectedId={pantsId}
+                        setSelectedId={setPantsId}
+                    />
+                </div>
+                <div className={styles.container}>
+                    <BuildCard
+                        type='shoes'
+                        idRange={[10, 13]}
+                        selectedId={shoesId}
+                        setSelectedId={setShoesId}
+                    />
+                </div>
             </div>
-            <div className={styles.container}>
-                <BuildCard
-                    type='shirts'
-                    idRange={[1, 5]}
-                    selectedId={shirtId}
-                    setSelectedId={setShirtId}
-                />
-            </div>
-            <div className={styles.container}>
-                <BuildCard
-                    type='pants'
-                    idRange={[6, 9]}
-                    selectedId={pantsId}
-                    setSelectedId={setPantsId}
-                />
-            </div>
-            <div className={styles.container}>
-                <BuildCard
-                    type='shoes'
-                    idRange={[10, 13]}
-                    selectedId={shoesId}
-                    setSelectedId={setShoesId}
-                />
-            </div>
-
             <Navbar />
         </div>
     );

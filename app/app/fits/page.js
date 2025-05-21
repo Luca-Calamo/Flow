@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import FitsCard from "@/app/components/fits-card/fitscard";
 import styles from "@/app/fits/css/styles.module.css";
 import Navbar from "@/app/components/global-components/bottom-navbar/navbar";
-import Top_Bar from "@/app/components/global-components/topBar/topBar";
+import TopBar from "@/app/components/global-components/topBar/topBar";
 import SmallButton from "@/app/components/buttons/smallButton";
 import Link from "next/link";
 import TagsOverlay from "@/app/camera/tagsOverlay/page"; // Adjust the import path if necessary
@@ -68,7 +68,7 @@ export default function FitsPage() {
 
     return (
         <div className={styles.body}>
-            <Top_Bar title="Fits" hasBar={true} hasIcon={false} />
+            <TopBar title="Fits" hasBar={true} hasIcon={false} />
             <div className={styles.btncontainer}>
                 <Link href="/build-a-fit">
                     <div className={styles.button}>

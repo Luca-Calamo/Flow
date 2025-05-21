@@ -1,3 +1,5 @@
+"use client";
+
 import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
 // import WardrobeCardHome from '@/app/components/wardrobe-components/wardrobeCardHome';
 

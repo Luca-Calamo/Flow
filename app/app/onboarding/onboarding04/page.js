@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 // If you are using @next/font/google for Roboto:
 // import { Roboto } from 'next/font/google';
@@ -11,12 +12,50 @@ import { useRouter } from 'next/navigation';
 
 export default function Onboarding04Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
-  const visualSrc = '/images/onboarding4visual.png';
   const router = useRouter();
 
   const handleNextClick = () => {
     router.push('/home');
   };
+
+  // State to hold the fetched data for this specific page
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchOnboardingData = async () => {
+      try {
+        const response = await fetch('/onboarding.json'); // Fetch from public directory
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        // Find the data for this specific page (onboarding04)
+        const currentPageData = data.find(page => page.id === 'onboarding04');
+        if (currentPageData) {
+          setPageData(currentPageData);
+        } else {
+          setError("Data for onboarding04 not found in JSON.");
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOnboardingData();
+  }, []); // Empty dependency array means this runs once on mount
+
+  // Render loading or error state while data is fetching
+  if (loading) {
+    return <div style={{ backgroundColor: '#E0E8FF', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#066051', fontSize: '24px' }}>Loading...</div>;
+  }
+
+  if (error) {
+    return <div style={{ backgroundColor: '#E0E8FF', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'red', fontSize: '24px' }}>Error loading onboarding data: {error}</div>;
+  }
 
   return (
     <div
@@ -62,7 +101,7 @@ export default function Onboarding04Page() {
               marginBottom: '40px',
               alignSelf: 'center',
           }}>
-             <Image src={visualSrc} alt="Onboarding Visual" width={220} height={220} objectFit="contain" />
+             <Image src={pageData.visualImage} alt="Onboarding Visual" width={220} height={220} objectFit="contain" />
           </div>
 
           <div style={{
@@ -79,7 +118,7 @@ export default function Onboarding04Page() {
                 marginBottom: '15px',
               }}
             >
-              Designed for Accessibility
+              {pageData.title}
             </h2>
             <p
               style={{
@@ -89,7 +128,7 @@ export default function Onboarding04Page() {
                 lineHeight: '1.5',
               }}
             >
-              Fits help colorblind users recognize hues and reads item details out loud for users with visual impairments.
+              {pageData.description}
             </p>
           </div>
 
@@ -100,9 +139,18 @@ export default function Onboarding04Page() {
                marginTop: '40px',
                alignSelf: 'center',
            }}>
-               <div style={{ width: '8px', height: '8px', backgroundColor: '#D3D3D3', borderRadius: '50%', marginRight: '8px' }}></div>
-               <div style={{ width: '8px', height: '8px', backgroundColor: '#D3D3D3', borderRadius: '50%', marginRight: '8px' }}></div>
-               <div style={{ width: '25px', height: '8px', backgroundColor: '#066051', borderRadius: '4px' }}></div>
+               {pageData.indicator.map((type, index) => (
+                 <div
+                   key={index}
+                   style={{
+                     width: type === 'green-dash' ? '25px' : '8px',
+                     height: '8px',
+                     backgroundColor: type === 'green-dash' ? '#066051' : '#D3D3D3',
+                     borderRadius: type === 'green-dash' ? '4px' : '50%',
+                     marginRight: index < pageData.indicator.length - 1 ? '8px' : '0',
+                   }}
+                 ></div>
+               ))}
            </div>
 
       </div>

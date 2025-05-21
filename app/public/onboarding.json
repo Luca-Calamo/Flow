@@ -1,0 +1,35 @@
+[
+  {
+    "id": "onboarding02",
+    "visualImage": "/images/onboarding2visual.png",
+    "title": "Get Styled Daily – Effortlessly",
+    "description": "Let Fits suggest outfits tailored to your closet, plans, and the weather. Dressing up just got easier.",
+    "indicator": [
+      "green-dash",
+      "grey-dot",
+      "grey-dot"
+    ]
+  },
+  {
+    "id": "onboarding03",
+    "visualImage": "/images/onboarding3visual.png",
+    "title": "Upload, Organize & Create Fits",
+    "description": "Snap pictures of your clothes, build outfits you love, and save them in your personal wardrobe – all in one place.",
+    "indicator": [
+      "grey-dot",
+      "green-dash",
+      "grey-dot"
+    ]
+  },
+  {
+    "id": "onboarding04",
+    "visualImage": "/images/onboarding4visual.png",
+    "title": "Designed for Accessibility",
+    "description": "Fits help colorblind users recognize hues and reads item details out loud for users with visual impairments.",
+    "indicator": [
+      "grey-dot",
+      "grey-dot",
+      "green-dash"
+    ]
+  }
+] 

@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 
 export default function Onboarding03Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
-  const visualSrc = '/images/onboarding3visual.png';
   const router = useRouter();
 
   const handleSkipClick = () => {
@@ -17,6 +17,42 @@ export default function Onboarding03Page() {
   const handleNextClick = () => {
     router.push('/onboarding/onboarding04');
   };
+
+  const [pageData, setPageData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchOnboardingData = async () => {
+      try {
+        const response = await fetch('/onboarding.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const currentPageData = data.find(page => page.id === 'onboarding03');
+        if (currentPageData) {
+          setPageData(currentPageData);
+        } else {
+          setError("Data for onboarding03 not found in JSON.");
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOnboardingData();
+  }, []);
+
+  if (loading) {
+    return <div style={{ backgroundColor: '#E0E8FF', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#066051', fontSize: '24px' }}>Loading...</div>;
+  }
+
+  if (error) {
+    return <div style={{ backgroundColor: '#E0E8FF', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'red', fontSize: '24px' }}>Error loading onboarding data: {error}</div>;
+  }
 
   return (
     <div
@@ -82,7 +118,7 @@ export default function Onboarding03Page() {
               marginBottom: '40px',
               alignSelf: 'center',
           }}>
-             <Image src={visualSrc} alt="Onboarding Visual" width={220} height={220} objectFit="contain" />
+             <Image src={pageData.visualImage} alt="Onboarding Visual" width={220} height={220} objectFit="contain" />
           </div>
 
           <div style={{
@@ -99,7 +135,7 @@ export default function Onboarding03Page() {
                 marginBottom: '15px',
               }}
             >
-              Upload, Organize & Create Fits
+              {pageData.title}
             </h2>
             <p
               style={{
@@ -109,7 +145,7 @@ export default function Onboarding03Page() {
                 lineHeight: '1.5',
               }}
             >
-              Snap pictures of your clothes, build outfits you love, and save them in your personal wardrobe – all in one place.
+              {pageData.description}
             </p>
           </div>
 
@@ -120,9 +156,18 @@ export default function Onboarding03Page() {
                marginTop: '40px',
                alignSelf: 'center',
            }}>
-               <div style={{ width: '8px', height: '8px', backgroundColor: '#D3D3D3', borderRadius: '50%', marginRight: '8px' }}></div>
-               <div style={{ width: '25px', height: '8px', backgroundColor: '#066051', borderRadius: '4px', marginRight: '8px' }}></div>
-               <div style={{ width: '8px', height: '8px', backgroundColor: '#D3D3D3', borderRadius: '50%' }}></div>
+               {pageData.indicator.map((type, index) => (
+                 <div
+                   key={index}
+                   style={{
+                     width: type === 'green-dash' ? '25px' : '8px',
+                     height: '8px',
+                     backgroundColor: type === 'green-dash' ? '#066051' : '#D3D3D3',
+                     borderRadius: type === 'green-dash' ? '4px' : '50%',
+                     marginRight: index < pageData.indicator.length - 1 ? '8px' : '0',
+                   }}
+                 ></div>
+               ))}
            </div>
 
       </div>

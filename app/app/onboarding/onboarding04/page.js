@@ -1,5 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
+import { useRouter } from 'next/navigation';
 
 // If you are using @next/font/google for Roboto:
 // import { Roboto } from 'next/font/google';
@@ -9,6 +12,11 @@ import StatusBar from '../../components/global-components/statusbar/Statusbar';
 export default function Onboarding04Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
   const visualSrc = '/images/onboarding4visual.png';
+  const router = useRouter();
+
+  const handleNextClick = () => {
+    router.push('/home');
+  };
 
   return (
     <div
@@ -118,6 +126,7 @@ export default function Onboarding04Page() {
            paddingLeft: '4px',
            zIndex: 3,
          }}
+         onClick={handleNextClick}
        >
           →
        </button>

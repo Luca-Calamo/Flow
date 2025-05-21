@@ -1,10 +1,22 @@
+'use client';
+
 import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
+import { useRouter } from 'next/navigation';
 
 
 export default function Onboarding03Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
   const visualSrc = '/images/onboarding3visual.png';
+  const router = useRouter();
+
+  const handleSkipClick = () => {
+    router.push('/home');
+  };
+
+  const handleNextClick = () => {
+    router.push('/onboarding/onboarding04');
+  };
 
   return (
     <div
@@ -36,6 +48,7 @@ export default function Onboarding03Page() {
           cursor: 'pointer',
           zIndex: 3,
         }}
+        onClick={handleSkipClick}
       >
         Skip
       </button>
@@ -133,6 +146,7 @@ export default function Onboarding03Page() {
            paddingLeft: '4px',
            zIndex: 3,
          }}
+         onClick={handleNextClick}
        >
           →
        </button>

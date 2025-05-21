@@ -62,8 +62,17 @@ export default function Articles() {
 
     return (
         <div className={styles.body}>
+<<<<<<< HEAD
             <TopBar title="Articles" hasBar={true} hasIcon={false} initialActive="right" />
 
+=======
+            <TopBar
+                title='Articles'
+                hasBar={true}
+                hasIcon={false}
+                initialActive='right'
+            />
+>>>>>>> 4ab7f3b (fix extra back button on article page)
             <div className={styles.btncontainer}>
                 <Link href="/build-a-fit">
                     <div className={styles.button}>

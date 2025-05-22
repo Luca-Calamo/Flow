@@ -4,13 +4,17 @@ import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import SignInModal from '../../components/sign-in/SignInModal';
 
 export default function Onboarding02Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
   const router = useRouter();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleSkipClick = () => {
-    router.push('/home');
+    // Navigate to sign-in01 page
+    router.push('/sign-in/sign-in01');
   };
 
   const handleNextClick = () => {
@@ -155,7 +159,7 @@ export default function Onboarding02Page() {
             </p>
           </div>
 
-          {/* Page Indicator - Now centered within the content area */}
+          {/* Page Indicator */}
            <div style={{
                display: 'flex',
                alignItems: 'center',
@@ -203,6 +207,8 @@ export default function Onboarding02Page() {
        >
           →
        </button>
+
+      <SignInModal isOpen={isModalOpen} />
     </div>
   );
 }

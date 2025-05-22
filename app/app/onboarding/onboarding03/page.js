@@ -4,14 +4,18 @@ import Image from 'next/image';
 import StatusBar from '../../components/global-components/statusbar/Statusbar';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import SignInModal from '../../components/sign-in/SignInModal';
 
 
 export default function Onboarding03Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
   const router = useRouter();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleSkipClick = () => {
-    router.push('/home');
+    // Navigate to sign-in01 page
+    router.push('/sign-in/sign-in01');
   };
 
   const handleNextClick = () => {
@@ -195,6 +199,8 @@ export default function Onboarding03Page() {
        >
           →
        </button>
+
+      <SignInModal isOpen={isModalOpen} />
     </div>
   );
 } 

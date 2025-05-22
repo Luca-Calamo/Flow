@@ -5,17 +5,13 @@ import StatusBar from '../../components/global-components/statusbar/Statusbar';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
-// If you are using @next/font/google for Roboto:
-// import { Roboto } from 'next/font/google';
-// const robotoBold = Roboto({ subsets: ['latin'], weight: ['700'] });
-// const robotoRegular = Roboto({ subsets: ['latin'], weight: ['400'] });
 
 export default function Onboarding04Page() {
   const ellipseSrc = '/images/onboardingEllipse.png';
   const router = useRouter();
 
   const handleNextClick = () => {
-    router.push('/home');
+    router.push('/sign-in/sign-in01');
   };
 
   // State to hold the fetched data for this specific page

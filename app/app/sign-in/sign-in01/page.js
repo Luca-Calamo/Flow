@@ -1,14 +1,10 @@
-'use client'; // Add this since we're using state and event handlers
+'use client'; 
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import SignInModal from '../../components/sign-in/SignInModal';
-// No useRouter needed yet as buttons don't navigate
 
-// If you are using @next/font/google for Roboto:
-// import { Roboto } from 'next/font/google';
-// const robotoRegular = Roboto({ subsets: ['latin'], weight: ['400'] }); // Assuming regular is 400
 
 export default function SignIn01Page() { // Component name
   const darkLogoSrc = '/images/darkLogo.png';
@@ -56,8 +52,6 @@ export default function SignIn01Page() { // Component name
           color: '#59606E', // Color 59606E
           textAlign: 'center',
           marginBottom: '60px', // Space below title
-          // If using @next/font, apply class here
-          // className={robotoRegular.className}
         }}
       >
         Let's Get You Started With Your Fits!
@@ -68,8 +62,8 @@ export default function SignIn01Page() { // Component name
          <Image
             src={darkLogoSrc}
             alt="App Logo"
-            width={268} // Increased width (adjust as needed)
-            height={99} // Increased height (adjust as needed)
+            width={268} 
+            height={99} 
             objectFit="contain"
          />
       </div>
@@ -82,11 +76,11 @@ export default function SignIn01Page() { // Component name
             display: 'flex',
             alignItems: 'center',
             width: '100%',
-            padding: '20px 20px', // Increased vertical padding
+            padding: '20px 20px', 
             marginBottom: '20px', // Standardized space between social buttons
             backgroundColor: 'white', // Button background
-            borderRadius: '12px', // Border radius 12
-            border: '1.25px solid #8CB6AF', // Stroke 1.25 color 8CB6AF
+            borderRadius: '12px', 
+            border: '1.25px solid #8CB6AF', 
             cursor: 'pointer',
           }}
           onClick={handleSocialSignIn}
@@ -125,7 +119,7 @@ export default function SignIn01Page() { // Component name
             alignItems: 'center',
             width: '100%',
             padding: '18px 18px', // Increased vertical padding
-            marginBottom: '40px', // Increased space below Apple button to before green button (adjust as needed)
+            marginBottom: '40px', 
             backgroundColor: 'white',
             borderRadius: '12px',
             border: '1.25px solid #8CB6AF',
@@ -145,7 +139,7 @@ export default function SignIn01Page() { // Component name
       <button
         style={{
           width: '100%',
-          maxWidth: '350px',
+          maxWidth: '330px',
           backgroundColor: '#066051',
           color: 'white',
           padding: '15px 20px',
